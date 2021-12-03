@@ -166,7 +166,7 @@ body{
   margin-bottom: 0;
 }
 
-@media (max-width:420px) {
+@media (min-width:420px) {
   .wrapper .form .inputfield{
     flex-direction: column;
     align-items: flex-start;
@@ -190,4 +190,5 @@ body{
 
 .inputfield .input {
     margin-top: 20px;
+    align-content: center;
 }

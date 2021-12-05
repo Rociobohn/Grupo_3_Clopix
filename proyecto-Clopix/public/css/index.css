@@ -1,141 +1,113 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background: black;
-    font-family: 'calibri';
-  }
-  
-
-  header {
-    background: white;
-    width: 100%;
-    clear: both;
-    position: relative;
-  
-    
-  }
-  
-  header .menu {
-    
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-  }
-  
- 
-  .img {
-    width: 76px; 
-    float: left;
-    padding: 0px;
-    border: 1px solid greenyellow;
-  
-  }
-  
-  nav {
-    float: left;
-    right: 0%;
-  }
-
-  nav ul li {
-    list-style: none;
-    margin-left: 75px;
-    padding: 12px 0;
-    float: left;
-    position: relative;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #444;
-    font-weight: bold;
-  }
-  
-  nav ul li a::before {
-    display: block;
-    content: '';
-    width: 0%;
-    background: #444;
-    height: 5px;
-    top:0;
-    position: absolute;
-    transition: width 0.2s;
-  }
-  
-  nav ul li a:hover::before {
-    width: 100%;
-  }
-
- header i {
-    display: flex;
-    /* flex-wrap: wrap; */
-    right: 15px;
-    justify-content: space-between;
-    margin-top: 15px;
-    
+*{
+  color: white;
+  box-sizing:  border-box;
 }
- 
-/*footer*/
-
-footer {
+body{
   width: 100%;
-  height: auto;
-  display: block;
- 
+  background-image: url("https://cutewallpaper.org/21/vaporwave-pixel-art-wallpaper/19-Pixel-Art-Wallpapers-that-Will-Make-Your-Desktop-Retro.png"); 
+  padding: 40px;
+  margin: auto;
 }
 
-footer .img-footer {
-  width: 76px;
-  margin-top: 1px;
-  margin-left: 1px;
 
+
+img{
+  width: 100%;
+  height: 100%;
 }
 
- .contenedor-footer  {
-
-}
-
-.pie {
-  margin-top:780px;
-  background-color:white;
- 
-}
-
-.pie .pie1 {
- 
-  display: flex;
-  justify-content: space-around;
-
-}
-
-.pie .pie2 {
-  display: flex;
-  justify-content: space-around;
-}
-
-p {
+header{
   background-color: white;
+}
+header nav ul li a{
+  width: 15%;
+  color: #99DDCC;
+  font-size: 30px;
+  margin: 10px;
+ 
+}
+header nav ul li{
+  display: flex;
+  width: 25%;
+  align-items: center;
+  justify-content:space-between;
+}
+header nav ul{
+  display: flex;
+  flex-direction: row;
+}
+/*div.menu{
+  display: flex;
+  border: 1px solid white;
+  height: 16vh;
+  flex-direction: row;
+  align-content: center;
+}*/
 
+.fas-fa {
+  display: flex;
+  flex-wrap: wrap; 
+  position: absolute;
+  right: 15px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.fas-fa .fas-fa-home{
+  color: white;
+  background-color: black;
+}
+section.op{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+footer a img{
+  width: 8%;
+}
+
+#footer { 
+  position: fixed;
+  height: 200px;
+  bottom: 40px;
+  margin-bottom: 20px;
+}
+.etiquetasPie{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+section.infoContacto{
+  align-items: flex-end;
+}
+
+html{
+  height: 100%;
+}
+img.redesSociales{
+  align-items: flex-end;
 }
 
 
 
 
+@media (min-width:1280px){
 
-/*fin footer*/
+}
+@media (max-width:1279px){
 
+}
+@media (max-width:768px){
+  body{
+      width: 768px;
+  }
 
-/*@media screen and (min-width: 980px){
-  .body{
-      width: 90%;
+}
+
+@media (max-width:480px){
+  body{
+      width: 480px;
   }
-  .{
-      width: 60%;
-  }
-  .pie{
-      width:30%;
-  }
-}*/
+
+}

@@ -5,7 +5,6 @@
 body{
     width: 100%;
     background-image: url("https://cutewallpaper.org/21/vaporwave-pixel-art-wallpaper/19-Pixel-Art-Wallpapers-that-Will-Make-Your-Desktop-Retro.png"); 
-
     padding: 40px;
     margin: auto;
 }
@@ -35,7 +34,7 @@ tr td.producto img{
 button{
     margin-top: 20px;
     background-color: #99DDCC;
-    width: 30%;
+    width: 40%;
     color: #FF5DA2;
     border: solid #FF5DA2 5px;
     justify-content: space-around;
@@ -64,7 +63,7 @@ img{
     text-align: right;
 }
 header{
-    background-color: white;
+    background-color: none;
 }
 header nav ul li a{
     width: 15%;
@@ -99,7 +98,10 @@ header nav ul{
     justify-content: space-between;
     align-items: center;
     margin-top: 15px;
-    
+}
+.fas-fa .fas-fa-home{
+    color: white;
+    background-color: black;
 }
 section.op{
     display: flex;
@@ -108,6 +110,29 @@ section.op{
 }
 footer a img{
     width: 8%;
+}
+
+#footer { 
+    position: fixed;
+    height: 200px;
+    bottom: 40px;
+    margin-bottom: 20px;
+}
+.etiquetasPie{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+section.infoContacto{
+    align-items: flex-end;
+}
+
+html{
+    height: 100%;
+}
+img.redesSociales{
+    align-items: flex-end;
 }
 
 

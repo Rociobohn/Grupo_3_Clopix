@@ -9,8 +9,31 @@
 body{
   background-image: url("https://cdn.shopify.com/s/files/1/1171/8456/files/71530421_729406894232388_5302369846022799223_n_1024x1024.jpg?v=1636497317");
   background-size: cover;
-  padding: 0 10px;
+  
+ 
 }
+
+
+/*HEADER PRUEBA*/
+
+*{
+  color: white;
+  box-sizing:  border-box;
+  margin:0;
+  padding: 0;
+}
+
+
+
+/*HEADER*/
+
+
+
+
+
+
+/*FIN DEL HEADER*/
+
 
 
 .wrapper{
@@ -192,3 +215,5 @@ body{
     margin-top: 20px;
     align-content: center;
 }
+
+

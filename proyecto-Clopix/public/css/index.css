@@ -5,28 +5,33 @@
   }
   
   body {
-    background: white;
+    background: black;
     font-family: 'calibri';
   }
   
+
   header {
-    background: plum;
+    background: white;
     width: 100%;
     clear: both;
-    content:'';
-    display: table;
+    position: relative;
+  
+    
   }
   
-  .menu {
-    width: 900px;
+  header .menu {
+    
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
   }
   
-  img {
-    width: 10%;
-    height: 10%;
+ 
+  .img {
+    width: 76px; 
     float: left;
     padding: 0px;
+    border: 1px solid greenyellow;
   
   }
   
@@ -64,37 +69,73 @@
     width: 100%;
   }
 
-.fas-fa {
+ header i {
     display: flex;
     /* flex-wrap: wrap; */
-    position: absolute;
     right: 15px;
     justify-content: space-between;
     margin-top: 15px;
     
 }
  
+/*footer*/
+
+footer {
+  width: 100%;
+  height: auto;
+  display: block;
+ 
+}
+
+footer .img-footer {
+  width: 76px;
+  margin-top: 1px;
+  margin-left: 1px;
+
+}
+
+ .contenedor-footer  {
+
+}
+
 .pie {
+  margin-top:780px;
+  background-color:white;
+ 
+}
+
+.pie .pie1 {
+ 
   display: flex;
-  
+  justify-content: space-around;
+
 }
 
-@media (max-width:420px) {
-  .fas-fa{
-    /*propiedad*/
-  }
-  .pie {
-    /*propiedad*/
-  }
-  .menu{
-    /*propiedad*/
-  }
+.pie .pie2 {
+  display: flex;
+  justify-content: space-around;
 }
 
-@media (min-width: 361px) {
-  
+p {
+  background-color: white;
+
 }
 
-@media (min-width:7668px) {
-  
-}
+
+
+
+
+/*fin footer*/
+
+
+/*@media screen and (min-width: 980px){
+  .body{
+      width: 90%;
+  }
+  .{
+      width: 60%;
+  }
+  .pie{
+      width:30%;
+  }
+}*/

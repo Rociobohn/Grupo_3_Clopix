@@ -1,69 +1,134 @@
-
-td img{
+*{
+    color: white;
+    box-sizing:  border-box;
+}
+body{
     width: 100%;
-    height: 220px;
-}
-td button{
-    width: 100%;
-    
-}
-.suprimir{
-    
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-td{
-    border: 1px solid black;
-}
-a img{
-    width: 30px;
+    background-image: url("https://cutewallpaper.org/21/vaporwave-pixel-art-wallpaper/19-Pixel-Art-Wallpapers-that-Will-Make-Your-Desktop-Retro.png"); 
 
+    padding: 40px;
+    margin: auto;
 }
+
 table{
     width: 100%;
 }
-.contenedorSuprimir{
-    display: flex;
+tr{
     width: 100%;
-    border-bottom:0px solid blue;
-    height: 150px;
+    text-align: center;
+}
+
+tr td.encabezado{
+    width: 22,5%;
+}
+tr td.dproducto{
+    height: 12vh;
+    background-color: #99DDCC;
     justify-content: center;
     align-items: center;
 }
-td.btnmasmenos{
- height: 25%;
- width: 100%;
-}
-#Producto{
-width: 40%;
-}
-#PrecioUnitario{
-width: 20%;
-}
-#Cantidad{
-width: 10%;
-}
-#PrecioTotal{
-    width: 20%;
-}
-#ListaCompras{
-    border: 1px solid red;
-}
-.producto{
-    border:1px solid blue;
-    height: 130px;
-}
-.producto td button{
-    width: 50px;
-    height: 50px;
+tr td.producto img{
+    justify-content: center;
     align-items: center;
 }
-.detalleProducto{
-    width: 100%;
-    height: 220px;
+
+button{
+    margin-top: 20px;
+    background-color: #99DDCC;
+    width: 30%;
+    color: #FF5DA2;
+    border: solid #FF5DA2 5px;
+    justify-content: space-around;
 }
-.precioProducto{
+td.quitarProducto button{
+    width: 100%;
+
+}
+tr td{
+    width: 25%;
+    border: 1px solid white;
+}
+
+tr.resultados td{
+    border: none;
+}
+tr.resultados td.resultados{
+    border: 1px solid white;
+    background-color: #FF5DA2;
+}
+img{
     width: 100%;
     height: 100%;
+}
+#TotalFacturado{
+    text-align: right;
+}
+header{
+    background-color: white;
+}
+header nav ul li a{
+    width: 15%;
+    color: #99DDCC;
+    font-size: 30px;
+    margin: 10px;
+   
+}
+header nav ul li{
+    display: flex;
+    width: 25%;
+    align-items: center;
+    justify-content:space-between;
+}
+header nav ul{
+    display: flex;
+    flex-direction: row;
+}
+/*div.menu{
+    display: flex;
+    border: 1px solid white;
+    height: 16vh;
+    flex-direction: row;
+    align-content: center;
+}*/
+
+.fas-fa {
+    display: flex;
+    flex-wrap: wrap; 
+    position: absolute;
+    right: 15px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    
+}
+section.op{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+footer a img{
+    width: 8%;
+}
+
+
+
+
+@media (min-width:1280px){
+
+}
+@media (max-width:1279px){
+
+}
+@media (max-width:768px){
+    body{
+        width: 768px;
+    }
+
+}
+
+@media (max-width:480px){
+    body{
+        width: 480px;
+    }
+
 }

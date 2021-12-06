@@ -23,7 +23,7 @@
                     <li style="justify-content: space-evenly;"> 
                         <a href="#"><i class="fas fa-home" style="color: black;"></i></a>
                         <a href="#"><i class="fas fa-tag" style="color: black;"></i></a>
-                    </li>
+                    
                   </ul>
               </nav>
               
@@ -32,72 +32,79 @@
 
         </header>
         <table id="ListaCompras">
-            <tr>
-                <th id="Producto" class="encabezado">Producto</th>
-                <th id="PrecioUnitario" class="encabezado">Precio Unitario</th>
-                <th id="Cantidad" class="encabezado">Cantidad</th>
-                <th id="PrecioTotal"class="encabezado">Precio Total</th>
-                <th></th>
-            </tr>
-            <tr >
-                <td class="dproducto">
-                    <img src='/images/productoEjemplo1.png' alt="Imagen de Producto" class="img"> 
-                </td>
-
-                <td class="dproducto"> 
-                    <label>1000$</label>
-                </td>
-
-                <td class="dproducto">
-                    <button type="button">+</button>
-                    <label for="">1</label>
-                    <button type="button">-</button>
-                </td>
-
-                <td class="dproducto"> 
-                    <label>1000$</label>
-                </td>
-
-                <td class="quitarProducto">
-                    <button type="delete">X</button>
-                </td>
-            </tr>
-            <tr>
-                <td class="dproducto">
-                    <img src="/images/productoEjemplo2.png" alt="Imagen de producto2" id="ImagenProducto"> 
-                </td>
-                <td class="dproducto">
-                    <label>50$</label>
-                </td>
-                <td class="dproducto">
-                    <button type="button">+</button>
+            <thead>
+                <tr>
+                    <th id="Producto">Producto</th>
+                    <th id="PrecioUnitario">Precio Unitario</th>
+                    <th id="Cantidad">Cantidad</th>
+                    <th id="PrecioTotal">Precio Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr >
+                    <td class="dproducto">
+                        <img src='/images/productoEjemplo1.png' alt="Imagen de Producto" class="img"> 
+                    </td>
+    
+                    <td class="dproducto"> 
+                        <label>1000$</label>
+                    </td>
+    
+                    <td class="dproducto">
+                        <button type="button">+</button>
+                        <label for="">1</label>
+                        <button type="button">-</button>
+                    </td>
+    
+                    <td class="dproducto"> 
+                        <label>1000$</label>
+                    </td>
+    
+                    <td class="NoProducto">
+                        <button type="delete">X</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="dproducto">
+                        <img src="/images/productoEjemplo2.png" alt="Imagen de producto2" id="ImagenProducto"> 
+                    </td>
+                    <td class="dproducto">
+                        <label>50$</label>
+                    </td>
+                    <td class="dproducto">
+                        <button type="button">+</button>
+                        
+                        <label for="">1</label>
                     
-                    <label for="">1</label>
-                
-                    <button type="button">-</button>
-                </td>
-                <td class="dproducto"> 
-                    <label>1000$</label>
-                </td>
-                <td class="quitarProducto">
-                    <button type="delete" >X</button>
-                </td>
-            </tr>
-            <tr class="resultados">
-                <td style="border: none;"></td>
-                <td></td>
-                <td class="resultados">
-                    <label >Total Neto: </label>
-                </td>
-                <td class="resultados"> 
-                    <label for="obtenerTotal"> 1050$</label>
-                </td>
-                <td></td>
-            </tr>
+                        <button type="button">-</button>
+                    </td>
+                    <td class="dproducto"> 
+                        <label>1000$</label>
+                    </td>
+                    <td class="NoProducto">
+                        <button type="delete" >X</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody class="resultados">
+                <tr class="resultados">
+                    <td class="NoProducto"></td>
+                    <td class="NoProducto"></td>
+                    <td class="resultados">
+                        <label >Total Neto: </label>
+                    </td>
+                    <td class="resultados"> 
+                        <label for="obtenerTotal"> 1050$</label>
+                    </td>
+                    <td class="NoProducto"></td>
+                </tr>
+            </tbody>
+            
 
 
         </table>
-        <section class="op"> 
+        <section class="special"> 
             <button type="submit">Realizar Pedido</button>
             <br>
             <button type="submit">Seguir Comprando</button>

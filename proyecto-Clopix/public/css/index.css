@@ -1,15 +1,17 @@
 *{
   color: white;
   box-sizing:  border-box;
+  margin:0;
+  padding: 0;
 }
 body{
   width: 100%;
-  background-color: black;
-  padding: 40px;
-  margin: auto;
+  background: rgb(238,174,202);
+  background: linear-gradient(207deg, rgba(238,174,202,1) 0%, rgba(52,84,107,1) 100%);
 }
 
 
+/*HEADER*/
 
 img{
   width: 100%;
@@ -18,7 +20,7 @@ img{
 
 header{
   background-color: white;
-  border: 5px solid wheat;
+  border: 5px solid #f0cddc;
 }
 header nav ul li a{
   width: 15%;
@@ -63,6 +65,9 @@ section.op{
   margin: auto;
   justify-content: center;
 }
+
+/* fin header*/
+
 footer a img{
   width: 8%;
 }
@@ -120,6 +125,7 @@ ul, li {
   margin: 0;
   list-style: none inside;
 }
+
 ul.slider {
   position:relative; /*Necesitamos que el ul sea relativo*/
 }
@@ -140,22 +146,14 @@ ul.slider li:first-child {
 ul.slider li:target {
   opacity: 1; /*Mostramos el <li> al que apunta el enlace*/
 }
-nav .menu{
+nav .slide-num{
   position:relative;
-  top:200px;
-  left:50px;
-}
-body, html {
-  padding: 0;
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
+  margin-top:35%;
   
 }
 
-ul, li {
-  box-sizing: border-box;
-}
+
+
 
 ul.slider {
   padding: 30px;
@@ -169,7 +167,6 @@ ul.slider li {
   background-color: rgb(0, 0, 0);
   opacity: 0; 
   transition: opacity .5s;
-  padding-top: 50%;
   text-align: center;
 }
 
@@ -231,16 +228,77 @@ nav li:last-child a {
 }
 
 nav a:hover {
-  background-color: #00324b;
+  background-color: #3ccabe;
   color: #fff;
   border-top-color: #65bce8;
 }
 
 nav a:active {
-  border-top-color: #f90;
-  background: #f90;
-  color: #00324b;
+  border-top-color: rgb(106, 219, 195);
+  background: rgb(187, 22, 146);
+  color: #23d6be;
 }
 
 
 /*fin CSS del slider*/
+
+/*MAIN*/
+
+
+main{
+  margin: auto;
+  width: 90%;
+  
+}
+main article{
+  margin: auto;
+  margin-top:15px;
+  width: 100%;
+  
+}
+main article img{
+  width: 100%;
+}
+
+.caja-detalle{
+  border-top: 1px #ebebeb solid;
+  padding: 15px;
+  background-color: white;
+
+}
+main section article .caja-detalle{
+  position: relative;
+}
+.caja-detalle i{
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  color: #39b54a;
+  background-color: #FFF;
+  border-radius: 50%;
+
+  position: absolute;
+  right: 20px;
+  top: -15px;
+  
+
+  transition: all 0.3s;
+ 
+
+}
+
+.caja-detalle i:hover{
+  transform: rotate(-90deg)
+}
+
+main section article h3{
+  text-align: left;
+}
+
+main section article{
+
+   width: 43%;
+}

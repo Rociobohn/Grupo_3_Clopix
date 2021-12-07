@@ -25,7 +25,7 @@ app.get('/Catalogo', (req,res)=>{
     res.sendFile(__dirname + '/src/views/productDetail.html');
 });
 
-app.get('/register2', (req,res)=>{
-    res.sendFile(__dirname + '/src/views/register2.html');
+app.get('/login2', (req,res)=>{
+    res.sendFile(__dirname + '/src/views/login2.html');
 });
 

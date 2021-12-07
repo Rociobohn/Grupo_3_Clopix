@@ -44,7 +44,7 @@ button{
     background-color: #99DDCC;
     width: 100%;
     color: #FF5DA2;
-    border: solid #FF5DA2 5px;
+    /*border: solid #FF5DA2 5px;*/
     justify-content: space-around;
 }
 td button{
@@ -53,10 +53,13 @@ td button{
 }
 td.NoProducto{
     border: none;
+    color: white;
 }
 td.NoProducto button{
     width: 100%;
-    height: 100%;
+    height: 10vw;
+    background-color: none;
+    border: none;
 }
 tr td{
     width: 25%;

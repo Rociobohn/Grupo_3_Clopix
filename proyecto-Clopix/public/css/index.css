@@ -73,11 +73,12 @@ footer a img{
 }
 
 #footer { 
-  position: fixed;
-  height: 200px;
-  bottom: 40px;
+  position:relative;
+  height: 10vh;
+  /*bottom: 40px;*/
   margin-bottom: 20px;
 }
+
 .etiquetasPie{
   display: flex;
   justify-content: space-evenly;
@@ -261,9 +262,10 @@ main article img{
 }
 
 .caja-detalle{
-  border-top: 1px #ebebeb solid;
+  border: 3px black solid;
   padding: 15px;
-  background-color: white;
+  background: rgb(241,104,193);
+  background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(242,223,231,1) 1%); 
 
 }
 main section article .caja-detalle{
@@ -279,12 +281,9 @@ main section article .caja-detalle{
   color: #39b54a;
   background-color: #FFF;
   border-radius: 50%;
-
   position: absolute;
   right: 20px;
   top: -15px;
-  
-
   transition: all 0.3s;
  
 
@@ -301,4 +300,8 @@ main section article h3{
 main section article{
 
    width: 43%;
+}
+
+.caja-detalle p {
+  color: black;
 }

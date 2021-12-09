@@ -1,31 +1,20 @@
 const express = require('express');
+const { login } = require('./src/controllers/userCtrl');
 const app = express();
+///cargando rutas
+const rutaPrincipal=require('./src/routes/main');
+const rutaP=require('./src/routes/producto');
+const rutaUser=require('./src/routes/user');
+
 app.use(express.static('public'));
+app.set('view engine','ejs'); /** establesco que voy a usar ejs */
+app.set('views',__dirname+'/src/views');/** seteo la ruta en la que va buscar los archivos ejs */
 
 
 app.listen (process.env.PORT ||3001, ()=>{
     console.log('Servidor funcionando bien');
 });
-
-app.get('/', (req,res)=>{
-    res.sendFile(__dirname + '/src/views/index.html');
-});
-
-app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + '/src/views/login.html');
-});
-
-app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + '/src/views/register.html');
-});
-app.get('/productCart', (req,res)=>{
-    res.sendFile(__dirname + '/src/views/productCart.html');
-});
-app.get('/Catalogo', (req,res)=>{
-    res.sendFile(__dirname + '/src/views/productDetail.html');
-});
-
-app.get('/login2', (req,res)=>{
-    res.sendFile(__dirname + '/src/views/login2.html');
-});
+app.use('/',rutaPrincipal);
+app.use('/Producto',rutaP);
+app.use('/User',rutaUser);
 

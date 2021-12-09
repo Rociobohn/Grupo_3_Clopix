@@ -22,8 +22,7 @@
 - perder el tiempo
 
 
-**SPRINT 2**
-
+**SPRINT 3**
 Retrospectiva
 
 

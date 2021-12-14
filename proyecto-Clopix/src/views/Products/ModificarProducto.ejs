@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html > 
+<%- include('../partials/head')  %> 
+<body>
+    <%- include('../partials/header')%>
+    <section class="AltaProducto"></section>
+
+    <div class="wrapper">
+        <div class="title">
+          Edición de producto 
+        </div>
+
+        <div class="form">
+           
+            <div class="inputfield">
+               
+                <label>Nombre del producto</label>
+                <input type="text" class="input">
+            </div> 
+
+            <div class="inputfield">
+                
+                <label>Descripción </label>
+                <input type="text" class="input">
+            </div> 
+
+             <div class="inputfield"> 
+                 
+                <label> Precio Unitario </label>
+                <input type="text" class="input">
+             </div>
+
+            <!--BOTONES-->
+
+            <a href="">
+                <input type="submit" value="Crear nuevo producto" class="btn"  >
+              </a>
+
+              <a href="">
+                <input type="submit" value="Editar producto" class="btn"  >
+              </a>
+
+              <a href=""> 
+                  <input type="submit" value="Guardar cambios" class="btn" >
+              </a>
+
+              <a href=""> 
+                  <input type="submit" value="Eliminar producto" class="btn">
+              </a>
+
+    <%- include('../partials/footer')%>
+</body>
+</html> 

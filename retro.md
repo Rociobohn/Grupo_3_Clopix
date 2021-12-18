@@ -45,3 +45,39 @@ Ignorar menos el grupo de wpp para tener una comunicación más fluída.
 ###DEJAR DE HACER:
 
 Dejar de atrasarse con el material del playground para que haya un equilibrio en el equipo a la hora de realizar los sprints.
+
+
+RETROSPECTIVA STRING 4 
+
+
+###COMENZAR A HACER 
+
+Organizar el tiempo y coordinar horarios 
+
+Que haya un lider en el equipo 
+
+
+###HACER MAS 
+
+Ayudararnos a entender mejor los temas y solucionar problemas en el proyecto 
+
+Mas reuniones 
+
+
+###CONTINUAR HACIENDO
+
+
+Mejorar CSS
+
+Limpiar código 
+
+
+###DEJAR DE HACER
+
+
+Perder el tiempo 
+
+Dejar de atrasarse con el material del playground para que haya un equilibrio en el equipo a la hora de realizar los sprints.
+
+Procastinar
+

@@ -9,6 +9,7 @@ const rutaUser=require('./src/routes/user');
 app.use(express.static('public'));
 app.set('view engine','ejs'); /** establesco que voy a usar ejs */
 app.set('views',__dirname+'/src/views');/** seteo la ruta en la que va buscar los archivos ejs */
+app.use(express.static(__dirname + '/public'));
 
 
 app.listen (process.env.PORT ||3001, ()=>{

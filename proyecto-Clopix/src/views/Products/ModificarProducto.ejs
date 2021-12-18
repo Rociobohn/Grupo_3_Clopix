@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<html > 
-<%- include('../partials/head')  %> 
-<body>
-    <%- include('../partials/header')%>
-    <section class="AltaProducto"></section>
+<html> 
 
-    <div class="wrapper">
-        <div class="title">
-          Edición de producto 
-        </div>
+    <head>
+        <meta name="viewport" content="width-device-width">
 
-        <div class="form">
-           
+        <link rel="stylesheet" href="/css/Styless.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet">
+    
+    </head>
+
+    <body>
+        <%- include('../partials/header')%>
+    
+        <section class="AltaProducto"></section>
+
+            <div class="wrapper">
+            <div class="title">
+                Edición de producto 
+            </div>
+
+            <div class="form">
+    
             <div class="inputfield">
-               
+
                 <label>Nombre del producto</label>
                 <input type="text" class="input">
-            </div> 
+                </div> 
 
             <div class="inputfield">
                 
@@ -24,29 +34,29 @@
                 <input type="text" class="input">
             </div> 
 
-             <div class="inputfield"> 
-                 
+            <div class="inputfield"> 
+            
                 <label> Precio Unitario </label>
                 <input type="text" class="input">
-             </div>
+            </div>
 
             <!--BOTONES-->
 
             <a href="">
                 <input type="submit" value="Crear nuevo producto" class="btn"  >
-              </a>
+            </a>
 
-              <a href="">
+            <a href="">
                 <input type="submit" value="Editar producto" class="btn"  >
-              </a>
+            </a>
 
-              <a href=""> 
-                  <input type="submit" value="Guardar cambios" class="btn" >
-              </a>
+            <a href=""> 
+                <input type="submit" value="Guardar cambios" class="btn" >
+            </a>
 
-              <a href=""> 
-                  <input type="submit" value="Eliminar producto" class="btn">
-              </a>
+            <a href=""> 
+                <input type="submit" value="Eliminar producto" class="btn">
+            </a>
 
     <%- include('../partials/footer')%>
 </body>

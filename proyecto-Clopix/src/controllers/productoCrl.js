@@ -6,7 +6,7 @@ const producto={
         /** lo que va hacer */
     },
     edit:(req, res)=>{
-        res.render('ModificarProducto');
+        res.render('Products/ModificarProducto');
     },
     Catalogo:(req, res)=>{
         res.render('productDetail');

@@ -15,15 +15,12 @@
 
             <% for(let i=0;i<producto.length;i++){ %> 
                 <article>
-                    <section>
+                    <section class="imagenProducto">
                         <a href= <%= "/Producto/"+producto[i].id %>  > <img src = <%= producto[i].image %>  alt="imagen Ejemplo">    </a>    
                     </section>
-                    <section>
-                        <label for="Nombre"><%= producto[i].nombre %> </label>
-                        <br>
-                        <label for="Precio">Precio:<%= producto[i].precio %> </label>
-                        <br>
-                        <button type="submit">Añadir al Carrito </button>
+                    <section class="datos">
+                        <b>   <label for="Nombre" class="Nombre"><%= producto[i].nombre %> </label>   </b>    
+                        <label for="Precio" class="Precio">$<%= producto[i].precio %> </label>
                     </section>
                 </article>
             <% } %> 

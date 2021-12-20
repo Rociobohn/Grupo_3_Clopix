@@ -137,6 +137,7 @@ footer {
     border: 1px solid white;
     align-content: center;
     justify-content: center;
+    align-items: flex-end;
 }
 footer a img{
     width: 8%;

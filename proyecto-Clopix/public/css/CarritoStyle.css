@@ -135,6 +135,8 @@ footer {
     margin-top:35px;
     margin-bottom: 0px;
     border: 1px solid white;
+    align-content: center;
+    justify-content: center;
 }
 footer a img{
     width: 8%;
@@ -144,6 +146,7 @@ footer a img{
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+    align-items: center;
 }
 
 section.infoContacto{

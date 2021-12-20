@@ -1,0 +1,34 @@
+[
+    {"id": 1, 
+        "nombre": "adict0", 
+        "image": "/images/product/p1.png",
+        "descripcion": "estoy testeando", 
+        "talle": "M", 
+        "precio": 100,
+        "unidades":1
+    },
+    {"id": 1, 
+        "nombre": "adict0", 
+        "image": "/images/product/p1.png",
+        "descripcion": "estoy testeando", 
+        "talle": "M", 
+        "precio": 100,
+        "unidades":1
+    },
+    {"id": 1, 
+        "nombre": "adict0", 
+        "image": "/images/product/p1.png",
+        "descripcion": "estoy testeando", 
+        "talle": "M", 
+        "precio": 100,
+        "unidades":2
+    },
+    {"id": 1, 
+        "nombre": "adict0", 
+        "image": "/images/product/p1.png",
+        "descripcion": "estoy testeando", 
+        "talle": "M", 
+        "precio": 100,
+        "unidades":1
+    }
+]

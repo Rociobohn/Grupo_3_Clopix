@@ -18,4 +18,6 @@ app.listen (process.env.PORT ||3001, ()=>{
 app.use('/',rutaPrincipal);
 app.use('/Producto',rutaP);
 app.use('/User',rutaUser);
+app.use(express.urlencoded({ extended: false}));
+app.use(express.json());
 

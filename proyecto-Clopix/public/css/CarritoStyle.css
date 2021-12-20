@@ -1,6 +1,8 @@
 *{
     color: white;
     box-sizing:  border-box;
+    padding: 0px;
+    margin: 0px;
 }
 body{
     width: 100%;
@@ -58,7 +60,7 @@ td.NoProducto{
 td.NoProducto button{
     width: 100%;
     height: 10vw;
-    background-color: none;
+    background:none;
     border: none;
 }
 tr td{
@@ -124,16 +126,20 @@ header nav ul{
     flex-direction: row;
     height: 4vh;
 }
+
+
+footer { 
+    /*height: 10vh;*/
+    /*bottom: 40px;*/
+    height: auto;
+    margin-top:35px;
+    margin-bottom: 0px;
+    border: 1px solid white;
+}
 footer a img{
     width: 8%;
 }
 
-#footer { 
-    position:relative;
-    height: 10vh;
-    /*bottom: 40px;*/
-    margin-bottom: 20px;
-}
 .etiquetasPie{
     display: flex;
     justify-content: space-evenly;
@@ -142,10 +148,6 @@ footer a img{
 
 section.infoContacto{
     align-items: flex-end;
-}
-
-html{
-    height: 100%;
 }
 img.redesSociales{
     align-items: flex-end;

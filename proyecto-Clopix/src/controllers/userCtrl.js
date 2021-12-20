@@ -1,9 +1,9 @@
 const user={
     login:(req, res)=>{
-        res.render('login');
+        res.render('Users/login');
     },
     registro:(req, res)=>{
-        res.render('register');
+        res.render('Users/register');
     },
     edit:(req,res)=>{
         /** lo que va hacer */

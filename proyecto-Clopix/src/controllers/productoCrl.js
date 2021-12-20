@@ -9,10 +9,10 @@ const producto={
         res.render('Products/ModificarProducto');
     },
     Catalogo:(req, res)=>{
-        res.render('productDetail');
+        res.render('Products/productDetail');
     },
     Carrito:(req, res)=>{
-        res.render('CarritoCompras');
+        res.render('Products/CarritoCompras');
     }
     
 }

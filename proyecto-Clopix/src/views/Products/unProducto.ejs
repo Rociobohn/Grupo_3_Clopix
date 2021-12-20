@@ -6,18 +6,18 @@
     
     <article>
         <section>
-            <img src = <%= producto.image %>  alt="imagen Ejemplo"> 
+            <img src = <%= unP.image %>  alt="imagen Ejemplo"> 
         </section>
         <section>
-            <label for="Nombre"><%= producto.nombre %> </label>
+            <label for="Nombre"><%= unP.nombre %> </label>
             <br>
-            <label for="Precio">Precio:<%= producto.precio %> </label>
+            <label for="Precio">Precio:<%= unP.precio %> </label>
             <br>
-            <label for="Descripcion"> <%= producto.descripcion %> </label>
+            <label for="Descripcion"> <%= unP.descripcion %> </label>
             <br>
-            <div> Unidades:  <button><i class="far fa-plus-square"></i></button><label for="unidades"><%= producto.unidades %> </label><button><i class="far fa-minus-square"></i></button> </div>
+            <div> Unidades:  <button><i class="far fa-plus-square"></i></button><label for="unidades"><%= unP.unidades %> </label><button><i class="far fa-minus-square"></i></button> </div>
             <br>
-            <label> Talle: <%= producto.talle %>  </label>
+            <label> Talle: <%= unP.talle %>  </label>
             <br>
             <button type="submit">Añadir al Carrito </button>
             <button type="submit">Volver al Catalogo </button>

@@ -16,7 +16,7 @@
             <% for(let i=0;i<producto.length;i++){ %> 
                 <article>
                     <section>
-                        <a href=<%= "/Producto/"+producto[i].id %>  > <img src = <%= producto[i].image %>  alt="imagen Ejemplo">    </a>    
+                        <a href= <%= "/Producto/"+producto[i].id %>  > <img src = <%= producto[i].image %>  alt="imagen Ejemplo">    </a>    
                     </section>
                     <section>
                         <label for="Nombre"><%= producto[i].nombre %> </label>

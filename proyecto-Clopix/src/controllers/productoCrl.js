@@ -15,12 +15,13 @@ const producto={
     Catalogo:(req, res)=>{
         res.render('Products/productDetail',{producto:vProductos.readFile()});
     },
+    
+    Detalle:(req, res)=>{
+        let ins=req.params.id;
+        res.render('Products/unProducto',{ unP :vProductos.find(ins)});
+    },
     Carrito:(req, res)=>{
         res.render('Products/CarritoCompras',{ DetalleCompra: Detalle.readFile()});
-    },
-    Detalle:(req, res)=>{
-        let id=req.params.id;
-        res.render('Products/unProducto',{ producto: vProductos.find(id)})
     }
     
 }

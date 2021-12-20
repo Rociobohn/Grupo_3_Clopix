@@ -148,19 +148,7 @@ section article section{/*apartado Img y Descripcion*/
     justify-content: center;
     text-align: center;
 }
-section article section div{/*contenedor de C/U*/
-    display: flex;
-    height: 10%;
-    justify-content:center;
-}
 
-
-
-section article section button{/*button de send*/
-    background-color: #99DDCC;
-    width: 100%;
-    height: 10%;
-}
 section.Productos{
     display: flex;
     flex-direction: row;

@@ -26,7 +26,7 @@
                 <% for(let i=0;i<DetalleCompra.length;i++){ %> 
                
                     <tr >
-                        <td class="dproducto">
+                        <td class="imagenProducto">
                              <img src= <%= DetalleCompra[i].image %>  alt="Imagen de Producto" class="img" > 
                         </td>
                         <td class="dproducto"> 
@@ -34,9 +34,9 @@
                         </td>
         
                         <td class="dproducto">
-                            <button type="button">+</button>
+                            <button type="button"> <i class="fas fa-arrow-up"> </i> </button>
                             <label for=""> <%= DetalleCompra[i].unidades %> </label>
-                            <button type="button">-</button>
+                            <button type="button"> <i class="fas fa-arrow-down"></i> </button>
                         </td>
         
                         <td class="dproducto"> 

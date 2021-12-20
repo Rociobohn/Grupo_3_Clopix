@@ -31,14 +31,20 @@ tbody.resultados{
 }
 
 tr td.dproducto{
+    
     height: auto;
     background-color: #99DDCC;
     justify-content: center;
     align-items: center;
+    width: 16%;
+    color: black;
 }
 tr td.producto img{
     justify-content: center;
     align-items: center;
+}
+td.imagenProducto{
+    width: 35%;
 }
 
 button{
@@ -51,7 +57,6 @@ button{
 }
 td button{
     width: 40%;
-    height: 100%;
 }
 td.NoProducto{
     border: none;
@@ -62,9 +67,12 @@ td.NoProducto button{
     height: 10vw;
     background:none;
     border: none;
+    font-size: 50px
+}
+td.dproducto label{
+    font-size: 25px;
 }
 tr td{
-    width: 25%;
     border: 1px solid white;
 }
 
@@ -75,6 +83,7 @@ tr.resultados td.resultados{
     border: 1px solid white;
     background-color: #FF5DA2;
 }
+
 /*ajuste del carrito*/
 img{
     width: 100%;

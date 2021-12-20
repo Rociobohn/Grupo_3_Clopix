@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %> 
+<body>
+    <%- include("../partials/header") %> 
+    
+    <article>
+        <section>
+            <img src = <%= producto.image %>  alt="imagen Ejemplo"> 
+        </section>
+        <section>
+            <label for="Nombre"><%= producto.nombre %> </label>
+            <br>
+            <label for="Precio">Precio:<%= producto.precio %> </label>
+            <br>
+            <label for="Descripcion"> <%= producto.descripcion %> </label>
+            <br>
+            <div> Unidades:  <button><i class="far fa-plus-square"></i></button><label for="unidades"><%= producto.unidades %> </label><button><i class="far fa-minus-square"></i></button> </div>
+            <br>
+            <label> Talle: <%= producto.talle %>  </label>
+            <br>
+            <button type="submit">Añadir al Carrito </button>
+            <button type="submit">Volver al Catalogo </button>
+        </section>
+    </article>
+
+    <%- include("../partials/footer") %> 
+</body>
+</html>

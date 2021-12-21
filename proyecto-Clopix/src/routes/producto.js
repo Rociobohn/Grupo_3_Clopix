@@ -5,7 +5,8 @@ const productoCtrl= require('../controllers/productoCrl');
 const routers= express.Router();
 
 routers.get('/Carrito',productoCtrl.Carrito);
-routers.delete('/Carrito/:id', (req,res)=>{ res.send(req.params.id)});                                                                                                                                                                                                                                                                     
+routers.delete('/Carrito/:id/eliminar', productoCtrl.baja);     
+//routers.post('/Carrito/:id/eliminar', (req,res)=>{ res.send(req.params.id)});                                                                                                                                                                                                                                                              
 
 routers.get('/',productoCtrl.Catalogo); ///listar productos
 routers.get('/Create',productoCtrl.alta); //form de creacion de productos

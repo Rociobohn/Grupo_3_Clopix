@@ -9,8 +9,7 @@ const producto={
     baja:(req, res)=>{
        let ins=req.params.id;
        Detalle.delete(ins);
-      
-       res.redirect('/Productos/Carrito');
+       res.redirect('/Producto/Carrito');
     },
     edit:(req, res)=>{
         res.render('Products/ModificarProducto');

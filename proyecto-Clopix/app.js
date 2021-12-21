@@ -1,6 +1,7 @@
 const express = require('express');
 const { login } = require('./src/controllers/userCtrl');
 const app = express();
+const methodOverride= require("method-override");
 ///cargando rutas
 const rutaPrincipal=require('./src/routes/main');
 const rutaP=require('./src/routes/producto');
@@ -21,3 +22,4 @@ app.use('/User',rutaUser);
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 
+app.use(methodOverride("_method"));

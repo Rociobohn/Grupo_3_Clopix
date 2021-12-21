@@ -1,34 +1,29 @@
 [
-    {"id": 1, 
-        "nombre": "adict0", 
-        "image": "/images/product/p1.png",
-        "descripcion": "estoy testeando", 
-        "talle": "M", 
-        "precio": 100,
-        "unidades":1
-    },
-    {"id": 1, 
-        "nombre": "adict0", 
-        "image": "/images/product/p1.png",
-        "descripcion": "estoy testeando", 
-        "talle": "M", 
-        "precio": 100,
-        "unidades":1
-    },
-    {"id": 1, 
-        "nombre": "adict0", 
-        "image": "/images/product/p1.png",
-        "descripcion": "estoy testeando", 
-        "talle": "M", 
-        "precio": 100,
-        "unidades":2
-    },
-    {"id": 1, 
-        "nombre": "adict0", 
-        "image": "/images/product/p1.png",
-        "descripcion": "estoy testeando", 
-        "talle": "M", 
-        "precio": 100,
-        "unidades":1
-    }
+ {
+  "id": 2,
+  "nombre": "ajuarez1 ",
+  "image": "/images/product/p2.png",
+  "descripcion": "",
+  "talle": "L",
+  "precio": 150,
+  "unidades": 2
+ },
+ {
+  " id ": 3,
+  "nombre": "gmayhew2",
+  "image": "/images/product/p3.png",
+  "descripcion": " ",
+  "talle": "XL",
+  "precio": 60,
+  "unidades": 1
+ },
+ {
+  "id": 4,
+  "nombre": "nharbage3",
+  "image": "/images/product/p4.png",
+  "descripcion": " ",
+  "talle": "XXL",
+  "precio": 260,
+  "unidades": 1
+ }
 ]

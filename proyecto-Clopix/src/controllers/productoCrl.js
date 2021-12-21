@@ -7,7 +7,10 @@ const producto={
         res.render('Products/AltaProducto.ejs');
     },
     baja:(req, res)=>{
-        /** lo que va hacer */
+       let ins=req.params.id;
+       Detalle.delete(ins);
+      
+       res.redirect('/Productos/Carrito');
     },
     edit:(req, res)=>{
         res.render('Products/ModificarProducto');

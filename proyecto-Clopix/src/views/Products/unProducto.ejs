@@ -10,23 +10,29 @@ rel="stylesheet">
     <%- include("../partials/header") %> 
     
     <article>
-        <section>
-            <img src = <%= unP.image %>  alt="imagen Ejemplo"> 
-        </section>
-        <section>
-            <label for="Nombre"><%= unP.nombre %> </label>
-            <br>
-            <label for="Precio">Precio:<%= unP.precio %> </label>
-            <br>
-            <label for="Descripcion"> <%= unP.descripcion %> </label>
-            <br>
-            <div> Unidades:  <button><i class="far fa-plus-square"></i></button><label for="unidades"><%= unP.unidades %> </label><button><i class="far fa-minus-square"></i></button> </div>
-            <br>
-            <label> Talle: <%= unP.talle %>  </label>
-            <br>
-            <button type="submit">Añadir al Carrito </button>
-            <button type="submit">Volver al Catalogo </button>
-        </section>
+        <form action="/Producto/<%= unP.id %>/agregarCarrito" method="post">
+            <section>
+                <img src = <%= unP.image %>  alt="imagen Ejemplo"> 
+            </section>
+            <section>
+                <label for="Nombre"><%= unP.nombre %> </label>
+                <br>
+                <label for="Precio">Precio:<%= unP.precio %> </label>
+                <br>
+                <label for="Descripcion"> <%= unP.descripcion %> </label>
+                <br>
+                <div> Unidades:  <button><i class="far fa-plus-square"></i></button><label for="unidades"><%= unP.unidades %> </label><button><i class="far fa-minus-square"></i></button> </div>
+                <br>
+                <label> Talle: <%= unP.talle %>  </label>
+                <br>
+            </section>
+            <button type="submit" >Añadir al Carrito </button>
+
+            
+        </form>
+        <button  onclick="location.href='/Producto/'" >Volver al Catalogo </button>        
+            
+        
     </article>
 
     <%- include("../partials/footer") %> 

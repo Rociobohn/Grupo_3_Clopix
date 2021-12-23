@@ -2,10 +2,10 @@
  {
   "id": 1,
   "nombre": "adict0",
+  "descripcion": "",
   "image": "/images/product/p1.png",
-  "descripcion": "estoy testeando",
+  "precio": 200,
   "talle": "M",
-  "precio": 100,
   "unidades": 100
  },
  {
@@ -28,15 +28,6 @@
  },
  {
   "id": 4,
-  "nombre": "nharbage3",
-  "image": "/images/product/p4.png",
-  "descripcion": " ",
-  "talle": "XXL",
-  "precio": 260,
-  "unidades": 100
- },
- {
-  "id": 5,
   "nombre": "fspencelayh4",
   "image": "/images/product/p5.png",
   "descripcion": " ",
@@ -45,7 +36,7 @@
   "unidades": 100
  },
  {
-  "id": 6,
+  "id": 5,
   "nombre": "ahaeslier5",
   "image": "/images/product/p6.png",
   "descripcion": "",
@@ -54,21 +45,12 @@
   "unidades": 100
  },
  {
-  "id": 7,
+  "id": 6,
   "nombre": "bcaselli6",
   "image": "/images/product/p7.png",
   "descripcion": " ",
   "talle": "M",
   "precio": 890,
   "unidades": 100
- },
- {
-  "id": 8,
-  "nombre": "LiSA",
-  "image": "/images/product/1640219810200_img_.jpg",
-  "descripcion": "the best",
-  "talle": "L",
-  "precio": "600000",
-  "unidades": "2"
  }
 ]

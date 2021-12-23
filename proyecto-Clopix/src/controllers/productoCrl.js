@@ -1,4 +1,4 @@
-const req = require('express/lib/request');
+
 const gArchivoJson=require('../model/jsonDataBase');
 let vProductos=gArchivoJson('product');
 let Detalle=gArchivoJson('listaComprasTest');
@@ -17,8 +17,27 @@ const producto={
         res.redirect('/Producto');
     },
     edit:(req, res)=>{
-        res.render('Products/ModificarProducto');
+        let id=req.params.id;
+        res.render('Products/ModificarProducto',{producto:vProductos.find(id)});
     },
+    editar:(req,res)=>{
+        let id=req.params.id;
+        let actual=vProductos.find(id);
+        
+        if(req.body.newNombre!=""){
+            actual.nombre=req.body.newNombre;
+        }
+        if(req.body.newDescripcion!="")
+        {
+            actual.descripcion=req.body.newDescripcion;
+        }
+        if(req.body.newPrecio!=""){
+            actual.precio=req.body.newPrecio;
+        }
+        vProductos.update(actual);
+        res.redirect("/Producto/"+id+"/edit");
+    }
+    ,
     Catalogo:(req, res)=>{
         res.render('Products/productDetail',{producto:vProductos.readFile()});
     },

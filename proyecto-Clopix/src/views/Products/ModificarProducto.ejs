@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="/css/Styless.css">
+        <link rel="stylesheet" href="/css/styless.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     rel="stylesheet">
     
@@ -12,9 +12,8 @@
 
     <body>
         <%- include('../partials/header')%>
-    
-        <section class="AltaProducto"></section>
 
+        <form action="/Producto/<%= producto.id%>?_method=put" method="post">
             <div class="wrapper">
                 <div class="title">
                     PRODUCTO PERSONALIZADO
@@ -24,39 +23,34 @@
         
                     <div class="inputfield">
 
-                        <label>Nombre del producto</label>
-                        <label >Actual: <%= producto.nombre%> </label>
+                        <label> <b>Nombre del producto Actual: </b>   <%= producto.nombre%> </label>
                         <input type="text" class="input" name="newNombre">
-                        </div> 
+                    </div> 
 
                     <div class="inputfield">
                         
-                        <label>Descripción </label>
-                        <label >Actual: <%= producto.descripcion %> </label>
+                        <label> <b>Descripción Actual:  </b>  <%= producto.descripcion %></label>
+                        
                         <input type="text" class="input" name="newDescripcion">
                     </div> 
 
                     <div class="inputfield"> 
                     
-                        <label> Precio </label>
-                        <label >Actual: <%= producto.precio %> </label>
+                        <label> <b> Precio Actual: $</b>  <%= producto.precio %> </label>
                         <input type="text" class="input" name="newPrecio">
                     </div>
                 </div>
             </div>
-               </article>
             <!--BOTONES-->
 
-        <div class="inputfield">
-
-            <a href=""> 
-                <input type="submit" value="Guardar cambios" class="btn" >
-            </a>
-
-            <a href=""> 
-                <input type="submit" value="Eliminar producto" class="btn">
-            </a>
-        </div>
+            <div class="inputfield">
+                <button type="submit"> Guardar Cambios</button>
+            </div>
+        </form>
+        <form action="/Producto/<%= producto.id%>?_method=delete" method="post">
+            <button type="submit"> Eliminar!!!!!</button>
+        </form>
+           
 
     <%- include('../partials/footer')%>
 </body>

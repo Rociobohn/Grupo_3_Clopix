@@ -1,6 +1,4 @@
 const express = require('express');
-const req = require('express/lib/request');
-const res = require('express/lib/response');
 const path=require('path');
 
 const multer=require('multer');
@@ -24,7 +22,7 @@ routers.get('/Create',productoCtrl.alta); //form de creacion de productos
 routers.get('/:id',productoCtrl.Detalle); ///detalle de un producto en particular
 routers.post('/',upload.single('imagenProducto'),productoCtrl.CrearProducto);  ///accion de creacion (donde se envia los formularios)
 routers.get('/:id/edit',productoCtrl.edit); /// form de edicion de productos
-routers.put('/:id'); ///accion de edicion(donde se envia el formulario)
+routers.put('/:id',productoCtrl.editar); ///accion de edicion(donde se envia el formulario)
 routers.delete('/:id',productoCtrl.baja); ///accion de borrado
 
 

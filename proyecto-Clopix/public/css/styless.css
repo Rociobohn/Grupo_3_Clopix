@@ -761,7 +761,8 @@ body#bodyRegister{
 /*alta Producto*/
 #AltaProducto form{
   display: flex;
-  background-color: black;
+  background: rgb(255,221,236);
+  background: radial-gradient(circle, rgba(255,221,236,1) 0%, rgba(143,34,149,1) 100%);
   border: 1px solid white;
   flex-direction: column;
   align-items: center;
@@ -778,21 +779,51 @@ body#bodyRegister{
   height: 100vh;
   justify-items: center;
   align-content: flex-end;
-  background-color: black;
   margin: 20px;
   padding: 10px;
+  color: white;
+  text-shadow: #555 2px 2px 3px;
+  background: rgb(255,221,236);
+  background: radial-gradient(circle, rgba(255,221,236,1) 0%, rgba(143,34,149,1) 100%);
 }
-#AltaProducto input{
+
+#AltaProducto input {
   color: black;
+  
+
+}
+
+#AltaProducto input.imagenProducto{
+  color: white;
+  background-color: lightblue;
+  margin-top:20px;
+	border:1px solid transparent;
+  padding: 5px;
+  font-size: 16px;
+
 }
 #AltaProducto button{
-  color: black;
+  color: white;
+  background-color: lightblue;
+  margin-top:20px;
+	border:1px solid transparent;
+  padding: 5px;
+  font-size: 16px;
+  
 }
+
+
 #AltaProducto select{
-  color: black;
+  color: white;
+  background-color: lightblue;
+  margin-top:0px;
+	border:1px solid transparent;
+  padding: 5px;
+  font-size: 16px;
 }
 #AltaProducto option{
   color: black;
+  
 }
 /*fin alta Producto*/
 
@@ -853,3 +884,4 @@ footer {
   }
 
 }
+

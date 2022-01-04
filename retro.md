@@ -47,7 +47,7 @@ Ignorar menos el grupo de wpp para tener una comunicación más fluída.
 Dejar de atrasarse con el material del playground para que haya un equilibrio en el equipo a la hora de realizar los sprints.
 
 
-RETROSPECTIVA STRING 4 
+----- RETROSPECTIVA STRING 4 -----
 
 
 ###COMENZAR A HACER 
@@ -80,4 +80,37 @@ Perder el tiempo 
 Dejar de atrasarse con el material del playground para que haya un equilibrio en el equipo a la hora de realizar los sprints.
 
 Procastinar
+
+----- RETROSPECTIVA SPRINT 5 ----- 
+
+###COMENZAR A HACER
+
+
+Mejor organización del tiempo para la solución de las tareas.
+
+
+###HACER MÁS
+
+
+Ayudararnos a entender mejor los temas para solucionar problemas del proyecto 
+
+Más reuniones 
+
+###CONTINUAR HACIENDO
+
+
+Utilizar el Trello 
+
+División de tareas
+
+Organizar el tiempo y coordinar horarios 
+
+###HACERMENOS 
+
+
+
+###DEJAR DE HACER
+
+Dejar de atrasarse con el material del playground
+
 

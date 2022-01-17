@@ -10,7 +10,7 @@
             </div>
             
 
-            <form action="/User/Alta" method="post" class="form">
+            <form action="/User/Alta" method="post" enctype="multipart/form-data" class="form">
               <div class="inputfield">
                 <label>Nombre completo</label>
                 <input type="text" class="input" name="nombreCompleto">
@@ -38,8 +38,12 @@
                   <input type="password" class="input" >
               </div> 
 
+            <!--imagen de perfil-->
 
-              
+            <input type="file" class="image-profile" name="avatar">            
+
+            <!--terms-->
+
               <div class="inputfield terms">
                   <label class="check">
                     <input type="checkbox">
@@ -58,6 +62,8 @@
             <div class="container-signin">
               <p>¿Ya tienes una cuenta?<a href="#">Iniciar sesión</a>.</p>
             </div>
+
+
               
           </form>
         </div>	

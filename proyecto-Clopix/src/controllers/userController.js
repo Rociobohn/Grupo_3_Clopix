@@ -9,17 +9,24 @@ const user={
         res.render('Users/register');
     },
     edit:(req,res)=>{
-        /** lo que va hacer */
+        /** lo que va a hacer */
     },
     crear:(req,res)=>{
+        console.log(req.file);
         let nuevo={
             id:1,
+            avatar:"/images/avatar/"+req.file.getfilename,
             nombreCompleto:req.body.nombreCompleto,
             mail:req.body.mail,
             usuario:req.body.usuario,
             pasword:req.body.pasword,
             celular:req.body.celular
+            
+            
         }
+
+        
+
         usuarios.create(nuevo);
         res.redirect("/");
     },

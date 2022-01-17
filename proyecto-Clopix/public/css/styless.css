@@ -770,6 +770,7 @@ body#bodyRegister{
   margin: 0px;
   padding: 5px;
   font-size:x-large;
+  
  
 }
 
@@ -790,7 +791,6 @@ body#bodyRegister{
 #AltaProducto input {
   color: black;
   
-
 }
 
 #AltaProducto input.imagenProducto{

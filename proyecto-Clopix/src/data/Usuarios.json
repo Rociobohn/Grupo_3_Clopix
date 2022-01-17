@@ -14,5 +14,29 @@
   "usuario": "mimoariel",
   "pasword": "123",
   "celular": "01167286912"
+ },
+ {
+  "id": 3,
+  "nombreCompleto": "",
+  "mail": "",
+  "usuario": "",
+  "pasword": "",
+  "celular": ""
+ },
+ {
+  "id": 4,
+  "nombreCompleto": "asad",
+  "mail": "rocioquinterosbohn@gmail.com",
+  "usuario": "Calva",
+  "pasword": "<!--imagen de perfil-->",
+  "celular": "1213200"
+ },
+ {
+  "id": 5,
+  "nombreCompleto": "asad",
+  "mail": "rocioquinterosbohn@gmail.com",
+  "usuario": "ro",
+  "pasword": "const path=require('path');",
+  "celular": "55120513."
  }
 ]

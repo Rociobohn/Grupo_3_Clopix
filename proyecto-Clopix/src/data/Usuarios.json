@@ -38,5 +38,32 @@
   "usuario": "ro",
   "pasword": "const path=require('path');",
   "celular": "55120513."
+ },
+ {
+  "id": 6,
+  "avatar": "/images/avatar/undefined",
+  "nombreCompleto": "asad",
+  "mail": "rocioquinterosbohn@gmail.com",
+  "usuario": "Calva",
+  "pasword": "unicenter",
+  "celular": "55120513"
+ },
+ {
+  "id": 7,
+  "avatar": "/images/avatar/undefined",
+  "nombreCompleto": "asad",
+  "mail": "rocioquinterosbohn@gmail.com",
+  "usuario": "Calva",
+  "pasword": "unicenter",
+  "celular": "1213200"
+ },
+ {
+  "id": 8,
+  "avatar": "/images/avatar/undefined",
+  "nombreCompleto": "541564",
+  "mail": "5464",
+  "usuario": "Calva",
+  "pasword": "123456=",
+  "celular": "adasd"
  }
 ]

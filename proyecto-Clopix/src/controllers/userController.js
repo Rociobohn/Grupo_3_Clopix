@@ -1,6 +1,8 @@
 const req = require('express/lib/request');
 const archivosJson=require('../model/controlDatos');
 let usuarios=archivosJson('Usuarios');
+const { body, validationResult } = require('express-validator');
+
 const user={
     login:(req, res)=>{
         res.render('Users/login');
@@ -9,10 +11,13 @@ const user={
         res.render('Users/register');
     },
     edit:(req,res)=>{
-        /** lo que va a hacer */
+        /*lo que va a hacer*/
     },
     crear:(req,res)=>{
-        console.log(req.file);
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+          return res.status(400).json({ errors: errors.array() });
+        }
         let nuevo={
             id:1,
             avatar:"/images/avatar/"+req.file.getfilename,
@@ -24,8 +29,8 @@ const user={
             
             
         }
-
         
+
 
         usuarios.create(nuevo);
         res.redirect("/");
@@ -35,4 +40,5 @@ const user={
     }
     
 }
+
 module.exports=user;

@@ -36,6 +36,9 @@ const user={
     },
     logear:(req,res)=>{
         res.send("Logeado con exito!!!!!!");
+    }, 
+    perfil:(req,res) => { 
+        res.render('Users/perfil');
     }
     
 }

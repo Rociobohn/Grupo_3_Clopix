@@ -41,6 +41,7 @@ userRoute.delete('/:id/Baja');
 userRoute.put('/:id/editar');
 userRoute.get('/register',userController.registro);
 
+userRoute.get('/perfil',userController.perfil);
 
 
 

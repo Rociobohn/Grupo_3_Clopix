@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width">
+
+        <link rel="stylesheet" href="/css/perfil.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet">
+    </head>
+
+<%- include('../partials/header')%>
+
+<div class="wrapper">
+    <div class="title">
+        EDITAR MI PERFIL 
+    </div> 
+
+        <form action="/perfil" method="GET" enctype="multipart/form-data"> </form>
+
+        <tr>
+            <td class="camposcompletar">     
+            </td>
+        </tr>
+        
+            <label for="">Nombre</label>
+            <input type="text" name="nombre">
+            <label for="">Nombre de usuario</label>
+            <input type="text" name="nombre de usuario">
+
+            <label for="">Cambiar foto del perfil</label>
+            <input type="file" name="imagenPerfil">
+
+            <button type="submit">Cambiar contraseña</button>
+
+        </form>
+
+<%- include('../partials/footer')%>    
+
+    </body>
+
+</html>

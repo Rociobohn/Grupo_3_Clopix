@@ -56,4 +56,5 @@ userRoute.get('/register',userController.registro);
 
 
 
+
 module.exports=userRoute;

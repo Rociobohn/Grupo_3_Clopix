@@ -1,10 +1,25 @@
 const express = require('express');
 const path=require('path');
 const multer  = require('multer');
-const { body, validationResult } = require('express-validator');
+const { body } = require('express-validator');
 const userController= require('../controllers/userController');
-const { Console } = require('console');
+const req = require('express/lib/request');
+
+let validationUser=[
+   body('nombreCompleto').notEmpty().isLength({min:3}).withMessage("El nombre indicado no es valido").bail(),
+   body('mail').notEmpty().isEmail().withMessage("el mail indicado no es valido").bail(),
+   body('usuario').notEmpty().isLength({min:3}).withMessage("el usuario no es valido").bail(),
+   body('celular').notEmpty().isNumeric().isLength({min:8 ,max:8}).withMessage("numero no valido").bail(),
+   body('pasword').notEmpty().isLength({min:8}).withMessage("password invalido").equals(body('passwordConfirm')).bail(),
+   body('pasword').notEmpty().isLength({min:8}).equals(body('pasword')).withMessage("las contraseñas no coinciden").bail(),
+   body('terminosyCondiciones').notEmpty().withMessage("Campo Obligatorio").bail()
+]
+
+  
+
+
 const userRoute= express.Router();
+
 
 const storage = multer.diskStorage({ 
     destination: function (req, file, cb) { 
@@ -21,32 +36,9 @@ console.log(storage)
 
 userRoute.get('/login',userController.login);
 userRoute.get('/editUser',userController.edit);
-userRoute.post('/Alta', body("username")
-.isLength({ min: 4 })
-.withMessage("el nombre de usuario debe tener al menos 4 caracteres de largo")
-.isLength({ max: 12 })
-.withMessage("el nombre de usuario debe tener menos de 12 caracteres")
-.exists()
-.withMessage("Se requiere nombre de usuario")
-.trim()
-.matches(/^[A-Za-z0-9\_]+$/)
-.withMessage("el nombre de usuario debe ser solo alfanumérico")
-.escape(),
-body("email")
-.isEmail()
-.normalizeEmail()
-.withMessage("Invalid Email")
-.exists(),
-body("password")
-.isLength({ min: 5 })
-.withMessage("la contraseña debe tener al menos 5 caracteres")
-.isLength({ max: 30 })
-.withMessage("la contraseña debe tener un máximo de 30 caracteres")
-.matches(/\d/)
-.withMessage("la contraseña debe contener un número")
-.exists(), upload.single('avatar'), userController.crear)
-userRoute.delete('/:id/Baja')
-userRoute.put('/:id/editar')
+userRoute.post('/Alta', validationUser, upload.single('avatar'), userController.crear);
+userRoute.delete('/:id/Baja');
+userRoute.put('/:id/editar');
 userRoute.get('/register',userController.registro);
 
 

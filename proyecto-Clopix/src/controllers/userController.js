@@ -1,8 +1,8 @@
 const req = require('express/lib/request');
 const archivosJson=require('../model/controlDatos');
 let usuarios=archivosJson('Usuarios');
-const { body, validationResult } = require('express-validator');
-
+const { validationResult } = require('express-validator');
+const bcrypt=require('bcrypt');
 const user={
     login:(req, res)=>{
         res.render('Users/login');
@@ -16,7 +16,7 @@ const user={
     crear:(req,res)=>{
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-          return res.status(400).json({ errors: errors.array() });
+          res.render('Users/register',{errors:errors.mapped(), old: req.body});
         }
         let nuevo={
             id:1,
@@ -24,9 +24,12 @@ const user={
             nombreCompleto:req.body.nombreCompleto,
             mail:req.body.mail,
             usuario:req.body.usuario,
+<<<<<<< HEAD
             password:req.body.password,
+=======
+            pasword:bcrypt.hashSync(req.body.pasword,3),
+>>>>>>> 001da1b80dc5251d627e0a31364a75652199609c
             celular:req.body.celular
-            
             
         }
         
@@ -37,6 +40,9 @@ const user={
     },
     logear:(req,res)=>{
         res.send("Logeado con exito!!!!!!");
+    }, 
+    perfil:(req,res) => { 
+        res.render('Users/perfil');
     }
     
 }

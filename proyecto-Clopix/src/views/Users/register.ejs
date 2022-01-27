@@ -14,7 +14,10 @@
               <div class="inputfield">
                 <label>Nombre completo</label>
                 <input type="text" class="input" name="nombreCompleto">
-              </div>  
+              </div>
+              <% if(typeof errors != undefined ){ %>
+                <p class="feedback"><%= errors.nombreCompleto %> </p>
+                <% } %>  
               
               <div class="inputfield">
                 <label>E-mail</label>
@@ -35,7 +38,7 @@
               </div>  
               <div class="inputfield">
                   <label>Confirmar contraseña</label>
-                  <input type="password" class="input" >
+                  <input type="password" class="input" name="passwordConfirm">
               </div> 
 
             <!--imagen de perfil-->
@@ -46,11 +49,12 @@
 
               <div class="inputfield terms">
                   <label class="check">
-                    <input type="checkbox">
+                    <input type="checkbox" name="terminosyCondiciones">
                     <span class="checkmark"></span>
                   </label>
                   <p>Acepto términos y condiciones</p>
-               </div> 
+               </div>
+              
               <div class="inputfield">
                 
                 <button type="submit"> Crear Cuenta </button>

@@ -3,7 +3,6 @@ const path=require('path');
 const multer  = require('multer');
 const { body, validationResult } = require('express-validator');
 const userController= require('../controllers/userController');
-const { Console } = require('console');
 const userRoute= express.Router();
 
 const storage = multer.diskStorage({ 

@@ -24,7 +24,7 @@ const user={
             nombreCompleto:req.body.nombreCompleto,
             mail:req.body.mail,
             usuario:req.body.usuario,
-            pasword:req.body.pasword,
+            password:req.body.password,
             celular:req.body.celular
             
             

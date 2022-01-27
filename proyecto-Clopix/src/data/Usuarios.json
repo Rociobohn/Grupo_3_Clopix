@@ -65,5 +65,23 @@
   "usuario": "Calva",
   "pasword": "123456=",
   "celular": "adasd"
+ },
+ {
+  "id": 9,
+  "avatar": "/images/avatar/undefined",
+  "nombreCompleto": "",
+  "mail": "xaxwtf@gmail.com",
+  "usuario": "Sariel1997",
+  "pasword": "123456789",
+  "celular": "01167286912"
+ },
+ {
+  "id": 10,
+  "avatar": "/images/avatar/undefined",
+  "nombreCompleto": "antonio",
+  "mail": "xaxwtf@gmail.com",
+  "usuario": "Sariel1997",
+  "pasword": "123456789",
+  "celular": "01167286912"
  }
 ]

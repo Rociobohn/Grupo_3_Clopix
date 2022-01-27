@@ -145,5 +145,14 @@ input {
 }
 section.infoContacto {
     align-items: flex-end;
-}
+}*/
 
+.imagen-perfil {
+        border: 2px solid;
+        margin: 10px;
+        border-radius: 50%;
+        border-color: turquoise;
+        max-width: 10%;
+        padding: 50px;
+        background-image: url('imagendeperfil.png');
+}

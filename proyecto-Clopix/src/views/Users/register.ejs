@@ -15,7 +15,7 @@
                 <label>Nombre completo</label>
                 <input type="text" class="input" name="nombreCompleto">
               </div>
-              <% if(locals.errors && errors.nombreCompleto){ %>
+              <% if(typeof errors != undefined ){ %>
                 <p class="feedback"><%= errors.nombreCompleto %> </p>
                 <% } %>  
               

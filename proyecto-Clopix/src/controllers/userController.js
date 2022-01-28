@@ -48,7 +48,6 @@ const user={
             }
             usuarios.create(nuevo);
             res.redirect("/");
-            
         }
         res.redirect("/User/register");
         

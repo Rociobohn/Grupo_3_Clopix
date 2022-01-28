@@ -6,15 +6,8 @@ const rutaPrincipal=require('./src/routes/main');
 const rutaP=require('./src/routes/producto');
 const rutaUser=require('./src/routes/user');
 
-/*ERROR 404*/ 
 
-app.use((req,res,next)=>{
-    res.status(404).render("User/notFound")
-});
-
-/*ERROR 404*/ 
-
-app.set('view engine','ejs'); /** establesco que voy a usar ejs */
+app.set('view engine','ejs'); /** establezco que voy a usar ejs */
 app.set('views',__dirname+'/src/views');/** seteo la ruta en la que va buscar los archivos ejs */
 
 app.use(express.static('public'));
@@ -34,3 +27,13 @@ app.listen (process.env.PORT ||3001, ()=>{
     console.log('Servidor funcionando bien');
 });
 
+
+app.use(function(req, res, next) {
+    res.status(404);
+  
+    // respond with html page
+    if (req.accepts('html')) {
+      res.render('404', { url: req.url });
+      return;
+    }
+});

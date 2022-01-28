@@ -6,7 +6,13 @@ const rutaPrincipal=require('./src/routes/main');
 const rutaP=require('./src/routes/producto');
 const rutaUser=require('./src/routes/user');
 
+/*ERROR 404*/ 
 
+app.use((req,res,next)=>{
+    res.status(404).render("User/notFound")
+});
+
+/*ERROR 404*/ 
 
 app.set('view engine','ejs'); /** establesco que voy a usar ejs */
 app.set('views',__dirname+'/src/views');/** seteo la ruta en la que va buscar los archivos ejs */

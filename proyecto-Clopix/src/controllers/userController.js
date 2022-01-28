@@ -2,7 +2,7 @@ const req = require('express/lib/request');
 const archivosJson=require('../model/controlDatos');
 let usuarios=archivosJson('Usuarios');
 const { validationResult } = require('express-validator');
-const bcrypt=require('bcrypt');
+
 const user={
     login:(req, res)=>{
         res.render('Users/login');
@@ -24,12 +24,8 @@ const user={
             nombreCompleto:req.body.nombreCompleto,
             mail:req.body.mail,
             usuario:req.body.usuario,
-<<<<<<< HEAD
-            password:req.body.password,
-=======
-            pasword:bcrypt.hashSync(req.body.pasword,3),
->>>>>>> 001da1b80dc5251d627e0a31364a75652199609c
-            celular:req.body.celular
+            pasword:req.body.password,
+            celular:req.body.celularnp
             
         }
         

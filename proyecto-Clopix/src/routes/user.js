@@ -3,9 +3,7 @@ const path=require('path');
 const multer  = require('multer');
 const { body } = require('express-validator');
 const userController= require('../controllers/userController');
-<<<<<<< HEAD
-=======
-const req = require('express/lib/request');
+
 
 let validationUser=[
    body('nombreCompleto').notEmpty().isLength({min:3}).withMessage("El nombre indicado no es valido").bail(),
@@ -17,10 +15,6 @@ let validationUser=[
    body('terminosyCondiciones').notEmpty().withMessage("Campo Obligatorio").bail()
 ]
 
-  
-
-
->>>>>>> 001da1b80dc5251d627e0a31364a75652199609c
 const userRoute= express.Router();
 
 

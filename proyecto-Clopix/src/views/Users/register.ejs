@@ -13,30 +13,33 @@
             <form action="/User/Alta" method="post" enctype="multipart/form-data" class="form">
               <div class="inputfield">
                 <label>Nombre completo</label>
-                <input type="text" class="input" name="nombreCompleto">
+                <input type="text" class="input" name="nombreCompleto" required>
+                <% if( locals && locals.messajeErros && locals.messajeErros.nombreCompleto){ %>
+                  <p class="feedback"><%= messajeErros['nombreCompleto'].msg %> </p>
+                <% } %>  
               </div>
               
               
               <div class="inputfield">
                 <label>E-mail</label>
-                <input type="text" class="input" name="mail">
+                <input type="text" class="input" name= "mail" required>
               </div>  
               <div class="inputfield">
                 <label>Celular</label>
-                <input type="text" class="input" name="celular">
+                <input type="number" class="input" name="celular" required >
               </div>  
          <!--Datos de ingreso-->      
               <div class="inputfield">
                 <label>Nombre de usuario</label>
-                <input type="text" class="input" name="usuario">
+                <input type="text" class="input" name="usuario" required>
               </div>  
               <div class="inputfield">
                 <label>Contraseña</label>
-                <input type="password" class="input" name="pasword">
+                <input type="password" class="input" name="pasword" required>
               </div>  
               <div class="inputfield">
                   <label>Confirmar contraseña</label>
-                  <input type="password" class="input" name="passwordConfirm">
+                  <input type="password" class="input" name="passwordConfirm" required>
               </div> 
 
             <!--imagen de perfil-->
@@ -45,9 +48,9 @@
 
             <!--terms-->
 
-              <div class="inputfield terms">
+              <div class="inputfield terms" >
                   <label class="check">
-                    <input type="checkbox" name="terminosyCondiciones">
+                    <input type="checkbox" name="terminosyCondiciones" required>
                     <span class="checkmark"></span>
                   </label>
                   <p>Acepto términos y condiciones</p>

@@ -1,6 +1,7 @@
 const req = require('express/lib/request');
 const archivosJson=require('../model/controlDatos');
 let usuarios=archivosJson('Usuarios');
+const bycript=require('bcryptjs');
 const { validationResult } = require('express-validator');
 
 const user={
@@ -15,24 +16,40 @@ const user={
     },
     crear:(req,res)=>{
         const errors = validationResult(req);
+        let todoOk=true;
         if (!errors.isEmpty()) {
-          res.render('Users/register',{errors:errors.mapped(), old: req.body});
+          res.render('Users/register',{menssajeErros: errors.mapped(),old:req.body});
+          todoOk=false;
         }
-        let nuevo={
-            id:1,
-            avatar:"/images/avatar/"+req.file.getfilename,
-            nombreCompleto:req.body.nombreCompleto,
-            mail:req.body.mail,
-            usuario:req.body.usuario,
-            pasword:req.body.password,
-            celular:req.body.celularnp
-            
+        if(todoOk && !bycript.compareSync(req.body.pasword, bycript.hashSync(req.body.passwordConfirm))){
+            console.log("las contraseñas no coinciden");
+            todoOk=false;
         }
+        if(todoOk && usuarios.findByAll('usuario',req.body.user)!=undefined){
+            console.log("el  usuario ya esta en uso");
+            todoOk=false;
+        }
+        if(todoOk && usuarios.findByAll('mail',req.body.mail)!=undefined){
+            console.log("el mail ya esta en uso");
+            todoOk=false;
+        }
+        if(todoOk){
+            let passEncrip=bycript.hashSync(req.body.pasword,3);
+            let nuevo={
+                id:1,
+                avatar:"/images/avatar/"+req.file.getfilename,
+                nombreCompleto:req.body.nombreCompleto,
+                mail:req.body.mail,
+                usuario:req.body.usuario,
+                pasword:passEncrip,
+                celular:req.body.celular
+
+            }
+            usuarios.create(nuevo);
+            res.redirect("/");
+        }
+        res.redirect("/User/register");
         
-
-
-        usuarios.create(nuevo);
-        res.redirect("/");
     },
     logear:(req,res)=>{
         res.send("Logeado con exito!!!!!!");

@@ -8,8 +8,8 @@ const req = require('express/lib/request');
 let validationUser=[
    body('nombreCompleto').notEmpty().isLength({min:3}).withMessage("El nombre indicado no es valido").bail(),
    body('mail').notEmpty().isEmail().withMessage("el mail indicado no es valido").bail(),
-   body('usuario').notEmpty().isLength({min:3}).withMessage("el usuario no es valido").bail(),
-   body('celular').notEmpty().isNumeric().isLength({min:8 ,max:8}).withMessage("numero no valido").bail(),
+   body('usuario').isLength({min:3}).withMessage("el usuario no es valido").bail(),
+   body('celular').isLength({min:8 ,max:8}).withMessage("numero no valido").bail(),
    body('pasword').notEmpty().isLength({min:8}).withMessage("password invalido").equals(body('passwordConfirm')).bail(),
    body('pasword').notEmpty().isLength({min:8}).equals(body('pasword')).withMessage("las contraseñas no coinciden").bail(),
    body('terminosyCondiciones').notEmpty().withMessage("Campo Obligatorio").bail()

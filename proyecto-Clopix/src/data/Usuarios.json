@@ -1,87 +1,11 @@
 [
  {
   "id": 1,
+  "avatar": "/images/avatar/undefined",
   "nombreCompleto": "ariel",
   "mail": "xaxwtf@gmail.com",
   "usuario": "Sariel1997",
-  "pasword": "cat",
-  "celular": "01167286912"
- },
- {
-  "id": 2,
-  "nombreCompleto": "ariel",
-  "mail": "churqui98@gmail.com",
-  "usuario": "mimoariel",
-  "pasword": "123",
-  "celular": "01167286912"
- },
- {
-  "id": 3,
-  "nombreCompleto": "",
-  "mail": "",
-  "usuario": "",
-  "pasword": "",
-  "celular": ""
- },
- {
-  "id": 4,
-  "nombreCompleto": "asad",
-  "mail": "rocioquinterosbohn@gmail.com",
-  "usuario": "Calva",
-  "pasword": "<!--imagen de perfil-->",
-  "celular": "1213200"
- },
- {
-  "id": 5,
-  "nombreCompleto": "asad",
-  "mail": "rocioquinterosbohn@gmail.com",
-  "usuario": "ro",
-  "pasword": "const path=require('path');",
-  "celular": "55120513."
- },
- {
-  "id": 6,
-  "avatar": "/images/avatar/undefined",
-  "nombreCompleto": "asad",
-  "mail": "rocioquinterosbohn@gmail.com",
-  "usuario": "Calva",
-  "pasword": "unicenter",
-  "celular": "55120513"
- },
- {
-  "id": 7,
-  "avatar": "/images/avatar/undefined",
-  "nombreCompleto": "asad",
-  "mail": "rocioquinterosbohn@gmail.com",
-  "usuario": "Calva",
-  "pasword": "unicenter",
-  "celular": "1213200"
- },
- {
-  "id": 8,
-  "avatar": "/images/avatar/undefined",
-  "nombreCompleto": "541564",
-  "mail": "5464",
-  "usuario": "Calva",
-  "pasword": "123456=",
-  "celular": "adasd"
- },
- {
-  "id": 9,
-  "avatar": "/images/avatar/undefined",
-  "nombreCompleto": "",
-  "mail": "xaxwtf@gmail.com",
-  "usuario": "Sariel1997",
-  "pasword": "123456789",
-  "celular": "01167286912"
- },
- {
-  "id": 10,
-  "avatar": "/images/avatar/undefined",
-  "nombreCompleto": "antonio",
-  "mail": "xaxwtf@gmail.com",
-  "usuario": "Sariel1997",
-  "pasword": "123456789",
+  "pasword": "$2a$04$wdaSzpK6dziLHh4MAM4wGua6e0ixtb7q6bc3JnM8QQL/xI1o6KApq",
   "celular": "01167286912"
  }
 ]

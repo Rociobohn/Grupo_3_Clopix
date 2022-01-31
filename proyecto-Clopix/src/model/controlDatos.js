@@ -108,10 +108,6 @@ const modelController = function (name) {
             console.log(" --- por el findByAll");
             return rows.find(i => i[parametro] == valorRequerido);
         }
-       
-
-
-
     }
 }
 

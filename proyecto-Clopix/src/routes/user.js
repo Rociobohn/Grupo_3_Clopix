@@ -3,6 +3,7 @@ const path=require('path');
 const multer  = require('multer');
 const { body } = require('express-validator');
 const userController= require('../controllers/userController');
+const userisLoged=require('../myMiddlewares/gestTest');
 
 let validationUser=[
    body('nombreCompleto').notEmpty().isLength({min:3}).withMessage("el nombre debe tener al menos 3 caracteres"),
@@ -38,7 +39,7 @@ userRoute.delete('/:id/Baja');
 userRoute.put('/:id/editar');
 userRoute.get('/register',userController.registro);
 
-userRoute.get('/:user/perfil',userController.perfil);
+userRoute.get('/:user/perfil',userisLoged,userController.perfil);
 
 
 

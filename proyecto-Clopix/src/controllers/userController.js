@@ -53,9 +53,8 @@ const user={
         let us=usuarios.findByAll("user",req.body.user);
         console.log(us);
         if(us!=undefined && bycript.compareSync(req.body.password,us.pasword)){
-            req.session.usuarioLogeado=req.body.user;
-            req.session.paswordSave=req.body.password;
-            return res.redirect("/user/"+us.user+"/perfil");
+            req.session.userLogged=us; 
+            return res.redirect("/user/"+us.user+"/profile");
         }
         else{
              res.redirect("/user/login");

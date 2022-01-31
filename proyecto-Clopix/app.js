@@ -5,6 +5,7 @@ const methodOverride= require("method-override");
 const rutaPrincipal=require('./src/routes/main');
 const rutaP=require('./src/routes/producto');
 const rutaUser=require('./src/routes/user');
+const session=require('express-session')
 
 
 
@@ -16,6 +17,7 @@ app.use(express.static('public'));
 app.use(express.static(__dirname + '/public'));
 
 app.use(methodOverride("_method"));
+app.use(session({secret: "cuando cree esto solo dio y yo sabiamos como funciona, ahora solo dios sabe"}));
 
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());

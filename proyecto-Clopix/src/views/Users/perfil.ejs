@@ -12,30 +12,20 @@
 
 <div class="wrapper">
     <div class="title">
-        EDITAR MI PERFIL 
+        MI PERFIL 
     </div> 
 
-        <form action="/perfil" method="GET" enctype="multipart/form-data"> </form>
+        <form action="/editPerfil" method="post" enctype="multipart/form-data"> </form>
 
-        <tr>
-            <td class="camposcompletar">     
-            </td>
-        </tr>
-        
-            <label for="">Nombre</label>
-            <input type="text" name="nombre">
-            <label for="">Nombre de usuario</label>
-            <input type="text" name="nombre de usuario">
-
-            <label for="">Cambiar foto del perfil</label>
-
-            <img src="/images/avatar/imagendeperfil.png" alt="imagendeperfil" class="imagen-perfil">
+            <label for="">Nombre de usuario: <%= usuario.usuario %> </label>
+            <img src="/images/avatar/<%= usuario.avatar  %>"  alt="imagendeperfil" class="imagen-perfil" style="width: 100%;">
+            <label for="">Nombre Completo: <%= usuario.nombreCompleto %> </label>
             
-
-            <input type="file" class="seleccionar-archivo">
+            <label for="">Mail: <%= usuario.mail %> </label>
+            <label for="">Celular: 054 11-<%= usuario.celular %>  </label>
             
-
-            <button type="submit">Cambiar contraseña</button>
+            
+            <button type="submit">Cambiar Contraseña</button>
 
         </form>
 

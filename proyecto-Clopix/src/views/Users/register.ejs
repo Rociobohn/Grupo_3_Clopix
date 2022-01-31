@@ -14,32 +14,48 @@
               <div class="inputfield">
                 <label>Nombre completo</label>
                 <input type="text" class="input" name="nombreCompleto" required>
-                <% if( locals && locals.messajeErros && locals.messajeErros.nombreCompleto){ %>
-                  <p class="feedback"><%= messajeErros['nombreCompleto'].msg %> </p>
-                <% } %>  
+                <% if(locals && locals.errors && locals.errors.nombreCompleto){ %>
+                  <p><%= errors.nombreCompleto.msg %> </p>
+                <% } %>
               </div>
-              
-              
+               
+          
               <div class="inputfield">
                 <label>E-mail</label>
                 <input type="text" class="input" name= "mail" required>
-              </div>  
+              </div>
+              <% if(locals && locals.errors && locals.errors.mail){  %>
+                <p><%= errors.mail.msg %> </p>
+                <% } %>   
               <div class="inputfield">
                 <label>Celular</label>
                 <input type="number" class="input" name="celular" required >
-              </div>  
+              </div>
+              <% if(locals && locals.errors && locals.errors.celular){  %>
+                <p><%= errors.celular.msg %> </p>
+                <% } %> 
          <!--Datos de ingreso-->      
               <div class="inputfield">
                 <label>Nombre de usuario</label>
-                <input type="text" class="input" name="usuario" required>
-              </div>  
+                <input type="text" class="input" name="user" required>
+              </div>
+              <% if(locals && locals.errors && locals.errors.user){  %>
+                <p><%= errors.user.msg %> </p>
+                <% } %>   
               <div class="inputfield">
                 <label>Contraseña</label>
                 <input type="password" class="input" name="pasword" required>
-              </div>  
+              </div> 
+              <% if(locals && locals.errors && locals.errors.pasword){  %>
+                <p><%= errors.pasword.msg %> </p>
+                <% } %>  
               <div class="inputfield">
                   <label>Confirmar contraseña</label>
                   <input type="password" class="input" name="passwordConfirm" required>
+                  <br> 
+                  <% if(locals && locals.errors && locals.errors.passwordConfirm){  %>
+                    <p><%= errors.passwordConfirm.msg %> </p>
+                    <% } %>  
               </div> 
 
             <!--imagen de perfil-->

@@ -6,14 +6,14 @@ const userController= require('../controllers/userController');
 
 
 let validationUser=[
-   body('nombreCompleto').notEmpty().isLength({min:3}).withMessage("El nombre indicado no es valido").bail(),
-   body('mail').notEmpty().isEmail().withMessage("el mail indicado no es valido").bail(),
-   body('usuario').isLength({min:3}).withMessage("el usuario no es valido").bail(),
-   body('celular').isLength({min:8 ,max:8}).withMessage("numero no valido").bail(),
-   body('pasword').notEmpty().isLength({min:8}).withMessage("password invalido").equals(body('passwordConfirm')).bail(),
-   body('pasword').notEmpty().isLength({min:8}).equals(body('pasword')).withMessage("las contraseñas no coinciden").bail(),
+   body('nombreCompleto').notEmpty().isLength({min:3}).withMessage("el nombre debe tener al menos 3 caracteres"),
+   body('mail').notEmpty().withMessage("Campo Obligatorio").bail(),
+   body('user').notEmpty().isLength({min:3}).withMessage("el usuario debe tener al menos 3 caracteres").bail(),
+   body('celular').notEmpty().isLength({ max:8}).withMessage("el numero indicado debe tener 8 numeros").bail(),
+   body('pasword').notEmpty().isLength({min:8}).withMessage("La contraseña debe tener al menos 8 caracteres").bail(),
+   body('passwordConfirm').notEmpty().withMessage("Campo Obligatorio").bail(),
    body('terminosyCondiciones').notEmpty().withMessage("Campo Obligatorio").bail()
-]
+];
 
 const userRoute= express.Router();
 
@@ -32,13 +32,14 @@ const storage = multer.diskStorage({
 console.log(storage)
 
 userRoute.get('/login',userController.login);
+userRoute.post('/loading',userController.logear);
 userRoute.get('/editUser',userController.edit);
-userRoute.post('/Alta', validationUser, upload.single('avatar'), userController.crear);
+userRoute.post('/Alta', upload.single('avatar'),validationUser, userController.crear);
 userRoute.delete('/:id/Baja');
 userRoute.put('/:id/editar');
 userRoute.get('/register',userController.registro);
 
-userRoute.get('/perfil',userController.perfil);
+userRoute.get('/:user/perfil',userController.perfil);
 
 
 

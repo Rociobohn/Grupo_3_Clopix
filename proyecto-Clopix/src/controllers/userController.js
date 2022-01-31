@@ -17,46 +17,62 @@ const user={
     },
     crear:(req,res)=>{
         const errors = validationResult(req);
-        let todoOk=true;
+        let passEncrip=bycript.hashSync(req.body.pasword,3);
+        console.log("estos son los errores!!!!!!!!!!!!!!!!!");
+        console.log(errors);
         if (!errors.isEmpty()) {
-          res.render('Users/register',{menssajeErros: errors.mapped(),old:req.body});
-          todoOk=false;
+          return res.render('Users/register',{errors: errors.mapped(),old:req.body});
         }
-        if(todoOk && !bycript.compareSync(req.body.pasword, bycript.hashSync(req.body.passwordConfirm))){
+        if(!bycript.compareSync(req.body.passwordConfirm, passEncrip)){
             console.log("las contraseñas no coinciden");
-            todoOk=false;
+            return res.render("Users/register",{ errors: { passwordConfirm: { msg:"error, las contraseñas no coinciden"}}});
         }
-        if(todoOk && usuarios.findByAll('usuario',req.body.user)!=undefined){
-            console.log("el  usuario ya esta en uso");
-            todoOk=false;
+        if(usuarios.findByAll('user',req.body.user)!=undefined){
+            return res.render("Users/register",{ errors: { user: { msg:"error, el usuario ya esta en uso"}}});
         }
-        if(todoOk && usuarios.findByAll('mail',req.body.mail)!=undefined){
+        if(usuarios.findByAll('mail',req.body.mail)!=undefined){
             console.log("el mail ya esta en uso");
             todoOk=false;
         }
-        if(todoOk){
-            let passEncrip=bycript.hashSync(req.body.pasword,3);
             let nuevo={
                 id:1,
-                avatar:"/images/avatar/"+req.file.getfilename,
+                avatar:req.file.filename,
                 nombreCompleto:req.body.nombreCompleto,
                 mail:req.body.mail,
-                usuario:req.body.usuario,
+                user:req.body.user,
                 pasword:passEncrip,
                 celular:req.body.celular
 
             }
             usuarios.create(nuevo);
             res.redirect("/");
-        }
-        res.redirect("/User/register");
+        
+        res.redirect("Users/register");
         
     },
     logear:(req,res)=>{
-        res.send("Logeado con exito!!!!!!");
+        let us=usuarios.findByAll("user",req.body.user);
+        console.log(us);
+        if(us!=undefined && bycript.compareSync(req.body.password,us.pasword)){
+            req.session.usuarioLogeado=req.body.user;
+            req.session.paswordSave=req.body.password;
+            return res.redirect("/user/"+us.user+"/perfil");
+        }
+        else{
+             res.redirect("/user/login");
+        }
+        
+        
     }, 
     perfil:(req,res) => { 
-        res.render('Users/perfil');
+        if(req.session.usuarioLogeado!=undefined && req.session.paswordSave!=undefined){
+            console.log("hay info en session");
+            let us=usuarios.findByAll("user",req.session.usuarioLogeado);
+            if(us!=undefined && bycript.compareSync(req.session.paswordSave,us.pasword)){
+                res.render('Users/perfil',{usuario: us});
+            }
+        }
+        res.redirect("/User/login");
     }
     
 }

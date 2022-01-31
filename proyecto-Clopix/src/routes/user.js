@@ -4,7 +4,6 @@ const multer  = require('multer');
 const { body } = require('express-validator');
 const userController= require('../controllers/userController');
 
-
 let validationUser=[
    body('nombreCompleto').notEmpty().isLength({min:3}).withMessage("el nombre debe tener al menos 3 caracteres"),
    body('mail').notEmpty().withMessage("Campo Obligatorio").bail(),

@@ -4,7 +4,6 @@ let usuarios=archivosJson('Usuarios');
 const bycript=require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-
 const user={
     login:(req, res)=>{
         res.render('Users/login');

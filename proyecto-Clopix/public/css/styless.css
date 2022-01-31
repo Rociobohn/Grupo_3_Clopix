@@ -860,6 +860,25 @@ footer {
 }
 /*footer*/
 
+/*ERROR 404*/
+.not{
+    
+  background: rgb(10, 2, 19);
+  font-family: Montserrat, sans-serif;;
+  color: white;
+}
+
+.error{
+text-align: center;
+font-size: 26px;
+}
+.not-found{
+text-align: center;
+font-size: 16px;
+}
+
+/*ERROR 404*/
+
 @media (min-width:1280px){
 
 }

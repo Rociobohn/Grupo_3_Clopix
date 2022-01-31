@@ -15,7 +15,7 @@
         MI PERFIL 
     </div> 
 
-        <form action="/editPerfil" method="post" enctype="multipart/form-data"> </form>
+        <form action="user/<%= usuario.usuario %>/editPerfil" method="post" enctype="multipart/form-data"> </form>
 
             <label for="">Nombre de usuario: <%= usuario.usuario %> </label>
             <img src="/images/avatar/<%= usuario.avatar  %>"  alt="imagendeperfil" class="imagen-perfil" style="width: 100%;">

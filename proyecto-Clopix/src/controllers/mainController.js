@@ -6,6 +6,9 @@ const home={
 
     notFound: (req, res)=> {
         res.render('404');
+    },
+    menuAdmin: (req, res)=>{
+        res.render('Products/MenuAdmin');
     }
     
 }

@@ -3,7 +3,7 @@ const path=require('path');
 const multer  = require('multer');
 const { body } = require('express-validator');
 const userController= require('../controllers/userController');
-const userisLoged=require('../myMiddlewares/gestTest');
+const userTest=require('../myMiddlewares/guestTest');
 
 let validationUser=[
    body('nombreCompleto').notEmpty().isLength({min:3}).withMessage("el nombre debe tener al menos 3 caracteres"),
@@ -29,7 +29,7 @@ const storage = multer.diskStorage({
 
   const upload = multer({ storage });
 
-console.log(storage)
+console.log(storage);
 
 userRoute.get('/login',userController.login);
 userRoute.post('/loading',userController.logear);
@@ -38,8 +38,8 @@ userRoute.post('/Alta', upload.single('avatar'),validationUser, userController.c
 userRoute.delete('/:id/Baja');
 userRoute.put('/:id/editar');
 userRoute.get('/register',userController.registro);
-
-userRoute.get('/:user/perfil',userisLoged,userController.perfil);
+userRoute.get('/:user/profile',userTest.isLogged,userController.perfil);
+userRoute.get('/unloged',userController.unLoged);
 
 
 

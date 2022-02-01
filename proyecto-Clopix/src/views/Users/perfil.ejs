@@ -15,12 +15,12 @@
         MI PERFIL 
     </div> 
 
-        <form action="user/<%= usuario.usuario %>/editPerfil" method="post" enctype="multipart/form-data"> </form>
+        <form action="user/<%= usuario.user %>/editPerfil" method="post" enctype="multipart/form-data"> </form>
 
-            <label for="">Nombre de usuario: <%= usuario.usuario %> </label>
+            <label for="">Nombre de usuario: <%= usuario.user %> </label>
 
             <div class ="imagen-avatar-perfil"> 
-            <img src="/images/avatar/<%= usuario.avatar  %>"  alt="imagendeperfil" class="imagen-perfil" style="width: 100%;">
+            <img src="/images/avatar/<%= usuario.avatar %>"  alt="imagendeperfil" class="imagen-perfil" style="width: 100%;">
             </div>
 
             <label for="">Nombre Completo: <%= usuario.nombreCompleto %> </label>

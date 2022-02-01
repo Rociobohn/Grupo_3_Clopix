@@ -1,0 +1,2 @@
+Adminstrador: admin/admin
+cliente: myth/123456789

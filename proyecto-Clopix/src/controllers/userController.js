@@ -2,6 +2,7 @@ const req = require('express/lib/request');
 const archivosJson=require('../model/controlDatos');
 let usuarios=archivosJson('Usuarios');
 const bycript=require('bcryptjs');
+const db=require('../../database/models');
 const { validationResult } = require('express-validator');
 
 const user={
@@ -56,6 +57,11 @@ const user={
     logear:(req,res)=>{
         let us=usuarios.findByAll("user",req.body.user);
         console.log(us);
+        db.Usuarios.findOne({include:"Rol"},{
+            where:{
+                user:req.body.user
+            }
+        }).then(resultado=>console.log(resultado));
         if(req.body.user=="admin" && bycript.compareSync(req.body.user,'$2a$10$2oQJw5CU/tkhxYsWu5vPg.GA/S4JSx0r6.PnakbvSM8fFal1zonQS') ){
             admin={ 
                 user:req.body.user,

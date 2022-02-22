@@ -25,7 +25,7 @@ module.exports=(sequelize,DataTypes)=>{
     };
     const producto=sequelize.define(alias,cols,config);
     producto.associate=function(models){
-        producto.belongsTo(models.talles,{
+        producto.belongsTo(models.Talles,{
             as:"talles",
             foreignKey:"talle_id"
         });

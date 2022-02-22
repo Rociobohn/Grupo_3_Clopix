@@ -9,6 +9,9 @@ module.exports=(sequelize,DataTypes)=>{
         username:{
             type:DataTypes.STRING
         },
+        email:{
+            type:DataTypes.STRING
+        },
         password:{
             type:DataTypes.STRING
         },
@@ -30,6 +33,8 @@ module.exports=(sequelize,DataTypes)=>{
         timestamps:false
     };
     const user=sequelize.define(alias,cols,config);
+
+    
     user.associate=function(models){
         user.belongsTo(models.Rol,{
             as:"Rol",

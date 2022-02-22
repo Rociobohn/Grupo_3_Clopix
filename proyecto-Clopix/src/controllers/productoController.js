@@ -13,7 +13,11 @@ const producto={
     },
     baja:(req,res)=>{
         let ins= req.params.id;
-        dataProductos.delete(ins);
+        db.Productos.destroy( { 
+            where:{
+            id:ins
+                }                
+        })
         res.redirect('/Producto');
     },
     edit:(req, res)=>{

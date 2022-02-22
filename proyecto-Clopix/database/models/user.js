@@ -33,6 +33,8 @@ module.exports=(sequelize,DataTypes)=>{
         timestamps:false
     };
     const user=sequelize.define(alias,cols,config);
+
+    
     user.associate=function(models){
         user.belongsTo(models.Rol,{
             as:"Rol",

@@ -19,6 +19,7 @@ const user={
         const errors = validationResult(req);
         let passEncrip=bycript.hashSync(req.body.pasword,3);
         let image="imagendeperfil.png";
+        let todoOk = true;
         console.log("estos son los errores!!!!!!!!!!!!!!!!!");
         console.log(errors);
         if (!errors.isEmpty()) {
@@ -28,27 +29,42 @@ const user={
             console.log("las contraseñas no coinciden");
             return res.render("Users/register",{ errors: { passwordConfirm: { msg:"error, las contraseñas no coinciden"}}});
         }
-        if(usuarios.findByAll('user',req.body.user)!=undefined){
-            return res.render("Users/register",{ errors: { user: { msg:"error, el usuario ya esta en uso"}}});
-        }
-        if(usuarios.findByAll('mail',req.body.mail)!=undefined){
-            console.log("el mail ya esta en uso");
-            todoOk=false;
-        }
+       //valido por user unico
+        db.Usuarios.findOne({ 
+            where:{ 
+                username: req.body.user
+            }
+        }).then(resultado => { 
+            if (resultado != undefined) {
+                todoOk=false;
+            }
+        });
+        //valido por mail unico
+        db.Usuarios.findOne({ 
+            where:{ 
+                email:req.body.mail
+            }
+        }).then(resultado => { 
+            if (resultado != undefined) {
+                todoOk=false;
+            }
+        });
         if(req.body.file){
            image= req.file.filename;
         }
+        if (todoOk) {
             let nuevo={
-                id:1,
-                avatar:image,
-                nombreCompleto:req.body.nombreCompleto,
-                mail:req.body.mail,
-                user:req.body.user,
-                pasword:passEncrip,
-                celular:req.body.celular
-
-            }
-            usuarios.create(nuevo);
+                avatar_image:image,
+                full_name:req.body.nombreCompleto,
+                email:req.body.mail,
+                username:req.body.user,
+                password:passEncrip,
+                phone:req.body.celular,
+                rol_id:2
+            } 
+            db.Usuarios.create(nuevo); 
+        }
+            //usuarios.create(nuevo);
             res.redirect("/");
         
         res.redirect("Users/register");
@@ -56,27 +72,31 @@ const user={
     },
     logear:(req,res)=>{
         let us=usuarios.findByAll("user",req.body.user);
+        
         console.log(us);
         db.Usuarios.findOne({include:"Rol"},{
             where:{
                 user:req.body.user
             }
-        }).then(resultado=>console.log(resultado));
-        if(req.body.user=="admin" && bycript.compareSync(req.body.user,'$2a$10$2oQJw5CU/tkhxYsWu5vPg.GA/S4JSx0r6.PnakbvSM8fFal1zonQS') ){
-            admin={ 
-                user:req.body.user,
-                pasword:"$2a$10$2oQJw5CU/tkhxYsWu5vPg.GA/S4JSx0r6.PnakbvSM8fFal1zonQS"
+        }).then(resultado=>{
+            if(req.body.user==resultado.username && bycript.compareSync(req.body.password,resultado.pasword)&&resultado.rol=="admin" ){
+                admin={ 
+                    user:req.body.user,
+                    pasword:"$2a$10$2oQJw5CU/tkhxYsWu5vPg.GA/S4JSx0r6.PnakbvSM8fFal1zonQS"
+                }
+                req.session.userLogged=admin;
+                return res.redirect("/admin/menu");
             }
-            req.session.userLogged=admin;
-            return res.redirect("/admin/menu");
-        }
-        else if(us!=undefined && bycript.compareSync(req.body.password,us.pasword)){
-            req.session.userLogged=us; 
-            return res.redirect("/user/"+us.user+"/profile");
-        }
-        else{
-             res.redirect("/user/login");
-        }
+            else if(req.body.password == resultado.password && bycript.compareSync(req.body.password,us.password)){
+                req.session.userLogged=us; 
+                return res.redirect("/user/"+us.user+"/profile");
+            }
+            else{
+                 res.redirect("/user/login");
+            }
+        }).catch(error=>console.log(error));
+        
+       
         
         
     }, 
@@ -91,3 +111,4 @@ const user={
 }
 
 module.exports=user;
+

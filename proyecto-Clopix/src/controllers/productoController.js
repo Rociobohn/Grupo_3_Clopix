@@ -122,10 +122,14 @@ const producto={
         res.redirect('/Producto/');
     },
     AgregarAlCarrito:(req,res)=>{
+        let auxUnidades;
         db.Productos.findByPk(req.params.id).then(resultado=>{
+            auxUnidades=resultado.stock;
+            resultado.stock=1;
             Detalle.create(resultado);
-            /**falta en control de unidades y la creacion del registro de venta */
-            res.redirect("/Producto/Carrito")
+            /**falta la creacion del registro de venta */
+            db.Productos.update({ stock:(auxUnidades-1)},{where:{id:req.params.id}});
+            res.redirect("/Producto/Carrito");
         })
         
     }

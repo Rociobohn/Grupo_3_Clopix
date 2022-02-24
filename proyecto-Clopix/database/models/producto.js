@@ -20,6 +20,9 @@ module.exports=(sequelize,DataTypes)=>{
         },
         image_product:{
             type:DataTypes.STRING
+        },
+        stock:{
+            type:DataTypes.INTEGER
         }
     };
     let config={

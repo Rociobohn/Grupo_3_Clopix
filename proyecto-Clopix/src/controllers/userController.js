@@ -106,9 +106,16 @@ const user={
     unLoged:(req,res)=>{
         req.session.destroy();
         return res.redirect("/");
-    }
-    
+    }, 
+    editProfile:(req,res) => { 
+        db.Usuarios.update({
+            password: bycript.hashSync(req.body.newpassword)
+            },{
+            where: {
+                username: req.params.user           
+            }
+            })
+        }
 }
 
 module.exports=user;
-

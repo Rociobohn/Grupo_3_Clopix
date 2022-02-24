@@ -120,9 +120,9 @@ const user={
         where: {
             username: req.params.user
         }
-        })
+        });
+        res.redirect("/Producto/"+req.params.user+"/Profile");
     }
 }
 
 module.exports=user;
-

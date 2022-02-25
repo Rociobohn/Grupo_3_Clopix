@@ -17,6 +17,12 @@ module.exports=(sequelize,DataTypes)=>{
         },
         talle_id:{
             type:DataTypes.INTEGER,
+        },
+        image_product:{
+            type:DataTypes.STRING
+        },
+        stock:{
+            type:DataTypes.INTEGER
         }
     };
     let config={

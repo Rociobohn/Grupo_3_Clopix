@@ -1,6 +1,4 @@
 const req = require('express/lib/request');
-const archivosJson=require('../model/controlDatos');
-let usuarios=archivosJson('Usuarios');
 const bycript=require('bcryptjs');
 const db=require('../../database/models');
 const { validationResult } = require('express-validator');
@@ -14,6 +12,12 @@ const user={
     },
     edit:(req,res)=>{
         /*lo que va a hacer*/
+        db.Usuarios.findOne({
+            where: { 
+                
+            }
+            })
+    
     },
     crear:(req,res)=>{
         const errors = validationResult(req);
@@ -64,7 +68,6 @@ const user={
             } 
             db.Usuarios.create(nuevo); 
         }
-            //usuarios.create(nuevo);
             res.redirect("/");
         
         res.redirect("Users/register");
@@ -87,8 +90,11 @@ const user={
                 req.session.userLogged=admin;
                 return res.redirect("/admin/menu");
             }
-            else if(req.body.password == resultado.password && bycript.compareSync(req.body.password,us.password)){
-                req.session.userLogged=us; 
+            else if(req.body.password == resultado.password && bycript.compareSync(req.body.password,resultado.password)){
+                req.session.userLogged={ 
+                    user:resultado.username,
+                    pasword: resultado.password
+                }; 
                 return res.redirect("/user/"+us.user+"/profile");
             }
             else{
@@ -106,16 +112,17 @@ const user={
     unLoged:(req,res)=>{
         req.session.destroy();
         return res.redirect("/");
-    }, 
+    },
     editProfile:(req,res) => { 
-        db.Usuarios.update({
-            password: bycript.hashSync(req.body.newpassword)
-            },{
-            where: {
-                username: req.params.user           
-            }
-            })
+        db.Usuarios.update({ 
+         password: bycript.hashSync(req.body.newpassword)
+        },{
+        where: {
+            username: req.params.user
         }
+        });
+        res.redirect("/Producto/"+req.params.user+"/Profile");
+    }
 }
 
 module.exports=user;

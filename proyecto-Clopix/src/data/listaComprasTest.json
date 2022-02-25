@@ -45,30 +45,11 @@
   "stock": 1
  },
  {
-  "id": 5,
-  "nameProduct": "Lisa",
-  "description": "mimamamemima",
-  "priceUnit": 360,
-  "talle_id": 4,
-  "image_product": "p4.png",
-  "stock": 1
- },
- {
-  "id": 5,
-  "nameProduct": "Lisa",
-  "description": "mimamamemima",
-  "priceUnit": 360,
-  "talle_id": 4,
-  "image_product": "p4.png",
-  "stock": 1
- },
- {
-  "id": 3,
-  "nameProduct": "LiSA",
-  "description": "the best",
-  "priceUnit": 600000,
-  "talle_id": 2,
-  "image_product": "p1.png",
-  "stock": 1
+  "id": 4,
+  "nameProduct": "algo2",
+  "description": "danw",
+  "priceUnit": 250,
+  "talle_id": 5,
+  "image_product": "p3.jpg"
  }
 ]

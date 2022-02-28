@@ -69,13 +69,13 @@ const producto={
                 enumerable: true,
                 configurable: true
               });
-              if(req.session.productoActual!="defecto.png"){
+            if(req.session.productoActual!="defecto.png"){
                 try {
-                    fs.unlinkSync(__dirname+"/../../public/images/avatar/"+req.session.productoActual.image_product);
+                    fs.unlinkSync(__dirname+"/../../public/images/product/"+req.session.productoActual.image_product);
                     console.log('File removed');
                 } catch(err) {
                     console.error('Something wrong happened removing the file', err);
-                }
+                  }
             }
         }
         console.log(buffer);

@@ -11,7 +11,9 @@
                 <a href="/Producto/"><i class="fas fa-tag" style="color: black;"></i></a>
                 <a href="/Producto/Carrito"> <i style="color: black;" class="fas fa-shopping-cart"> </i></a>
                 <a href="/User/register"> <i style="color: black;" class="far fa-user"></i> </a>
+                <% if(!locals.loggedIsTrue){%>
                 <a href="/User/login"> <i style="color: black;" class="fas fa-sign-in-alt"> </i> </a>
+                <%}  %> 
                 <% if(locals.loggedIsTrue){%>
                   <a href="/User/unloged"><i class="fas fa-sign-out-alt"></i></a>
                 <%}  %>  

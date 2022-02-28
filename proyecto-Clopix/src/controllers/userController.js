@@ -66,8 +66,19 @@ const user={
                 rol_id:2
             } 
             db.Usuarios.create(nuevo); 
-        }
             res.redirect("/");
+        }
+        else{
+            if(req.file.filename!="defecto.png"){
+                try {
+                    fs.unlinkSync(__dirname+"/../../public/images/avatar/"+req.file.filename);
+                    console.log('File removed');
+                } catch(err) {
+                    console.error('Something wrong happened removing the file', err);
+                  }
+            }
+        }
+            
         
         res.redirect("Users/register");
         

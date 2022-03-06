@@ -490,9 +490,12 @@ body#bodyHome{
 
 /*estilos login*/
 body#bodyLogin{
-    background-image: url("https://cdn.shopify.com/s/files/1/1110/3486/files/a2495535377_10.jpg?11163386226905960286");
-    background-size: cover;
-    padding: 0 10px;
+    /*background-image: url("https://cdn.shopify.com/s/files/1/1110/3486/files/a2495535377_10.jpg?11163386226905960286");*/
+    /*background-size: cover;*/
+    background-color: #23d6be;
+    padding: 2%;
+    width: 100%;
+    height: 100%; 
   }
   
   
@@ -507,18 +510,12 @@ body#bodyLogin{
     margin-top: 20%;
     
   }
-
-  #bodyLogin .wrapper .inputfield {
-    padding: 7px;
-    background-color: antiquewhite;
-    -webkit-text-stroke: 1px rgb(85, 81, 81);
+  #bodyLogin .wrapper form{
+    text-align: center;
+    padding: 2px;
     font-size: 20px;
-    display: flex;
-    margin: 5px;
-    
+    margin: auto;
   }
- 
-  
   #bodyLogin .wrapper .title{
     font-size: 24px;
     font-weight: 700;
@@ -527,50 +524,17 @@ body#bodyLogin{
     text-transform: uppercase;
     text-align: center;
   }
+  #bodyLogin .wrapper form input{
+    margin: 1%;
+    width: 60%;
+    font-size: x-large;
+    border: none;
+  } 
   
-  #bodyLogin .wrapper .form{
-    width: 100%;
-    
-  }
-
-  /* en revision 
-  #bodyLogin .wrapper .form .inputfield{
-  
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-
-  }
-*/
-
-  
-    
-  #bodyLogin .wrapper .form .inputfield label{
-       width: 200px;
-       color: #757575;
-       margin-right: 10px;
-      font-size: 14px;
-    
-    }
-
-    /* EN REVISIÓN:
-    #bodyLogin .wrapper .form .inputfield .input,
-    #bodyLogin .wrapper .form .inputfield .textarea{
+  #bodyLogin .wrapper form button{
       width: 100%;
-      outline: none;
-      border: 1px solid #d5dbd9;
-      font-size: 15px;
       padding: 8px 10px;
-      border-radius: 3px;
-      transition: all 0.3s ease;
-  }
-*/
-
-
-  
-  #bodyLogin .wrapper .form .inputfield .btn{
-      width: 100%;
-       padding: 8px 10px;
+      margin-top: 4%;
       font-size: 15px; 
       border: 0px;
       background:  plum;
@@ -579,10 +543,7 @@ body#bodyLogin{
       border-radius: 3px;
       outline: none;
     }
-    
-    #bodyLogin  .wrapper .form .inputfield .btn:hover{
-      background: black;
-    }
+
 /*fin estilos login*/
 /*register*/
 body#bodyRegister{
@@ -885,25 +846,9 @@ footer a img{
 footer a{
   color: white;
 }
-<<<<<<< HEAD
 footer section ul li {
   display: flex;
   justify-content: center; 
-=======
-footer { 
-    /*height: 10vh;*/
-    /*bottom: 40px;*/
-    height: auto;
-    margin-top:35px;
-    margin-bottom: 0px;
-    border: 1px solid white;
-    align-content: center;
-    justify-content: center;
-    align-items: flex-end;
-    color: white;
-    position: fixed;
-    bottom: 0px;
->>>>>>> bd67afa283f73ac266f4cc9a1e4ce4ed5bfaaece
 }
 
 
@@ -948,7 +893,6 @@ body#MenuAdmin div ul li{
   width: 100%;
   justify-content: center;
 }
-<<<<<<< HEAD
 @media (min-width:1280px){
   
   #bodyCatalogo section article{
@@ -965,9 +909,6 @@ body#MenuAdmin div ul li{
     
   }
 }
-=======
-
->>>>>>> bd67afa283f73ac266f4cc9a1e4ce4ed5bfaaece
 @media (max-width:1279px){
 
 }

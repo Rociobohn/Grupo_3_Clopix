@@ -886,6 +886,7 @@ footer {
     justify-content: center;
     align-items: flex-end;
     color: white;
+    /*AGREGADO Y FUNCIONAL PERO HAY QUE ARREGLAR*/
     position: fixed;
     bottom: 0px;
 }

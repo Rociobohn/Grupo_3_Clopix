@@ -10,10 +10,12 @@
             </div>
             
 
-            <form action="/User/Alta" method="post" enctype="multipart/form-data" class="form">
+            <form name="registerForm" id="registerForm" action="/User/Alta" method="post" enctype="multipart/form-data" class="form">
               <div class="inputfield">
                 <label>Nombre completo</label>
                 <input type="text" class="input" name="nombreCompleto" required>
+                <p id="errName"> 
+                </p>
                 <% if(locals && locals.errors && locals.errors.nombreCompleto){ %>
                   <p><%= errors.nombreCompleto.msg %> </p>
                 <% } %>
@@ -75,6 +77,7 @@
               <div class="inputfield">
                 
                 <button type="submit"> Crear Cuenta </button>
+              
                 
               </div>
               

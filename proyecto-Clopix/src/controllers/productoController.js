@@ -79,14 +79,14 @@ const producto={
                   }
             }
         }
-        /*if(req.body.stock>0){
+        if(req.body.stock>0){
             Object.defineProperty(buffer, "stock",{
                 value: req.body.stock,
                 writable: true,
                 enumerable: true,
                 configurable: true
             });
-        }*/
+        }
         console.log(buffer);
         db.Productos.update(buffer,{where:{id:req.params.id}});
         res.redirect("/Producto/");

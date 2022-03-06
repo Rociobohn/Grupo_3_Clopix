@@ -9,15 +9,7 @@ const user={
     registro:(req, res)=>{
         res.render('Users/register');
     },
-    edit:(req,res)=>{
-        /*lo que va a hacer*/
-        db.Usuarios.findOne({
-            where: { 
-                
-            }
-            })
     
-    },
     crear:(req,res)=>{
         const errors = validationResult(req);
         let passEncrip=bycript.hashSync(req.body.pasword,3);

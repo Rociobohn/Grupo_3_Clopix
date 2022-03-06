@@ -34,7 +34,7 @@ console.log(storage);
 
 userRoute.get('/login',userController.login);
 userRoute.post('/loading',userController.logear);
-userRoute.get('/editUser',userController.edit);
+
 userRoute.post('/Alta', upload.single('avatar'),validationUser, userController.crear);
 userRoute.delete('/:id/Baja');
 userRoute.put('/:id/editar');

@@ -490,9 +490,9 @@ body#bodyHome{
 
 /*estilos login*/
 body#bodyLogin{
-    /*background-image: url("https://cdn.shopify.com/s/files/1/1110/3486/files/a2495535377_10.jpg?11163386226905960286");*/
-    /*background-size: cover;*/
-    background-color: #23d6be;
+    background-image: url("https://cdn.shopify.com/s/files/1/1110/3486/files/a2495535377_10.jpg?11163386226905960286");
+    background-size: cover;
+    
     padding: 2%;
     width: 100%;
     height: 100%; 

@@ -6,10 +6,10 @@
         <table id="ListaCompras">
             <thead>
                 <tr>
-                    <th id="Producto">Producto</th>
-                    <th id="PrecioUnitario">Precio Unitario</th>
-                    <th id="Cantidad">Cantidad</th>
-                    <th id="PrecioTotal">Precio Total</th>
+                    <th id="img">Producto</th>
+                    <th class="infoPrecio">Precio Unitario</th>
+                    <th class="infoctrlUnidades">Cantidad</th>
+                    <th class="infoPrecioTotal">Precio Total</th>
                     <th></th>
                 </tr>
             </thead>
@@ -17,31 +17,29 @@
                 <!--prodcutos del carrito-->
 
                 <% for(let i=0;i<DetalleCompra.length;i++){ %> 
-               
-                    <tr >
-                        <td class="imagenProducto">
-                             <img src= "/images/product/<%= DetalleCompra[i].image_product %>"  alt="Imagen de Producto"  > 
-                        </td>
-                        <td class="dproducto"> 
-                            <label> <%= DetalleCompra[i].priceUnit %> </label>
-                        </td>
-        
-                        <td class="dproducto">
-                            <button type="button"> <i class="fas fa-arrow-up"> </i> </button>
-                            <label for=""> <%= DetalleCompra[i].stock %> </label>
-                            <button type="button"> <i class="fas fa-arrow-down"></i> </button>
-                        </td>
-        
-                        <td class="dproducto"> 
-                            <label><%= (DetalleCompra[i].priceUnit* DetalleCompra[i].stock) %> $</label>
-                        </td>
-        
-                        <td class="NoProducto">
-                            <form method="post" action= "/Producto/Carrito/<%= DetalleCompra[i].id %>/eliminar?_method=delete" > 
-
-                                <button type="submit"> <i class="far fa-trash-alt"></i> </button> 
-                            </form>
-                        </td>
+                    <tr class="unProducto">
+                            <td class="imagen">
+                                <img src= "/images/product/<%= DetalleCompra[i].image_product %>"  alt="Imagen de Producto"  > 
+                           </td>
+                           <td class="detalle"> 
+                               <p> <%= DetalleCompra[i].priceUnit %> </p>
+                           </td>
+           
+                           <td class="masMenos">
+                               <button type="button"> <i class="fas fa-arrow-up"> </i> </button>
+                               <p> <%= DetalleCompra[i].stock %> </p>
+                               <button type="button"> <i class="fas fa-arrow-down"></i> </button>
+                           </td>
+           
+                           <td class="detalle"> 
+                               <p><%= (DetalleCompra[i].priceUnit* DetalleCompra[i].stock) %> $</p>
+                           </td>
+           
+                           <td class="NoProducto">
+                               <form method="post" action= "/Producto/Carrito/<%= DetalleCompra[i].id %>/eliminar?_method=delete" > 
+                                   <button type="submit"> <i class="far fa-trash-alt"></i> </button> 
+                               </form>
+                           </td>
                     </tr>
                
                 <% } %> 

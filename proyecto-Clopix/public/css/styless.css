@@ -885,9 +885,25 @@ footer a img{
 footer a{
   color: white;
 }
+<<<<<<< HEAD
 footer section ul li {
   display: flex;
   justify-content: center; 
+=======
+footer { 
+    /*height: 10vh;*/
+    /*bottom: 40px;*/
+    height: auto;
+    margin-top:35px;
+    margin-bottom: 0px;
+    border: 1px solid white;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    position: fixed;
+    bottom: 0px;
+>>>>>>> bd67afa283f73ac266f4cc9a1e4ce4ed5bfaaece
 }
 
 
@@ -932,6 +948,7 @@ body#MenuAdmin div ul li{
   width: 100%;
   justify-content: center;
 }
+<<<<<<< HEAD
 @media (min-width:1280px){
   
   #bodyCatalogo section article{
@@ -948,6 +965,9 @@ body#MenuAdmin div ul li{
     
   }
 }
+=======
+
+>>>>>>> bd67afa283f73ac266f4cc9a1e4ce4ed5bfaaece
 @media (max-width:1279px){
 
 }

@@ -69,7 +69,7 @@ const producto={
                 writable: true,
                 enumerable: true,
                 configurable: true
-              });
+            });
             if(req.session.productoActual!="defecto.png"){
                 try {
                     fs.unlinkSync(__dirname+"/../../public/images/product/"+req.session.productoActual.image_product);
@@ -78,6 +78,14 @@ const producto={
                     console.error('Something wrong happened removing the file', err);
                   }
             }
+        }
+        if(req.body.stock>0){
+            Object.defineProperty(buffer, "stock",{
+                value: req.body.stock,
+                writable: true,
+                enumerable: true,
+                configurable: true
+            });
         }
         console.log(buffer);
         db.Productos.update(buffer,{where:{id:req.params.id}});
@@ -132,7 +140,11 @@ const producto={
             description: req.body.descripcion,
             talle_id: talleD, 
             priceUnit: req.body.precio,
+            stock:req.body.stock
         }
+        console.log("------------------------------------------------- voy por aca");
+        console.log(nuevo);
+    
         db.Productos.create(nuevo)
         res.redirect('/Producto/');
     },

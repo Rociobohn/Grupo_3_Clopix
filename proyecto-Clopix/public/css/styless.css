@@ -31,12 +31,12 @@ header nav ul{
     flex-wrap: wrap;/*esto hace el salto de linea*/
 }
 /*correccion del header, copie lo de rocio y quite el codigo que no hace nada*/
-nav ul li {
+header nav ul li {
     flex-grow: 1;
     flex-wrap: wrap;
     box-sizing: border-box;
 }
-nav a {
+header nav a {
     text-decoration: none;
     font-weight: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -50,79 +50,84 @@ nav a {
 
 
 /*header*/
+
+/*carrito Compras*/
 body#bodyCarritoCompras{
     width: 100%;
+    height: 100%;
     background-image: url("https://cutewallpaper.org/21/vaporwave-pixel-art-wallpaper/19-Pixel-Art-Wallpapers-that-Will-Make-Your-Desktop-Retro.png"); 
     padding: 40px;
     margin: auto;
     color: white;
+    font-size: x-large;
+    
 }
-/*ajustes del carrito*/
+body#bodyCarritoCompras table img{
+  width: auto;
+  height: auto;
+}
 #bodyCarritoCompras table{
-    width: 100%;
-}
-#bodyCarritoCompras tr{
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
 #bodyCarritoCompras thead{
-    height: 4vh;
-    font-size: medium;
-    font-family: cursive;
+  height: 5vh;
+  font-size: x-large;
+  font-family: cursive;
 }
-#bodyCarritoCompras tbody{
-    height: 50vh;
+#bodyCarritoCompras thead th.info{
+  width: 15%;
 }
 #bodyCarritoCompras tbody.resultados{
     height: 5vh;
 }
-
-#bodyCarritoCompras tr td.dproducto{
-    
-    height: auto;
-    background-color: #99DDCC;
-    justify-content: center;
-    align-items: center;
-    width: 22%;
-    color: black;
+#bodyCarritoCompras tr.unProducto td{
+    height: 25vh;
+    text-align: center;
+    border: 1px solid white;
 }
 #bodyCarritoCompras tr td.producto img{
     justify-content: center;
     align-items: center;
 }
-#bodyCarritoCompras td.imagenProducto{
-    width: 40%;
+#bodyCarritoCompras tr td.masMenos button{
+  height: 24%;
+  width: 100%;
+  background: none;
+  border: none;
 }
-
+#bodyCarritoCompras tr td.masMenos button i{
+  font-size: 50px;
+}
+#bodyCarritoCompras td.imagen{
+    width: 45%;
+}
+#bodyCarritoCompras td.detalle{
+  width: 20%;
+}
 #bodyCarritoCompras button{
-
+   
     background-color: #99DDCC;
     width: 100%;
     color: #FF5DA2;
-    /*border: solid #FF5DA2 5px;*/
     justify-content: space-around;
 }
-#bodyCarritoCompras td button{
+#bodyCarritoCompras table#listaCompras tbody {
     width: 40%;
+    height: 40%;
 }
-#bodyCarritoCompras td.NoProducto{
-    border: none;
-    color: white;
+#bodyCarritoCompras table tr.unProducto td.NoProducto{
+  border: none;
+
 }
 #bodyCarritoCompras td.NoProducto button{
     width: 100%;
-    height: 10vw;
+    height: 40%;
     background:none;
     border: none;
-    font-size: 50px
+    font-size: xx-large;
 }
-#bodyCarritoCompras td.dproducto label{
-    font-size: 25px;
-}
-#bodyCarritoCompras tr td{
-    border: 1px solid white;
-}
-
 #bodyCarritoCompras tr.resultados td{
     border: none;
 }
@@ -130,18 +135,22 @@ body#bodyCarritoCompras{
     border: 1px solid white;
     background-color: #FF5DA2;
 }
-#bodyCarritoCompras .special{
+body#bodyCarritoCompras section.special{
     display: flex;
     margin: auto;
     justify-content: center;
     flex-direction: row;
     height: 4vh;
+    margin-bottom: 1vh;
+    
 }
-#bodyCarritoCompras td.imagenProducto img{
-    width: 100%;
+body#bodyCarritoCompras section.special button{
+    font-size: xx-large;
+    font-family: italic;
 }
-
 /*fin stylos carrito*/
+
+
 /*estilos unproducto*/
 #bodyUnProducto article section {
     display: flex;
@@ -244,51 +253,54 @@ font-size: 14px;
 /*estilos catalogo*/
 body#bodyCatalogo{
     width: 100%;
+    height: 100%;
     background-image: url("https://cutewallpaper.org/21/vaporwave-pixel-art-wallpaper/19-Pixel-Art-Wallpapers-that-Will-Make-Your-Desktop-Retro.png"); 
-    padding: 40px;
+    padding: 2vw;
     margin: auto;
+    font-size: 2vw;
+    
 }
+
 #bodyCatalogo section article{
     display: flex;
-    width: 45%;
-    flex-direction: column;
-    height: auto;
-    margin: 2%;
+    width: 55%;
+    border: 1px solid white;
+    flex-direction:column;
+    height: 50vh;
+    margin: auto;
     
 }
+body#bodyCatalogo section.Productos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
 
-#bodyCatalogo section.imagenProducto{
-    height: 600px;
-
-}
-#bodyCatalogo section.datos{
-    background-color: #99DDCC;
-    
-}
-#bodyCatalogo section.datos label.Nombre{
-    font-size: 30px;
-    color: black;
-}
-#bodyCatalogo section.datos label.Precio{
-    font-size: 20px;
-    color: black;
-}
-#bodyCatalogo section article section{/*apartado Img y Descripcion*/
-    display: flex;
-    flex-direction: column;
+#bodyCatalogo section article a{
+    height: 85%;
     width: 100%;
-    border: 1px solid #99DDCC;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
+    border: 2px solid #99DDCC;
 }
 
-#bodyCatalogo section.Productos{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+#bodyCatalogo section article a img{
+  width: 100%;
+  height: 100%;
 }
+#bodyCatalogo section article section.datos{/* Descripcion*/
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  height: 15%;
+  background-color: #99DDCC;
+  border: 5px solid white;
+}
+
+
 /*fin estilos catalogo*/
 /*Home*/
 body#bodyHome{
@@ -480,7 +492,10 @@ body#bodyHome{
 body#bodyLogin{
     background-image: url("https://cdn.shopify.com/s/files/1/1110/3486/files/a2495535377_10.jpg?11163386226905960286");
     background-size: cover;
-    padding: 0 10px;
+    
+    padding: 2%;
+    width: 100%;
+    height: 100%; 
   }
   
   
@@ -495,18 +510,12 @@ body#bodyLogin{
     margin-top: 20%;
     
   }
-
-  #bodyLogin .wrapper .inputfield {
-    padding: 7px;
-    background-color: antiquewhite;
-    -webkit-text-stroke: 1px rgb(85, 81, 81);
+  #bodyLogin .wrapper form{
+    text-align: center;
+    padding: 2px;
     font-size: 20px;
-    display: flex;
-    margin: 5px;
-    
+    margin: auto;
   }
- 
-  
   #bodyLogin .wrapper .title{
     font-size: 24px;
     font-weight: 700;
@@ -515,50 +524,17 @@ body#bodyLogin{
     text-transform: uppercase;
     text-align: center;
   }
+  #bodyLogin .wrapper form input{
+    margin: 1%;
+    width: 60%;
+    font-size: x-large;
+    border: none;
+  } 
   
-  #bodyLogin .wrapper .form{
-    width: 100%;
-    
-  }
-
-  /* en revision 
-  #bodyLogin .wrapper .form .inputfield{
-  
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-
-  }
-*/
-
-  
-    
-  #bodyLogin .wrapper .form .inputfield label{
-       width: 200px;
-       color: #757575;
-       margin-right: 10px;
-      font-size: 14px;
-    
-    }
-
-    /* EN REVISIÓN:
-    #bodyLogin .wrapper .form .inputfield .input,
-    #bodyLogin .wrapper .form .inputfield .textarea{
+  #bodyLogin .wrapper form button{
       width: 100%;
-      outline: none;
-      border: 1px solid #d5dbd9;
-      font-size: 15px;
       padding: 8px 10px;
-      border-radius: 3px;
-      transition: all 0.3s ease;
-  }
-*/
-
-
-  
-  #bodyLogin .wrapper .form .inputfield .btn{
-      width: 100%;
-       padding: 8px 10px;
+      margin-top: 4%;
       font-size: 15px; 
       border: 0px;
       background:  plum;
@@ -567,10 +543,7 @@ body#bodyLogin{
       border-radius: 3px;
       outline: none;
     }
-    
-    #bodyLogin  .wrapper .form .inputfield .btn:hover{
-      background: black;
-    }
+
 /*fin estilos login*/
 /*register*/
 body#bodyRegister{
@@ -857,39 +830,30 @@ body#bodyRegister{
 /*fin alta Producto*/
 
 /*footer*/
-section.infoContacto{
-    align-items: flex-end;
+footer {
+  display:  flex;
+  flex-direction: column;
+  margin: auto;
+  border: 1px solid white;
+  color: white;
+  width: 80%;
+  height: 10%;
 }
-img.redesSociales{
-    align-items: flex-end;
-}
-.etiquetasPie{
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
-}
+
 footer a img{
     width: 8%;
 }
 footer a{
-    color: white;
+  color: white;
 }
-footer { 
-    /*height: 10vh;*/
-    /*bottom: 40px;*/
-    height: auto;
-    margin-top:35px;
-    margin-bottom: 0px;
-    border: 1px solid white;
-    align-content: center;
-    justify-content: center;
-    align-items: flex-end;
-    color: white;
-    /*AGREGADO Y FUNCIONAL PERO HAY QUE ARREGLAR*/
-    position: fixed;
-    bottom: 0px;
+footer section ul li {
+  display: flex;
+  justify-content: center; 
 }
+
+
+
+
 /*footer*/
 
 /*ERROR 404*/
@@ -929,7 +893,22 @@ body#MenuAdmin div ul li{
   width: 100%;
   justify-content: center;
 }
-
+@media (min-width:1280px){
+  
+  #bodyCatalogo section article{
+    width: 25%;
+    flex-direction:column;
+    height: 50vh;
+    text-align: center;
+  }
+  #bodyCarritoCompras{
+    justify-content: center;
+  }
+  #bodyCarritoCompras table#ListaCompras{
+    width: 60%;
+    
+  }
+}
 @media (max-width:1279px){
 
 }
@@ -938,17 +917,5 @@ body#MenuAdmin div ul li{
 
 }
 
-@media (max-width:480px){
-  #bodyRegister .wrapper .form .inputfield{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #bodyRegister .wrapper .form .inputfield label{
-    margin-bottom: 5px;
-  }
-  #bodyRegister .wrapper .form .inputfield.terms{
-    flex-direction: row;
-  }
 
-}
 

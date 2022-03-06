@@ -886,6 +886,8 @@ footer {
     justify-content: center;
     align-items: flex-end;
     color: white;
+    position: fixed;
+    bottom: 0px;
 }
 /*footer*/
 
@@ -926,9 +928,7 @@ body#MenuAdmin div ul li{
   width: 100%;
   justify-content: center;
 }
-@media (min-width:1280px){
 
-}
 @media (max-width:1279px){
 
 }

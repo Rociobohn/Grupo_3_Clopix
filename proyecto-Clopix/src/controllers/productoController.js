@@ -2,6 +2,7 @@
 const gArchivoJson=require('../model/controlDatos');
 let Detalle=gArchivoJson('listaComprasTest');
 const db=require('../../database/models');
+const { validationResult } = require('express-validator');
 
 const producto={
     alta:(req, res)=>{
@@ -97,6 +98,10 @@ const producto={
         res.render('Products/CarritoCompras',{ DetalleCompra: Detalle.readFile()});
     },
     CrearProducto:(req,res)=>{
+        let errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.render('Products/AltaProducto',{errors: errors.mapped(),old:req.body});
+          }
         let talleD;
         switch(req.body.talle){
             case 'S':

@@ -9,8 +9,9 @@ const user={
     registro:(req, res)=>{
         res.render('Users/register');
     },
-    
+
     crear:(req,res)=>{
+
         const errors = validationResult(req);
         let passEncrip=bycript.hashSync(req.body.pasword,3);
         let image="imagendeperfil.png";
@@ -44,8 +45,19 @@ const user={
                 todoOk=false;
             }
         });
-        if(req.body.file){
+        if(req.body.file && (path.extname(req.file.originalname)==".png" || path.extname(req.file.originalname)==".gif" || path.extname(req.file.originalname)==".jpeg" )){
            image= req.file.filename;
+        }
+        else
+        {
+            if(req.session.productoActual!="defecto.png"){
+                try {
+                    fs.unlinkSync(__dirname+"/../../public/images/avatar/"+req.file.filename);
+                    console.log('File removed');
+                } catch(err) {
+                    console.error('Something wrong happened removing the file', err);
+                  }
+            }
         }
         if (todoOk) {
             let nuevo={

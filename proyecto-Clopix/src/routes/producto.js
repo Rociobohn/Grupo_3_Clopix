@@ -10,7 +10,8 @@ const routers= express.Router();
 let validationProduct=[
    body('nombre').notEmpty().isLength({min:5}).withMessage("el nombre debe tener al menos 5 caracteres"),
    body('descripcion').notEmpty().isLength({min:20}).withMessage("Debe tener al menos 20 caracteres").bail(),
-
+   body('precio').notEmpty().withMessage("Debe Indicar un Precio!").isNumeric().withMessage("ingrese solo Numeros"),
+   body('imagenProducto').notEmpty().withMessage("NO hay Ninguna Imagen selecionada").bail()
 ];
 
 const storage = multer.diskStorage({ 

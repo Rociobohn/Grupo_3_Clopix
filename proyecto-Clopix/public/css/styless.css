@@ -426,6 +426,7 @@ body#bodyHome{
   #bodyHome main{
     margin: auto;
     width: 90%;
+   
     
   }
   #bodyHome main article{
@@ -472,15 +473,18 @@ body#bodyHome{
   #bodyHome .caja-detalle i:hover{
     transform: rotate(-90deg)
   }
-  
+  /*Probablemente no hace nada*/
   #bodyHome main section article h3{
     text-align: left;
   }
   
   #bodyHome main section article{
-  
-     width: 43%;
+      width: 43%;
+      padding: 10px;
+      
   }
+
+
   
   #bodyHome .caja-detalle p {
     color: black;

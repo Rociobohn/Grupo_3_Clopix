@@ -628,9 +628,9 @@ body#bodyRegister{
   width: 100%;
 }
 
-#bodyRegister .wrapper .form .inputfield{
+#bodyRegister .wrapper .form .inputfield{          /*comente el display: flex para que baje "el nombre tiene..." */
   margin-bottom: 15px;
-  display: flex;
+  /*display: flex;*/
   align-items: center;
 }
 
@@ -695,10 +695,22 @@ body#bodyRegister{
   border: 1px solid plum;
 }
 
+                                        /*empiezo el modifico del estilo de validaciones en register*/
+
 #bodyRegister .wrapper .form .inputfield p{
    font-size: 14px;
-   color: #757575;
+   color: red;
+   padding-top: 10px;
 }
+
+#bodyRegister .wrapper .form h1{
+  font-size: 14px;
+  color: gray;
+  display:flex;
+  justify-content: space-around;
+}
+                                         /*termino el modifico del estilo de validaciones en register*/
+
 #bodyRegister .wrapper .form .inputfield .check{
   width: 15px;
   height: 15px;
@@ -717,7 +729,9 @@ body#bodyRegister{
   height: 15px;
   border: 1px solid plum;
   display: block;
-  position: relative;
+  /*position: relative;                                           comente porque no hace nada
+                                 me falta poisicionarlo al lado de "Acepto terminos y condiciones"*/    
+
 }
 #bodyRegister .wrapper .form .inputfield .check .checkmark:before{
   content: "";

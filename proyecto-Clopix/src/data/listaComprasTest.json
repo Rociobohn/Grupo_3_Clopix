@@ -43,13 +43,5 @@
   "talle_id ": "S",
   "priceUnit": 700,
   "stock": 1
- },
- {
-  "id": 4,
-  "nameProduct": "algo2",
-  "description": "danw",
-  "priceUnit": 250,
-  "talle_id": 5,
-  "image_product": "p3.jpg"
  }
 ]

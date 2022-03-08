@@ -1,36 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<%-include('../partials/head')  %> 
+<html>
+<%- include('../partials/head')  %> 
 <body id="bodyLogin">
+    <%- include('../partials/header')%>
 
-  <%- include('../partials/header')%>
+        <div class="wrapper">
+            <div class="title">
+                Inicio de sesión 
+            </div>
 
-<div class="wrapper">
-    <div class="title">
-        Inicio de sesión 
-    </div>
-
-    <form action="/user/loading" method="post">
-        <div class="inputfield">
-        <label>Usuario</label>
-        <input type="text" class="input" name="user">
-        </div>  
-  
-        <div class="inputfield"> 
-        <label>Contraseña</label>
-        <input type="password" class="input" name="password">
+            <form action="/user/loading" method="post">
+                <p>Usuario</p>
+                <input type="text" class="input" name="user">
+                <p>Contraseña</p>
+                <input type="password" class="input" name="password">
+                <button type="submit">Inicia Sesión</button>
+            </form>
         </div>
-
-        <div class="inputfield">
-        <a href="">
-            <button type="submit">Logear</button>
-        </a>
-        </div>
-    </form>
-
-
-</div>
-<%- include('../partials/footer')%>
+        
+        <%- include('../partials/footer')%>
 </body>
 </html>

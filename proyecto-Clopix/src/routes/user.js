@@ -5,9 +5,10 @@ const { body } = require('express-validator');
 const userController= require('../controllers/userController');
 const userTest=require('../myMiddlewares/guestTest');
 
+
 let validationUser=[
    body('nombreCompleto').notEmpty().isLength({min:3}).withMessage("el nombre debe tener al menos 3 caracteres"),
-   body('mail').notEmpty().withMessage("Campo Obligatorio").bail(),
+   body('mail').notEmpty().withMessage("Campo Obligatorio").isEmail().withMessage("El email es inválido").bail(),
    body('user').notEmpty().isLength({min:3}).withMessage("el usuario debe tener al menos 3 caracteres").bail(),
    body('celular').notEmpty().isLength({ max:8}).withMessage("el numero indicado debe tener 8 numeros").bail(),
    body('pasword').notEmpty().isLength({min:8}).withMessage("La contraseña debe tener al menos 8 caracteres").bail(),
@@ -33,7 +34,7 @@ console.log(storage);
 
 userRoute.get('/login',userController.login);
 userRoute.post('/loading',userController.logear);
-userRoute.get('/editUser',userController.edit);
+
 userRoute.post('/Alta', upload.single('avatar'),validationUser, userController.crear);
 userRoute.delete('/:id/Baja');
 userRoute.put('/:id/editar');
@@ -41,7 +42,7 @@ userRoute.get('/register',userController.registro);
 userRoute.get('/:user/profile',userTest.isLogged,userController.perfil);
 userRoute.get('/unloged',userController.unLoged);
 userRoute.put('/:user/editPerfil',userController.editProfile); 
-
+userRoute.put('/:user/editImage',upload.single('newAvatar'),userController.editImageProfile);
 
 
 

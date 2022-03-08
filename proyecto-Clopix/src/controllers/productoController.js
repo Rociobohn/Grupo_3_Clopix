@@ -1,8 +1,8 @@
 
 const gArchivoJson=require('../model/controlDatos');
-let dataProductos=gArchivoJson('product');
 let Detalle=gArchivoJson('listaComprasTest');
 const db=require('../../database/models');
+const { validationResult } = require('express-validator');
 
 const producto={
     alta:(req, res)=>{
@@ -69,11 +69,27 @@ const producto={
                 writable: true,
                 enumerable: true,
                 configurable: true
-              });
+            });
+            if(req.session.productoActual!="defecto.png"){
+                try {
+                    fs.unlinkSync(__dirname+"/../../public/images/product/"+req.session.productoActual.image_product);
+                    console.log('File removed');
+                } catch(err) {
+                    console.error('Something wrong happened removing the file', err);
+                  }
+            }
+        }
+        if(req.body.stock>0){
+            Object.defineProperty(buffer, "stock",{
+                value: req.body.stock,
+                writable: true,
+                enumerable: true,
+                configurable: true
+            });
         }
         console.log(buffer);
         db.Productos.update(buffer,{where:{id:req.params.id}});
-        res.redirect("/Producto/"+id+"/edit");
+        res.redirect("/Producto/");
     },
     Catalogo:(req, res)=>{
         db.Productos.findAll({include:[{association:"talles"}]}).then(resultado=>res.render('Products/productDetail',{producto:resultado}));
@@ -81,12 +97,19 @@ const producto={
     },
     
     Detalle:(req, res)=>{
-        db.Productos.findByPk(req.params.id,{include:[{association:"talles"}]}).then(resultado=>res.render('Products/unProducto',{ unP: resultado }));
+        db.Productos.findByPk(req.params.id,{include:[{association:"talles"}]}).then(resultado=>{
+            req.session.productoActual=resultado;
+            res.render('Products/unProducto',{ unP: resultado })
+        });
     },
     Carrito:(req, res)=>{
         res.render('Products/CarritoCompras',{ DetalleCompra: Detalle.readFile()});
     },
     CrearProducto:(req,res)=>{
+        let errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.render('Products/AltaProducto',{errors: errors.mapped(),old:req.body});
+          }
         let talleD;
         switch(req.body.talle){
             case 'S':
@@ -117,7 +140,11 @@ const producto={
             description: req.body.descripcion,
             talle_id: talleD, 
             priceUnit: req.body.precio,
+            stock:req.body.stock
         }
+        console.log("------------------------------------------------- voy por aca");
+        console.log(nuevo);
+    
         db.Productos.create(nuevo)
         res.redirect('/Producto/');
     },

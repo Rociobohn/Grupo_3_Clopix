@@ -3,11 +3,17 @@
     <%- include('../partials/head')  %> 
 <body id="AltaProducto">
     <%- include('../partials/header')%>
-    <form method="post" action="/producto/" enctype="multipart/form-data">
+    <form method="post" action="/producto/Create" enctype="multipart/form-data">
         <label for="">Nombre del Producto</label>
-        <input type="text" name="nombre">
+        <input type="text" name="nombre" value="<% if (typeof errors !== "undefined") { %><%= old.nombre %><%} %>">
+        <% if (typeof errors !== "undefined" && typeof errors.nombre !== "undefined") { %>
+            <p><%= errors.nombre.msg %></p>
+         <% } %>
         <label for="">Descripcion</label>
-        <input type="text" name="descripcion" >
+        <input type="text" name="descripcion" value="<% if (typeof errors !== "undefined") { %><%= old.descripcion %><%} %>">
+        <% if (typeof errors !== "undefined" && typeof errors.descripcion !== "undefined") { %>
+            <p><%= errors.descripcion.msg %></p>
+         <% } %>>
         <label for="">Precio Unitario</label>
         <input type="text" name="precio">
         <label for="">Talle</label>
@@ -21,10 +27,11 @@
                     <option value="XXXL">XXXL</option> 
          </select>
          <label for="">Stock inicial</label>
-         <input type="text" name="unidades">
+         <input type="text" name="stock">
         <label for="">Selecionar Imagen</label>
         <input type="file" class= "imagenProducto" name="imagenProducto">
         <button type="submit">Agregar Producto</button>
+    
     </form>
     
     <%- include('../partials/footer')%>

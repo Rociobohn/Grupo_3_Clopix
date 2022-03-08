@@ -10,10 +10,11 @@
             </div>
             
 
-            <form action="/User/Alta" method="post" enctype="multipart/form-data" class="form">
+            <form name="registerForm" id="registerForm" action="/User/Alta" method="post" enctype="multipart/form-data" class="form">
               <div class="inputfield">
                 <label>Nombre completo</label>
                 <input type="text" class="input" name="nombreCompleto" required>
+                <p id="errName">  </p>
                 <% if(locals && locals.errors && locals.errors.nombreCompleto){ %>
                   <p><%= errors.nombreCompleto.msg %> </p>
                 <% } %>
@@ -24,6 +25,7 @@
                 <label>E-mail</label>
                 <input type="text" class="input" name= "mail" required>
               </div>
+              <p id="errMail"></p>
               <% if(locals && locals.errors && locals.errors.mail){  %>
                 <p><%= errors.mail.msg %> </p>
                 <% } %>   
@@ -45,7 +47,13 @@
               <div class="inputfield">
                 <label>Contraseña</label>
                 <input type="password" class="input" name="pasword" required>
+                <p id="errPassword"></p>
+               
               </div> 
+              <% if(locals && locals.errors && locals.errors.pasword){  %>
+                <p><%= errors.pasword.msg %> </p>
+                <% } %> 
+              
               <% if(locals && locals.errors && locals.errors.pasword){  %>
                 <p><%= errors.pasword.msg %> </p>
                 <% } %>  
@@ -75,6 +83,7 @@
               <div class="inputfield">
                 
                 <button type="submit"> Crear Cuenta </button>
+              
                 
               </div>
               

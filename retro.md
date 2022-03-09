@@ -143,3 +143,24 @@ Organizar el tiempo y coordinar horarios 
 Dejar de atrasarse con el material del playground
 
 
+
+----- RETROSPECTIVA SPRINT 7 ----- 
+
+###COMENZAR A HACER
+
+Mejorar la división de las tareas 
+
+###HACER MÁS
+
+Más reuniones 
+Mejorar la coordinación de las reuniones de acuerdo a los horarios disponibles de cada uno 
+
+###CONTINUAR HACIENDO
+
+Utilizar el Trello 
+
+###HACERMENOS 
+
+###DEJAR DE HACER
+
+Dejar de atrasarse con el material del playground

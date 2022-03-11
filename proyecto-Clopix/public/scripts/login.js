@@ -1,4 +1,4 @@
-
+const loginForm = document.forms['loginForm'];
 
 
 

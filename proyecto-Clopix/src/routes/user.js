@@ -33,7 +33,7 @@ const storage = multer.diskStorage({
 console.log(storage);
 
 userRoute.get('/login',userController.login);
-userRoute.post('/loading',validationUser,userController.logear); 
+userRoute.post('/loading',validationUser,userController.logear);                 //aca hice el validationUser
 
 userRoute.post('/Alta', upload.single('avatar'),validationUser, userController.crear);
 userRoute.delete('/:id/Baja');

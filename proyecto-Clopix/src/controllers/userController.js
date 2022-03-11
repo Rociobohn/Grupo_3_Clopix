@@ -118,7 +118,7 @@ const user={
                 console.log("No entra a ningun iff");
                  res.redirect("/user/login");
 
-            }
+            }res.render('Users/loading');                                          //user loading
         }) 
     }, 
     perfil:(req,res) => {

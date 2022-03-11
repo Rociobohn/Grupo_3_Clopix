@@ -117,12 +117,9 @@ const user={
             else{
                 console.log("No entra a ningun iff");
                  res.redirect("/user/login");
+
             }
-        });
-        
-       
-        
-        
+        }) 
     }, 
     perfil:(req,res) => {
         db.Usuarios.findOne({where:{username:req.session.userLogged.user }}).then(resultado=>{

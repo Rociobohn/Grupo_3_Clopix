@@ -12,7 +12,13 @@
             <form name= "loginForm" id="loginForm" action="/user/loading" method="post" class="form">  
                 <div class="inputfield"></div>
                 <p>Usuario</p>
-                <input type="text" class="input" name="user">
+                <input type="text" class="input" name="user" required>
+                <p id="errUser"></p>
+                <% if(locals && locals.errors && locals.errors.user){ %>
+                    <p><%= errors.user.msg %> </p>
+                  <% } %>
+                </div>
+
                 <p>Contraseña</p>
                 <input type="password" class="input" name="password">
                 <button type="submit">Inicia Sesión</button>

@@ -526,7 +526,6 @@ body#bodyLogin{
     color: plum;
     text-transform: uppercase;
     text-align: center;
-
   }
   /*#bodyLogin .wrapper form input no se que es */
     
@@ -538,7 +537,12 @@ body#bodyLogin{
       margin-top: 4%; 
       border: 1px solid #d5dbd9;
       transition: all 0.3s ease;
+      color: black;
     }
+
+/*#bodyLogin .wrapper .form .inputfield .pasword{ 
+  color:red;
+}*/
 
 /*FIN ESTILOS LOGIN*/
 

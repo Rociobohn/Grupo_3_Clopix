@@ -492,7 +492,8 @@ body#bodyHome{
 /*fin del home*/
 
 
-/*estilos login*/
+/*ESTILOS LOGIN*/
+
 body#bodyLogin{
     background-image: url("https://cdn.shopify.com/s/files/1/1110/3486/files/a2495535377_10.jpg?11163386226905960286");
     background-size: cover;   
@@ -501,54 +502,57 @@ body#bodyLogin{
     height: 100%; 
   }
   
-  
-  
-  #bodyLogin .wrapper{
+  #bodyLogin .wrapper{        /*fondo del formualrio*/
     max-width: 500px;
     width: 100%;
-    background: #fff;
+    background: white;
     margin: 20px auto;
     box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
     padding: 30px;
     margin-top: 20%;
-    
-  }
-  #bodyLogin .wrapper form{
+    }
+
+  #bodyLogin .wrapper form{    /*titulo usuario*/
     text-align: center;
     padding: 2px;
     font-size: 20px;
     margin: auto;
   }
-  #bodyLogin .wrapper .title{
+
+  #bodyLogin .wrapper .title{          /*titulo inicio de sesión*/
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 25px;
     color: plum;
     text-transform: uppercase;
     text-align: center;
+
   }
-  #bodyLogin .wrapper form input .password{
+  #bodyLogin .wrapper form input {    /*campo de usuario*/
     margin: 1%;
     width: 60%;
     font-size: x-large;
     border: none;
   } 
   
-  #bodyLogin .wrapper form button{
+ /* #bodyLogin .wrapper form button .password*/
+ #bodyLogin .wrapper form input{
       width: 100%;
       padding: 8px 10px;
       margin-top: 4%;
       font-size: 15px; 
       border: 0px;
       background:  plum;
-      color: #fff;
+      color: white;
       cursor: pointer;
       border-radius: 3px;
       outline: none;
     }
 
-/*fin estilos login*/
-/*register*/
+/*FIN ESTILOS LOGIN*/
+
+
+/*REGISTER*/
 body#bodyRegister{
   width: 100%;
   background-image: url("https://cdn.shopify.com/s/files/1/1171/8456/files/71530421_729406894232388_5302369846022799223_n_1024x1024.jpg?v=1636497317");

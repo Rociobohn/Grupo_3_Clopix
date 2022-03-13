@@ -528,25 +528,27 @@ body#bodyLogin{
     text-align: center;
 
   }
-  #bodyLogin .wrapper form input {    /*campo de usuario*/
+  #bodyLogin .wrapper form input {    /*no se que es */
     margin: 1%;
     width: 60%;
-    font-size: x-large;
-    border: none;
+    
+    
   } 
   
- /* #bodyLogin .wrapper form button .password*/
- #bodyLogin .wrapper form input{
-      width: 100%;
+                                        /* #bodyLogin .wrapper form button .password*/
+
+#bodyLogin .wrapper .form .inputfield .input{     /*campo de usuario*/
+      width: 60%;
       padding: 8px 10px;
       margin-top: 4%;
-      font-size: 15px; 
-      border: 0px;
-      background:  plum;
-      color: white;
+      font-size: x-large; 
+      background:  white;
       cursor: pointer;
       border-radius: 3px;
-      outline: none;
+     /* outline: none;*/
+      border: 1px solid #d5dbd9;
+      border-radius: 3px;
+      transition: all 0.3s ease;
     }
 
 /*FIN ESTILOS LOGIN*/

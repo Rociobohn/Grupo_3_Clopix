@@ -495,8 +495,7 @@ body#bodyHome{
 /*estilos login*/
 body#bodyLogin{
     background-image: url("https://cdn.shopify.com/s/files/1/1110/3486/files/a2495535377_10.jpg?11163386226905960286");
-    background-size: cover;
-    
+    background-size: cover;   
     padding: 2%;
     width: 100%;
     height: 100%; 
@@ -528,7 +527,7 @@ body#bodyLogin{
     text-transform: uppercase;
     text-align: center;
   }
-  #bodyLogin .wrapper form input{
+  #bodyLogin .wrapper form input .password{
     margin: 1%;
     width: 60%;
     font-size: x-large;

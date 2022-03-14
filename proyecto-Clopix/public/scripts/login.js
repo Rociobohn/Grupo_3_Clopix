@@ -2,7 +2,7 @@ const loginForm = document.forms['loginForm'];
 
 loginForm.addEventListener('submit', function(event){
     event.preventDefault();
-    let errores= false;
+    let errors= false;
 
 
     //validación usuario
@@ -18,7 +18,7 @@ function userValidate(){
 
     //validación de contraseña
 if (this.password.value.length < 8){
-    errores= true;
+    errors= true;
     document.getElementById('errorPassword').innerHTML='La contraseña debe tener al menos 8 caracteres';
     } 
 });

@@ -14,22 +14,22 @@
                 <div class="inputfield"></div>
                     <p> Usuario </p>
                 <input type="text" class="input" name="user" required>
-                    <p id="errorUser"></p>
-                <% if(locals && locals.errores && locals.errores.user){ %>
-                    <p> <%= errores.user.msg %> </p>
+                    <p id="errUser"></p>
+                <% if(locals && locals.errores && locals.errors.user){ %>
+                    <p> <%= errors.user.msg %> </p>
                 <% } %>
                 </div>
 
 
                 <div class="inputfield">
                     <p> Contraseña </p>
-                <input type="password" class="input" name="password" required>
+                <input type="password" class="input" name="pasword" required>
                 </div>
-                    <p id="errorPassword"></p>
+                    <p id="errPassword"></p>
 
                 <div>      
-                <% if(locals && locals.errores && locals.errores.password){  %>
-                    <p> <%= errores.password.msg %> </p>
+                <% if(locals && locals.errors && locals.errors.password){  %>
+                    <p> <%= errors.password.msg %> </p>
                 <% } %> 
                 </div> 
 

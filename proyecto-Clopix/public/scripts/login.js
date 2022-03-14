@@ -6,13 +6,13 @@ loginForm.addEventListener('submit', function(event){
 
 
     //validación usuario
-loginForm.user.addEventListener('keydown', userValidate);
+loginForm.username.addEventListener('keydown', userValidate);
 
 function userValidate(){
-    if(loginForm.user.value < 2 ){
-        loginForm.user.style.borderColor= 'red';
+    if(loginForm.username.value < 2 ){
+        loginForm.username.style.borderColor= 'red';
     }else {
-        loginForm.user.style.borderColor= 'inherit';
+        loginForm.username.style.borderColor= 'inherit';
     }
 } 
 

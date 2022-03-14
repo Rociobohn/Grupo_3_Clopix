@@ -15,8 +15,8 @@
                     <p> Usuario </p>
                 <input type="text" class="input" name="user" required>
                     <p id="errorUser"></p>
-                <% if(locals && locals.errors && locals.errors.user){ %>
-                    <p> <%= errors.user.msg %> </p>
+                <% if(locals && locals.errores && locals.errores.user){ %>
+                    <p> <%= errores.user.msg %> </p>
                 <% } %>
                 </div>
 
@@ -28,8 +28,8 @@
                     <p id="errorPassword"></p>
 
                 <div>      
-                <% if(locals && locals.errors && locals.errors.password){  %>
-                    <p> <%= errors.password.msg %> </p>
+                <% if(locals && locals.errores && locals.errores.password){  %>
+                    <p> <%= errores.password.msg %> </p>
                 <% } %> 
                 </div> 
 

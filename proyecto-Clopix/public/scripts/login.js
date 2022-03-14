@@ -4,6 +4,12 @@ loginForm.addEventListener('submit', function(event){
     event.preventDefault();
     let errors= false;
 
+
+    //validación usuario
+loginForm.user.addEventListener('keydown', userValidate);
+
+
+
     //validación de contraseña
 if (this.password.value.length < 8){
     errors= true;

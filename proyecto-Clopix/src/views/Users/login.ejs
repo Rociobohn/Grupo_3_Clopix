@@ -11,7 +11,7 @@
 
             <form name= "loginForm" id="loginForm" action="/user/loading" method="post" class="form">
 
-                <div class="inputfield"></div>
+                <div class="inputfield">
                     <p> Usuario </p>
                 <input type="text" class="input" name="user" required>
                     <p id="errUser"></p>
@@ -23,9 +23,10 @@
 
                 <div class="inputfield">
                     <p> Contraseña </p>
-                <input type="password" class="input" name="pasword" required>
-                </div>
+                    <input type="password" class="input" name="pasword" required>
                     <p id="errPassword"></p>
+                </div>
+                    
 
                 <div>      
                 <% if(locals && locals.errors && locals.errors.password){  %>
@@ -38,7 +39,7 @@
                 </div>
 
             </form>
-                </div>
+        </div>
                     <%- include('../partials/footer')%>
     </body>
 </html>

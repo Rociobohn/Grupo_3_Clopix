@@ -17,8 +17,8 @@ let validationUser=[
 ];
 
 let validationLogin=[
-   body('user').notEmpty().isLength({min:3}).withMessage("el usuario debe tener al menos 3 caracteres").bail(), 
-   body('pasword').notEmpty().isLength({min:8}).withMessage("La contraseña debe tener al menos 8 caracteres").bail(), 
+   body('user').notEmpty().withMessage("el campo es obligatorio").bail(), 
+   body('pasword').notEmpty().withMessage("el campo ers obligatorio").bail(), 
 ];
 
 const userRoute= express.Router();
@@ -38,7 +38,7 @@ const storage = multer.diskStorage({
 console.log(storage);
 
 userRoute.get('/login',userController.login);
-userRoute.post('/loading',userController.logear);                 //aca hice el validationUser
+userRoute.post('/loading',validationLogin,userController.logear);                 //aca hice el validationLogin
 
 userRoute.post('/Alta', upload.single('avatar'),validationUser, userController.crear);
 userRoute.delete('/:id/Baja');

@@ -13,9 +13,9 @@
 
                 <div class="inputfield">
                     <p> Usuario </p>
-                <input type="text" class="input" name="user" required>
+                <input type="text" class="input" name="user">
                     <p id="errUser"></p>
-                <% if(locals && locals.errores && locals.errors.user){ %>
+                <% if(locals && locals.errors && locals.errors.user){ %>
                     <p> <%= errors.user.msg %> </p>
                 <% } %>
                 </div>
@@ -23,7 +23,7 @@
 
                 <div class="inputfield">
                     <p> Contraseña </p>
-                    <input type="password" class="input" name="pasword" required>
+                    <input type="password" class="input" name="pasword" >
                     <p id="errPassword"></p>
                 </div>
                     

@@ -88,6 +88,9 @@ const user={
         
     },
     logear:(req,res)=>{
+        if (!errors.isEmpty()) {
+            return res.render('Users/login',{errors: errors.mapped(),old:req.body});
+          }
         db.Usuarios.findOne({
             where:{
                 username:req.body.user

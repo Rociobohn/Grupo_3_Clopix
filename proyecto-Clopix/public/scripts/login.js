@@ -23,4 +23,3 @@ if (this.password.value.length < 8){
     } 
 });
 
-<script src="/scripts/login.js"> </script>

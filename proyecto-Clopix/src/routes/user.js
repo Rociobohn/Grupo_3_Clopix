@@ -16,9 +16,17 @@ let validationUser=[
    body('terminosyCondiciones').notEmpty().withMessage("Campo Obligatorio").bail()
 ];
 
+<<<<<<< HEAD
 let validandoLogeo=[
    
 ]
+=======
+let validationLogin=[
+   body('user').notEmpty().withMessage("el campo es obligatorio").bail(), 
+   body('pasword').notEmpty().withMessage("el campo ers obligatorio").bail(), 
+];
+
+>>>>>>> 4bcfa2f45dd14ad98ed84b6331f4c1798a43d101
 const userRoute= express.Router();
 
 
@@ -36,7 +44,11 @@ const storage = multer.diskStorage({
 console.log(storage);
 
 userRoute.get('/login',userController.login);
+<<<<<<< HEAD
 userRoute.post('/loading',validandoLogeo,userController.logear);
+=======
+userRoute.post('/loading',validationLogin,userController.logear);                 //aca hice el validationLogin
+>>>>>>> 4bcfa2f45dd14ad98ed84b6331f4c1798a43d101
 
 userRoute.post('/Alta', upload.single('avatar'),validationUser, userController.crear);
 userRoute.delete('/:id/Baja');

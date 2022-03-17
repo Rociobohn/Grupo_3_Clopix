@@ -9,15 +9,43 @@
                 Inicio de sesión 
             </div>
 
-            <form action="/user/loading" method="post">
-                <p>Usuario</p>
+            <form name= "loginForm" id="loginForm" action="/user/loading" method="post" class="form">
+
+                <div class="inputfield">
+                    <p> Usuario </p>
                 <input type="text" class="input" name="user">
-                <p>Contraseña</p>
-                <input type="password" class="input" name="password">
-                <button type="submit">Inicia Sesión</button>
+                    <p id="errUser"></p>
+                <% if(locals && locals.errors && locals.errors.user){ %>
+                    <p> <%= errors.user.msg %> </p>
+                <% } %>
+                </div>
+
+
+                <div class="inputfield">
+                    <p> Contraseña </p>
+                    <input type="password" class="input" name="pasword" >
+                    <p id="errPassword"></p>
+                </div>
+                    
+
+                <div>      
+                <% if(locals && locals.errors && locals.errors.password){  %>
+                    <p> <%= errors.password.msg %> </p>
+                <% } %> 
+                </div> 
+
+                <div class="inputfield">
+                    <button type="submit">Inicia Sesión</button>
+                </div>
+
             </form>
         </div>
+<<<<<<< HEAD
         
         
 </body>
+=======
+                    <%- include('../partials/footer')%>
+    </body>
+>>>>>>> 4bcfa2f45dd14ad98ed84b6331f4c1798a43d101
 </html>

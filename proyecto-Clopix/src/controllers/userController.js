@@ -88,6 +88,9 @@ const user={
         
     },
     logear:(req,res)=>{
+        if (!errors.isEmpty()) {
+            return res.render('Users/login',{errors: errors.mapped(),old:req.body});
+          }
         db.Usuarios.findOne({
             where:{
                 username:req.body.user
@@ -117,12 +120,9 @@ const user={
             else{
                 console.log("No entra a ningun iff");
                  res.redirect("/user/login");
-            }
-        });
-        
-       
-        
-        
+
+            }                                   
+        }) 
     }, 
     perfil:(req,res) => {
         db.Usuarios.findOne({where:{username:req.session.userLogged.user }}).then(resultado=>{

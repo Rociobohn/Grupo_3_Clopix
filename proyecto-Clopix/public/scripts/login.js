@@ -1,5 +1,24 @@
+const loginForm = document.forms['loginForm'];
+
+loginForm.addEventListener('submit', function(event){
+    event.preventDefault();
+    let errors= false;
 
 
+    //validación usuario
+loginForm.user.addEventListener('keydown', userValidate);
 
+function userValidate(){
+    if(loginForm.user.value < 2 ){
+        loginForm.user.style.borderColor= 'red';
+    }else {
+        loginForm.user.style.borderColor= 'inherit';
+    }
+} 
 
-<script src="/scripts/login.js"> </script>
+    //validación de contraseña
+if (this.pasword.value.length < 8){
+    errors= true;
+    document.getElementById('errPassword').innerHTML='La contraseña debe tener al menos 8 caracteres';
+    } 
+});

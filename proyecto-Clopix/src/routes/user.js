@@ -16,6 +16,9 @@ let validationUser=[
    body('terminosyCondiciones').notEmpty().withMessage("Campo Obligatorio").bail()
 ];
 
+let validandoLogeo=[
+   
+]
 const userRoute= express.Router();
 
 
@@ -33,7 +36,7 @@ const storage = multer.diskStorage({
 console.log(storage);
 
 userRoute.get('/login',userController.login);
-userRoute.post('/loading',userController.logear);
+userRoute.post('/loading',validandoLogeo,userController.logear);
 
 userRoute.post('/Alta', upload.single('avatar'),validationUser, userController.crear);
 userRoute.delete('/:id/Baja');

@@ -27,6 +27,14 @@ registerForm.addEventListener('submit', function(event){
     document.getElementById('errPassword').innerHTML='La contraseña debe tener al menos 8 caracteres';
 } 
 
+
+
+
+
+
+
+
+
 });
 
  

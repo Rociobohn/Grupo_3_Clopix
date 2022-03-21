@@ -14,9 +14,9 @@
               <div class="inputfield">
                 <label>Nombre completo</label>
                 <input type="text" class="input" name="nombreCompleto" required>
-                <p id="errName">  </p>
+                <p id="errName" class="error">  </p>
                 <% if(locals && locals.errors && locals.errors.nombreCompleto){ %>
-                  <p><%= errors.nombreCompleto.msg %> </p>
+                  <p class="error"><%= errors.nombreCompleto.msg %> </p>
                 <% } %>
               </div>
                
@@ -25,16 +25,16 @@
                 <label>E-mail</label>
                 <input type="text" class="input" name= "mail" required>
               </div>
-              <p id="errMail"></p>
+              <p id="errMail" class="error"></p>
               <% if(locals && locals.errors && locals.errors.mail){  %>
-                <p><%= errors.mail.msg %> </p>
+                <p class="error"><%= errors.mail.msg %> </p>
                 <% } %>   
               <div class="inputfield">
                 <label>Celular</label>
                 <input type="number" class="input" name="celular" required >
               </div>
               <% if(locals && locals.errors && locals.errors.celular){  %>
-                <p><%= errors.celular.msg %> </p>
+                <p class="error"><%= errors.celular.msg %> </p>
                 <% } %> 
          <!--Datos de ingreso-->      
               <div class="inputfield">
@@ -42,27 +42,27 @@
                 <input type="text" class="input" name="user" required>
               </div>
               <% if(locals && locals.errors && locals.errors.user){  %>
-                <p><%= errors.user.msg %> </p>
+                <p class="error"><%= errors.user.msg %> </p>
                 <% } %>   
               <div class="inputfield">
                 <label>Contraseña</label>
                 <input type="password" class="input" name="pasword" required>
-                <p id="errPassword"></p>
+                <p id="errPassword" class="error"></p>
                
               </div> 
               <% if(locals && locals.errors && locals.errors.pasword){  %>
-                <p><%= errors.pasword.msg %> </p>
+                <p class="error"><%= errors.pasword.msg %> </p>
                 <% } %> 
               
               <% if(locals && locals.errors && locals.errors.pasword){  %>
-                <p><%= errors.pasword.msg %> </p>
+                <p class="error"><%= errors.pasword.msg %> </p>
                 <% } %>  
               <div class="inputfield">
                   <label>Confirmar contraseña</label>
                   <input type="password" class="input" name="passwordConfirm" required>
                   <br> 
                   <% if(locals && locals.errors && locals.errors.passwordConfirm){  %>
-                    <p><%= errors.passwordConfirm.msg %> </p>
+                    <p class="error"><%= errors.passwordConfirm.msg %> </p>
                     <% } %>  
               </div> 
 
@@ -91,14 +91,11 @@
           
             <div class="container-signin">
               <p>¿Ya tienes una cuenta?<a href="#">Iniciar sesión</a>.</p>
-            </div>
-
-
-              
+            </div>      
           </form>
         </div>	
         <%- include('../partials/footer')%>
-        <script src="/scripts/register.js"> </script>    <!--tuve que agregar el script en el register.ejs por un error en login.ejs
-    </body>
+        <script src="/scripts/register.js"> </script>    <!--tuve que agregar el script en el register.ejs por un error en login.ejs-->
+      </body>
 </html>
   

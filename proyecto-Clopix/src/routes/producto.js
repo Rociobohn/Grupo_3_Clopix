@@ -8,9 +8,9 @@ const productoControlador= require('../controllers/productoController');
 const testUserLogged=require("../myMiddlewares/guestTest")
 const routers= express.Router();
 let validationProduct=[
-   body('nombre').notEmpty().isLength({min:5}).withMessage("el nombre debe tener al menos 5 caracteres"),
-   body('descripcion').notEmpty().isLength({min:20}).withMessage("Debe tener al menos 20 caracteres").bail(),
-   body('precio').notEmpty().withMessage("Debe Indicar un Precio!").isNumeric().withMessage("ingrese solo Numeros"),
+   body('nombre').notEmpty().withMessage("el Nombre es un campo Obligatorio").isLength({min:5}).withMessage("el nombre debe tener al menos 5 caracteres").bail(),
+   body('descripcion').isLength({min:5}).withMessage("Debe tener al menos 5 caracteres").bail(),
+   body('precio').notEmpty().withMessage("Debe Indicar un Precio!").isNumeric().withMessage("ingrese solo Numeros").bail(),
    body('imagenProducto').notEmpty().withMessage("NO hay Ninguna Imagen selecionada").bail()
 ];
 

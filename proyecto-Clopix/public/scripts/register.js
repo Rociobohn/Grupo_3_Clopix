@@ -1,7 +1,7 @@
 const registerForm = document.forms['registerForm'];
 
 registerForm.addEventListener('submit', function(event){
-  event.preventDefault();
+    event.preventDefault();
     let errors= false;
 
     //validacion de nombreCompleto
@@ -21,20 +21,11 @@ registerForm.addEventListener('submit', function(event){
         registerForm.submit();
     }
      //validacion de contraseña
-  if (this.pasword.value.length < 8){
+     if (this.pasword.value.length < 8){
 
     errors= true;
     document.getElementById('errPassword').innerHTML='La contraseña debe tener al menos 8 caracteres';
-} 
-
-
-
-
-
-
-
-
-
+    } 
 });
 
  

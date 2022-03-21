@@ -5,47 +5,33 @@
     <%- include('../partials/header')%>
 
         <div class="wrapper">
-            <div class="title">
-                Inicio de sesión 
-            </div>
-
             <form name= "loginForm" id="loginForm" action="/user/loading" method="post" class="form">
-
-                <div class="inputfield">
-                    <p> Usuario </p>
-                <input type="text" class="input" name="user">
-                    <p id="errUser"></p>
+                <div class="title">
+                    Inicio de sesión 
+                </div>
+                <input type="text" class="input" placeholder="Usuario" name="user">
+                <p id="errUser"></p>
+                <% if(locals.notExist){%>
+                    <p>el Usuario o la contraseña no son validos</p>
+                <% } %>  
                 <% if(locals && locals.errors && locals.errors.user){ %>
                     <p> <%= errors.user.msg %> </p>
                 <% } %>
-                </div>
-
-
-                <div class="inputfield">
-                    <p> Contraseña </p>
-                    <input type="password" class="input" name="pasword" >
-                    <p id="errPassword"></p>
-                </div>
-                    
-
-                <div>      
+                
+                <input type="password" class="input" placeholder="Password" name="pasword" >
+                <p id="errPassword"></p>  
                 <% if(locals && locals.errors && locals.errors.password){  %>
                     <p> <%= errors.password.msg %> </p>
+                <% } %>
+                <% if(locals.notExist){%>
+                    <p>el Usuario o la contraseña no son validos</p>
                 <% } %> 
-                </div> 
 
-                <div class="inputfield">
-                    <button type="submit">Inicia Sesión</button>
-                </div>
-
+                <button type="submit">Inicia Sesión</button>
             </form>
+            
         </div>
-<<<<<<< HEAD
-        
-        
+
+        <%- include('../partials/footer')%>
 </body>
-=======
-                    <%- include('../partials/footer')%>
-    </body>
->>>>>>> 4bcfa2f45dd14ad98ed84b6331f4c1798a43d101
 </html>

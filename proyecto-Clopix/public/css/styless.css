@@ -105,7 +105,6 @@ body#bodyCarritoCompras div.main section.special{
 }
 body#bodyCarritoCompras div.main section.special button{
   width: 45%;
-  font-size: 125%;
 }
 
 /*fin stylos carrito*/
@@ -546,7 +545,7 @@ body#bodyRegister{
 }
 
 #bodyRegister nav a{
-  font-size: calc( 1.2rem + 1vw );
+
   text-decoration: none;
   font-weight: bold;
   color: #00324b;
@@ -922,7 +921,9 @@ body#MenuAdmin div ul li{
   #AltaProducto form{
     width: 60%;
   }
-
+  body#bodyCarritoCompras div.main section.special button{
+    font-size: 125%;
+  }
 
 }
 @media (min-width: 1280px){
@@ -949,7 +950,9 @@ body#MenuAdmin div ul li{
   #AltaProducto form{
     width: 40%;
   }
-  
+  body#bodyCarritoCompras div.main section.special button{
+    font-size: 125%;
+  }
 }
 
 

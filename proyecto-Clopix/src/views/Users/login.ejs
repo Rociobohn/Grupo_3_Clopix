@@ -20,8 +20,8 @@
                 
                 <input type="password" class="input" placeholder="Password" name="pasword" >
                 <p id="errPassword"></p>  
-                <% if(locals && locals.errors && locals.errors.password){  %>
-                    <p> <%= errors.password.msg %> </p>
+                <% if(locals && locals.errors && locals.errors.pasword){  %>
+                    <p> <%= errors.pasword.msg %> </p>
                 <% } %>
                 <% if(locals.notExist){%>
                     <p>el Usuario o la contraseña no son validos</p>

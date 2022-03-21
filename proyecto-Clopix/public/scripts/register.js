@@ -21,10 +21,8 @@ registerForm.addEventListener('submit', function(event){
         registerForm.submit();
     }
      //validacion de contraseña
-     if (this.pasword.value.length < 8){
-
-    errors= true;
-    document.getElementById('errPassword').innerHTML='La contraseña debe tener al menos 8 caracteres';
+    if (this.pasword.value.length < 8){
+        document.getElementById('errPassword').innerHTML='La contraseña debe tener al menos 8 caracteres';
     } 
 });
 

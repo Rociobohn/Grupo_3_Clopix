@@ -108,6 +108,7 @@ const producto={
     CrearProducto:(req,res)=>{
         let errors = validationResult(req);
         if (!errors.isEmpty()) {
+            
             return res.render('Products/AltaProducto',{errors: errors.mapped(),old:req.body});
           }
         let talleD;

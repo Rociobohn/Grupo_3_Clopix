@@ -9,6 +9,8 @@ img{
 /*header*/
 header{
     background-color: white;
+    font-size: 100%;
+    width: 100%;
 }
 header img{
     width: 100%;
@@ -48,106 +50,64 @@ header nav a {
     position: relative;
 }
 
-
 /*header*/
+
+form p.error{
+  color: red;
+  font-size: 75%;
+}
 
 /*carrito Compras*/
 body#bodyCarritoCompras{
-    width: 100%;
-    height: 100%;
     background-image: url("https://cutewallpaper.org/21/vaporwave-pixel-art-wallpaper/19-Pixel-Art-Wallpapers-that-Will-Make-Your-Desktop-Retro.png"); 
-    padding: 40px;
-    margin: auto;
+    margin: 20px;
     color: white;
-    font-size: x-large;
     
 }
-body#bodyCarritoCompras table img{
-  width: auto;
-  height: auto;
-}
-#bodyCarritoCompras table{
+body#bodyCarritoCompras div.main{
   width: 100%;
-  height: 100%;
+  text-align: center;
+  min-height: 60vh;
+}
+body#bodyCarritoCompras table{
+  width: 100%;
+}
+body#bodyCarritoCompras table th{
+  text-align: center;
+}
+body#bodyCarritoCompras table tr.producto{
+  border: 1px solid white;
+  background-color: #3ccabe;
+  margin: 5%;
+}
+body#bodyCarritoCompras table tr td.detalle{
+  display: flex;
+  flex-direction: column;
+}
+
+body#bodyCarritoCompras table tr td.detalle img{
+  display: none;
+}
+body#bodyCarritoCompras table tr td.detalle p{
   margin: auto;
 }
-#bodyCarritoCompras thead{
-  height: 5vh;
-  font-size: x-large;
-  font-family: cursive;
-}
-#bodyCarritoCompras thead th.info{
-  width: 15%;
-}
-#bodyCarritoCompras tbody.resultados{
-    height: 5vh;
-}
-#bodyCarritoCompras tr.unProducto td{
-    height: 25vh;
-    text-align: center;
-    border: 1px solid white;
-}
-#bodyCarritoCompras tr td.producto img{
-    justify-content: center;
-    align-items: center;
-}
-#bodyCarritoCompras tr td.masMenos button{
-  height: 24%;
-  width: 100%;
-  background: none;
+body#bodyCarritoCompras table tr td.unidades button{
   border: none;
 }
-#bodyCarritoCompras tr td.masMenos button i{
-  font-size: 50px;
-}
-#bodyCarritoCompras td.imagen{
-    width: 45%;
-}
-#bodyCarritoCompras td.detalle{
-  width: 20%;
-}
-#bodyCarritoCompras button{
-   
-    background-color: #99DDCC;
-    width: 100%;
-    color: #FF5DA2;
-    justify-content: space-around;
-}
-#bodyCarritoCompras table#listaCompras tbody {
-    width: 40%;
-    height: 40%;
-}
-#bodyCarritoCompras table tr.unProducto td.NoProducto{
-  border: none;
 
+body#bodyCarritoCompras table tr td.eliminar button{
+  border: none;
+  background: none;
+  font-size: 125%;
 }
-#bodyCarritoCompras td.NoProducto button{
-    width: 100%;
-    height: 40%;
-    background:none;
-    border: none;
-    font-size: xx-large;
+body#bodyCarritoCompras div.main section.special{
+  width: 100%;
 }
-#bodyCarritoCompras tr.resultados td{
-    border: none;
+body#bodyCarritoCompras div.main section.special button{
+  width: 45%;
+  font-size: 125%;
 }
-#bodyCarritoCompras tr.resultados td.resultados{
-    border: 1px solid white;
-    background-color: #FF5DA2;
-}
-body#bodyCarritoCompras section.special{
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    flex-direction: row;
-    height: 4vh;
-    margin-bottom: 1vh;
-    
-}
-body#bodyCarritoCompras section.special button{
-    font-size: xx-large;
-    font-family: italic;
-}
+
 /*fin stylos carrito*/
 
 
@@ -165,9 +125,7 @@ body#bodyCarritoCompras section.special button{
     font-weight: 500;
     text-shadow: 1px 1px 6px #fff;
     padding: 10px;
-    
-    
-    
+    color: white;
 }
 body#bodyUnProducto{
     width: 100%;
@@ -257,25 +215,24 @@ body#bodyCatalogo{
     background-image: url("https://cutewallpaper.org/21/vaporwave-pixel-art-wallpaper/19-Pixel-Art-Wallpapers-that-Will-Make-Your-Desktop-Retro.png"); 
     padding: 2vw;
     margin: auto;
-    font-size: 2vw;
-    
 }
 
-#bodyCatalogo section article{
+body#bodyCatalogo section article{
     display: flex;
-    width: 55%;
-    border: 1px solid white;
     flex-direction:column;
-    height: 50vh;
+    height: 75vh;
     margin: auto;
-    
+    margin-bottom: 5%;
+    margin-top: 2%;
+    width: 80%;
 }
 body#bodyCatalogo section.Productos{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
+  margin: 0px;
+  font-size: 225%;
 }
 
 #bodyCatalogo section article a{
@@ -295,7 +252,8 @@ body#bodyCatalogo section.Productos{
   align-content: center;
   justify-content: center;
   text-align: center;
-  height: 15%;
+  height: 18%;
+  
   background-color: #99DDCC;
   border: 5px solid white;
 }
@@ -305,118 +263,34 @@ body#bodyCatalogo section.Productos{
 /*Home*/
 body#bodyHome{
     width: 100%;
-    background: rgb(241,104,193);
+    
     background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(189,94,213,1) 62%);
   }
 /*CSS del slider*/
+#bodyHome section ul {
+  width: 100%;
+  height: 100%;
+}
+#bodyHome section ul li {
+  height: 100%;
+  width: 100%;
+}
+#bodyHome section ul li#slide1{
+display: block;
+}
 
-#bodyHome ul, li {
-    padding: 0;
-    margin: 0;
-    list-style: none inside;
-  }
-  
-  #bodyHome ul.slider {
-    position:relative; /*Necesitamos que el ul sea relativo*/
-  }
-  #bodyHome ul.slider li {
-    opacity: 0; /*Ocultamos todos los <li>*/
-    transition: opacity .5s;
-    position: absolute; /*Posicionamos en absoluto los <li>*/
-    left: 0px;
-    top: 0px;
-    margin:50px;
-    padding:50px;
-    border:2px solid red;
-    background:#fff;
-  }
-  #bodyHome ul.slider li:first-child {
-    opacity: 1; /*Mostramos el primer <li>*/
-  }
-  #bodyHome ul.slider li:target {
-    opacity: 1; /*Mostramos el <li> al que apunta el enlace*/
-  }
-  #bodyHome nav .slide-num{
-    position:relative;
-    margin-top:35%;
-    
-  }
-  
-  
-  
-  
-  #bodyHome ul.slider {
-    padding: 30px;
-  }
-  
-  #bodyHome ul.slider li {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background-color: rgb(0, 0, 0);
-    opacity: 0; 
-    transition: opacity .5s;
-    text-align: center;
-  }
-  
+#bodyHome section ul li#slide2{
+  display: none;
+}
+#bodyHome section ul li#slide3{
+  display: none;
+} 
   
   /*aca se modifican los botones de diapositiva*/
-  #bodyHome nav .menu{ 
-    width: 100%;
-    position: absolute;
-    top: auto;
-    right: 0;
-    bottom: 1px;
-    left: 0;
-    background: #f1f2f3;
-    /**/
-  }
+ 
   
-  #bodyHome nav ul {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
   
-  #bodyHome nav ul li {
-    display: flex;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-  }
-  
-  #bodyHome nav a{
-    font-size: calc( 1.2rem + 1vw );
-    text-decoration: none;
-    font-weight: bold;
-    color: #00324b;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.8;
-    flex-grow: 1;
-    text-align: center;
-    border-top: 5px solid #00324b;
-    border-right: 1px solid #00324b;
-    flex-wrap: wrap;
-    position: relative;
-  }
-  
-  #bodyHome nav li:last-child a {
-    border-right: 0;
-  }
-  
-  #bodyHome nav a:hover {
-    background-color: #3ccabe;
-    color: #fff;
-    border-top-color: #65bce8;
-  }
-  
-  #bodyHome nav a:active {
-    border-top-color: rgb(106, 219, 195);
-    background: rgb(187, 22, 146);
-    color: #23d6be;
-  }
-  
+
   
   /*fin CSS del slider*/
   
@@ -425,10 +299,16 @@ body#bodyHome{
   
   #bodyHome main{
     margin: auto;
-    width: 90%;
+    width: 100%;
    
     
   }
+
+  #bodyHome main section.slider {
+    height: 40vh;
+    
+  }
+
   #bodyHome main article{
     margin: auto;
     margin-top:15px;
@@ -451,6 +331,7 @@ body#bodyHome{
   }
   #bodyHome main section article .caja-detalle{
     position: relative;
+    
   }
   #bodyHome .caja-detalle i{
     display: block;
@@ -481,6 +362,7 @@ body#bodyHome{
   #bodyHome main section article{
       width: 43%;
       padding: 10px;
+    
       
   }
 
@@ -499,51 +381,60 @@ body#bodyLogin{
     background-size: cover;   
     padding: 2%;
     width: 100%;
-    height: 100%; 
   }
   
   #bodyLogin .wrapper{        /*fondo del formualrio*/
-    max-width: 500px;
-    width: 100%;
-    background: white;
-    margin: 20px auto;
-    box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
-    padding: 30px;
-    margin-top: 20%;
-    }
+    
+      width: 100%;
+      height: 55%;   
+      margin: auto;
+      padding: 30px;
+      margin-top: 10%;
+      margin-bottom: 10%; 
+      align-items: center;
 
-  #bodyLogin .wrapper form{    /*titulo usuario*/
-    text-align: center;
-    padding: 2px;
-    font-size: 20px;
-    margin: auto;
   }
 
-  #bodyLogin .wrapper .title{          /*titulo inicio de sesión*/
+  #bodyLogin .wrapper form{    /*titulo usuario*/
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 25px;
+    color: red;
+    font-size: medium;
+    text-align: center;
+    max-width: 400px;
+    height: 250px;
+    margin: auto;
+  }
+  #bodyLogin .wrapper input{
+    border: none;
+    font-size: 100%;
+    margin: auto;
+    height: 15%;
+
+  }
+ 
+  #bodyLogin .wrapper form .title{          /*titulo inicio de sesión*/
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 25px;
+    margin:auto;
     color: plum;
     text-transform: uppercase;
     text-align: center;
+  
+    height: 25%;
   }
-  /*#bodyLogin .wrapper form input no se que es */
-    
-                                        /*#bodyLogin .wrapper form button .password*/
-
-#bodyLogin .wrapper .form .input{                     /*campo de usuario*/
-      width: 60%;
-      padding: 8px 10px;
-      margin-top: 4%; 
-      border: 1px solid #d5dbd9;
-      transition: all 0.3s ease;
-      color: black;
-    }
-
-/*#bodyLogin .wrapper .form .inputfield .pasword{ 
-  color:red;
-}*/
-
+  #bodyLogin .wrapper form button{
+    width: 100%;
+    background-color: #23d6be;
+    color: white;
+    border: none;
+    height: 25%;
+  }
+  #bodyLogin .wrapper form input{
+      text-align: center;
+  }
 /*FIN ESTILOS LOGIN*/
 
 
@@ -784,47 +675,50 @@ body#bodyRegister{
 /*alta Producto*/
 #AltaProducto form{
   display: flex;
-  background: rgb(255,221,236);
   background: radial-gradient(circle, rgba(255,221,236,1) 0%, rgba(143,34,149,1) 100%);
   border: 1px solid white;
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  margin: 0px;
+  width: 100%;
+  margin: auto;
   padding: 5px;
-  font-size:x-large;
-  
+  font-size:100%;
+  margin-top: 5%;
  
 }
 
-#AltaProducto {
+
+body#AltaProducto {
   
   width: 100%;
-  height: 100vh;
-  justify-items: center;
-  align-content: flex-end;
-  margin: 20px;
   padding: 10px;
   color: white;
   text-shadow: #555 2px 2px 3px;
-  background: rgb(255,221,236);
   background: radial-gradient(circle, rgba(255,221,236,1) 0%, rgba(143,34,149,1) 100%);
 }
-
-#AltaProducto input {
-  color: black;
-  
+body#AltaProducto form section.inputImage{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 5%;
+}
+body#AltaProducto form input{
+  margin: 2%;
 }
 
 #AltaProducto input.imagenProducto{
   color: white;
   background-color: lightblue;
-  margin-top:20px;
+  margin-top:5px;
 	border:1px solid transparent;
   padding: 5px;
-  font-size: 16px;
-
+  width: 80%;
+  content: "Subir img Producto";
 }
+
 #AltaProducto button{
   color: white;
   background-color: lightblue;
@@ -844,10 +738,12 @@ body#bodyRegister{
   padding: 5px;
   font-size: 16px;
 }
-#AltaProducto option{
-  color: black;
-  
+body#AltaProducto main.main{
+  width: 100%;
+  height: 60vh;
+  text-align: center;
 }
+
 /*fin alta Producto*/
 
 /*footer*/
@@ -859,6 +755,8 @@ footer {
   color: white;
   width: 80%;
   height: 10%;
+  font-size: 100%;
+  text-align: center;
 }
 
 footer a img{
@@ -887,11 +785,10 @@ footer section ul li {
 
 .error{
 text-align: center;
-font-size: 26px;
+
 }
 .not-found{
 text-align: center;
-font-size: 16px;
 }
 
 /*ERROR 404*/
@@ -901,7 +798,9 @@ body#MenuAdmin{
   background-color: #FF5DA2;
 }
 body#MenuAdmin div{
+  margin-top: 5%;
   height: 59vh;
+  font-size: 150%;
 }
 body#MenuAdmin div ul{
   width: 100%;
@@ -912,31 +811,71 @@ body#MenuAdmin div ul{
 body#MenuAdmin div ul li{
   display: flex;
   width: 100%;
+  margin-bottom: 5%;
   justify-content: center;
 }
-@media (min-width:1280px){
-  
-  #bodyCatalogo section article{
-    width: 25%;
-    flex-direction:column;
-    height: 50vh;
-    text-align: center;
+
+
+
+@media (min-width: 768px) and (max-width: 1279px ) {
+  header{
+    font-size: 225%;
   }
-  #bodyCarritoCompras{
+  body#bodyCatalogo section.Productos{
+    margin-top: 5%;
+    width: 100%;
+    text-align: center;
+    font-size: 125%;
+  }
+  body#bodyCatalogo section article{
+    width: 44%;
+    height: 40vh;
+    margin: 3%;
+  }
+ 
+  body#bodyCarritoCompras{
     justify-content: center;
   }
-  #bodyCarritoCompras table#ListaCompras{
+
+  body#bodyCarritoCompras table#ListaCompras{
     width: 60%;
-    
   }
-}
-@media (max-width:1279px){
+  #bodyLogin .wrapper form{
+    width: 60%;
+  }
+  #AltaProducto form{
+    width: 60%;
+  }
+
 
 }
-@media (max-width:768px){
-    
+@media (min-width: 1280px){
+  header{
+    font-size: 225%;
+  }
+  body#bodyCatalogo section.Productos{
+    font-size: 100%;
+  }
+  body#bodyCatalogo section article{
+    width: 23%;
+    height: 48vh;
+    margin: 1%;
+    margin-bottom: 5%;
+  }
 
+  footer{
+    width: 40%;
+    font-size: 100%;
+  }
+  #bodyLogin .wrapper form{
+    width: 40%;
+  }
+  #AltaProducto form{
+    width: 40%;
+  }
+  
 }
+
 
 
 

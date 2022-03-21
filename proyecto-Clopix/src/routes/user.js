@@ -18,7 +18,7 @@ let validationUser=[
 
 let validationLogin=[
    body('user').notEmpty().withMessage("el campo es obligatorio").bail(), 
-   body('pasword').notEmpty().withMessage("el campo ers obligatorio").bail(), 
+   body('pasword').notEmpty().withMessage("el campo es obligatorio").bail(), 
 ];
 
 const userRoute= express.Router();

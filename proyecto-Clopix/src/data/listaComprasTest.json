@@ -16,17 +16,5 @@
   "talle_id": "XXXL",
   "priceUnit": 610,
   "stock": 1
-<<<<<<< HEAD
- },
- {
-  "id": 8,
-  "nameProduct": "ahaeslier5",
-  "image_product": "p6.png",
-  "description": "",
-  "talle_id ": "S",
-  "priceUnit": 700,
-  "stock": 1
-=======
->>>>>>> 391325aacbc98af4695efb3f60d764bf300a4fb8
  }
 ]

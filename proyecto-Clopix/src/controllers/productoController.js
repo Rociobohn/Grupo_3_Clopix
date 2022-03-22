@@ -108,10 +108,12 @@ const producto={
     CrearProducto:(req,res)=>{
         let errors = validationResult(req);
         if (!errors.isEmpty()) {
-            
+
             return res.render('Products/AltaProducto',{errors: errors.mapped(),old:req.body});
           }
         let talleD;
+        console.log("EL TALLE ES");
+        console.log(req.body.talle.value);
         switch(req.body.talle){
             case 'S':
                 talleD=1;

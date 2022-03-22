@@ -11,7 +11,6 @@ let validationProduct=[
    body('nombre').notEmpty().withMessage("el Nombre es un campo Obligatorio").isLength({min:5}).withMessage("el nombre debe tener al menos 5 caracteres").bail(),
    body('descripcion').isLength({min:5}).withMessage("Debe tener al menos 5 caracteres").bail(),
    body('precio').notEmpty().withMessage("Debe Indicar un Precio!").isNumeric().withMessage("ingrese solo Numeros").bail(),
-   body('imagenProducto').notEmpty().withMessage("NO hay Ninguna Imagen selecionada").bail()
 ];
 
 const storage = multer.diskStorage({ 

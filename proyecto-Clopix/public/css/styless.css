@@ -242,17 +242,12 @@ body#bodyCatalogo section.Productos{
 
 #bodyCatalogo section article a img{
   width: 100%;
-  height: 100%;
+  height: 75%;
 }
 #bodyCatalogo section article section.datos{/* Descripcion*/
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  align-content: center;
-  justify-content: center;
+  height: 25%;
   text-align: center;
-  height: 18%;
-  
   background-color: #99DDCC;
   border: 5px solid white;
 }
@@ -260,116 +255,80 @@ body#bodyCatalogo section.Productos{
 
 /*fin estilos catalogo*/
 /*Home*/
-body#bodyHome{
-    width: 100%;
-    
-    background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(189,94,213,1) 62%);
+  body#bodyHome header{
+    margin: 2%;
+    width: 95%;
   }
-/*CSS del slider*/
-#bodyHome section ul {
-  width: 100%;
-  height: 100%;
-}
-#bodyHome section ul li {
-  height: 100%;
-  width: 100%;
-}
-#bodyHome section ul li#slide1{
-display: block;
-}
+  body#bodyHome{
+      width: 100%;
+      max-width: 100vh;
+      background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(189,94,213,1) 62%);
+    }
+  /*CSS del slider*/
+  #bodyHome section.slider ul {
+    display: flex;
+    width: 300%;
+    animation: cambio 12s infinite alternate;
+  }
+  
+  #bodyHome section.slider ul li {
+    list-style: none;
+    width: 90%;
+    margin: 1%;
+  }
 
-#bodyHome section ul li#slide2{
-  display: none;
-}
-#bodyHome section ul li#slide3{
-  display: none;
-} 
-  
-  /*aca se modifican los botones de diapositiva*/
- 
-  
-  
-
-  
-  /*fin CSS del slider*/
-  
-  /*MAIN*/
-  
-  
   #bodyHome main{
     margin: auto;
     width: 100%;
-   
-    
+    text-align: center;
   }
 
   #bodyHome main section.slider {
-    height: 40vh;
-    
+    width: 95%;
+  }
+  #bodyHome main section.Ofertas{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     text-align: center;
+     width: 100%;
   }
 
-  #bodyHome main article{
-    margin: auto;
-    margin-top:15px;
-    width: 100%;
-    
-  }
-  #bodyHome main article img{
-    width: 100%;
-  }
-  
   #bodyHome .caja-detalle{
+    display: flex;
+
     border: 3px white solid;
-    padding: 15px;
-    background: rgb(241,104,193);
+    margin: auto;
+    text-align: center;
     background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(242,223,231,1) 1%); 
     Font-family: Garamond;
-    
-    
-    
   }
-  #bodyHome main section article .caja-detalle{
-    position: relative;
-    
+  #bodyHome .caja-detalle div{
+    width: 90%;
   }
-  #bodyHome .caja-detalle i{
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    color: #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-    transition: all 0.3s;
-   
   
+  #bodyHome .caja-detalle i{
+    font-size: 16px;
+    background:none;
+    border: none;
+    transition: all 0.3s;
+    position: relative;
+    bottom: -10px;
   }
   
   #bodyHome .caja-detalle i:hover{
     transform: rotate(-90deg)
   }
-  /*Probablemente no hace nada*/
-  #bodyHome main section article h3{
-    text-align: left;
+  #bodyHome main section.Ofertas img{
+    width: 100%;
+    height: 100%;
   }
-  
-  #bodyHome main section article{
-      width: 43%;
-      padding: 10px;
-    
-      
+  #bodyHome main section.Ofertas article{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5%;
   }
 
-
-  
-  #bodyHome .caja-detalle p {
-    color: black;
-  }
 /*fin del home*/
 
 
@@ -756,6 +715,7 @@ footer {
   height: 10%;
   font-size: 100%;
   text-align: center;
+  margin-bottom: 5%;
 }
 
 footer a img{
@@ -848,6 +808,9 @@ body#MenuAdmin div ul li{
   body#bodyCarritoCompras div.main section.special button{
     font-size: 125%;
   }
+  #bodyHome main section.Ofertas article{
+    width: 45%;
+  }
 
 }
 @media (min-width: 1280px){
@@ -877,8 +840,15 @@ body#MenuAdmin div ul li{
   body#bodyCarritoCompras div.main section.special button{
     font-size: 125%;
   }
+  #bodyHome main section.Ofertas article{
+    width: 22%;
+  }
 }
-
+@keyframes cambio {
+  0%{margin-left: 0%;}
+  50%{margin-left: -100%;} 
+  100%{margin-left: -200%;}  
+}
 
 
 

@@ -164,3 +164,5 @@ Utilizar el Trello 
 ###DEJAR DE HACER
 
 Dejar de atrasarse con el material del playground
+
+

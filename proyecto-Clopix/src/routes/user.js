@@ -7,7 +7,7 @@ const userTest=require('../myMiddlewares/guestTest');
 
 
 let validationUser=[
-   body('nombreCompleto').notEmpty().isLength({min:3}).withMessage("el nombre debe tener al menos 3 caracteres"),
+   body('nombreCompleto').notEmpty().isLength({min:2}).withMessage("el nombre debe tener al menos 2 caracteres"),
    body('mail').notEmpty().withMessage("Campo Obligatorio").isEmail().withMessage("El email es inválido").bail(),
    body('user').notEmpty().isLength({min:3}).withMessage("el usuario debe tener al menos 3 caracteres").bail(),
    body('celular').notEmpty().isLength({ max:8}).withMessage("el numero indicado debe tener 8 numeros").bail(),

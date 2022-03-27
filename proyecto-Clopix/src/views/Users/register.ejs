@@ -36,7 +36,7 @@
               <% if(locals && locals.errors && locals.errors.celular){  %>
                 <p class="error"><%= errors.celular.msg %> </p>
                 <% } %> 
-         <!--Datos de ingreso-->      
+                  <!--Datos de ingreso-->      
               <div class="inputfield">
                 <label>Nombre de usuario</label>
                 <input type="text" class="input" name="user" required>
@@ -66,33 +66,26 @@
                     <% } %>  
               </div> 
 
-            <!--imagen de perfil-->
+              <!--imagen de perfil-->
 
-            <input type="file" class="image-profile" name="avatar">            
+              <input type="file" class="image-profile" name="avatar" accept=" .jpg, .jpeg, .png, .gif">          
 
-            <!--terms-->
+              <!--terms-->
 
-              <div class="inputfield terms" >
-                  <label class="check">
-                    <input type="checkbox" name="terminosyCondiciones" required>
-                    <span class="checkmark"></span>
-                  </label>
+              <div class="termsAndConditions" >
+                  <input type="checkbox" name="terminosyCondiciones" required>
                   <h1>Acepto términos y condiciones</h1>
-               </div>
-              
-              <div class="inputfield">
-                
-                <button type="submit"> Crear Cuenta </button>
-              
-                
               </div>
+        
+              <button type="submit"> Crear Cuenta </button>
               
-            <!--class container-signin-->
+              
+                <!--class container-signin-->
           
-            <div class="container-signin">
-              <p>¿Ya tienes una cuenta?<a href="#">Iniciar sesión</a>.</p>
-            </div>      
-          </form>
+              <div class="container-signin">
+                <p>¿Ya tienes una cuenta?<a href="#">Iniciar sesión</a>.</p>
+              </div>      
+            </form>
         </div>	
         <%- include('../partials/footer')%>
         <script src="/scripts/register.js"> </script>    <!--tuve que agregar el script en el register.ejs por un error en login.ejs-->

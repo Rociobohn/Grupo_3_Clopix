@@ -4,21 +4,22 @@
     <body id="AltaProducto">
         <%- include('../partials/header')%>
         <main class="main">
-            <form method="post" action="/producto/Create" enctype="multipart/form-data">
+
+            <form method="post"  action="/producto/Create" enctype="multipart/form-data">
                 <h2>Alta Producto</h2>
                 <input type="text" name="nombre" placeholder="Nombre del Producto" value="<% if (typeof errors != "undefined") { %><%= old.nombre %><%} %>">
-                <% if ( typeof errors != "undefined" && errors.nombre != undefined) { %>
-                    <p class="error"><%= errors.nombre.msg %></p>
-                <% } %>
+                    <% if ( typeof errors != "undefined" && errors.nombre != undefined) { %>
+                        <p class="error"><%= errors.nombre.msg %></p>
+                    <% } %>
 
                 <input type="text" name="descripcion" placeholder="Descripcion" value="<% if (typeof errors !== "undefined") { %><%= old.descripcion %><%} %>">
-                <% if (typeof errors != "undefined" && errors.descripcion != undefined) { %>
-                    <p class="error"><%= errors.descripcion.msg %></p>
-                <% } %>
+                    <% if (typeof errors != "undefined" && errors.descripcion != undefined) { %>
+                        <p class="error"><%= errors.descripcion.msg %></p>
+                    <% } %>
                 <input type="text" placeholder="Precio Unitario" name="precio" value="<% if (typeof errors !== "undefined") { %><%= old.precio %><%} %>">
-                <% if (typeof errors != "undefined" && errors.precio != undefined) { %>
-                    <p class="error"><%= errors.precio.msg %></p>
-                <% } %>
+                    <% if (typeof errors != "undefined" && errors.precio != undefined) { %>
+                        <p class="error"><%= errors.precio.msg %></p>
+                    <% } %>
                 <section class="talle">
                     <p>TALLE</p>
                     <select name="talle">
@@ -32,20 +33,21 @@
                 </section>
                 
                 <input type="text" placeholder="Stock Inicial" name="stock">
-                <% if (typeof errors != "undefined" && errors.stock != undefined) { %>
-                    <p class="error"><%= errors.stock.msg %></p>
-                <% } %>
+                    <% if (typeof errors != "undefined" && errors.stock != undefined) { %>
+                        <p class="error"><%= errors.stock.msg %></p>
+                    <% } %>
                 <section class="inputImage">
                     <p>Imagen de Producto</p>
-                    <input type="file"  id="imagenProducto" class= "imagenProducto" name="imagenProducto" >
-                    <p class="error"></p>
+                    <input type="file" name="imgProduct"  >
+                        <% if(locals.imageNovalida){ %> 
+                            <p class="error">archivo no valido!</p>
+                        <% } %> 
                 </section>
-                
+    
                 <button type="submit">Agregar Producto</button>
-            
             </form>
+
         </main>
-    <%- include('../partials/footer')%>
-    <script src="/scripts/AltaProducto.js"> </script> 
-</body>
+        <%- include('../partials/footer')%>
+    </body>
 </html>

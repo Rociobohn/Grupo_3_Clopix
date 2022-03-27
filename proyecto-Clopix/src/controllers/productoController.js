@@ -3,6 +3,8 @@ const gArchivoJson=require('../model/controlDatos');
 let Detalle=gArchivoJson('listaComprasTest');
 const db=require('../../database/models');
 const { validationResult } = require('express-validator');
+const multer=require('multer');
+const path=require('path');
 
 const producto={
     alta:(req, res)=>{
@@ -91,9 +93,9 @@ const producto={
         db.Productos.update(buffer,{where:{id:req.params.id}});
         res.redirect("/Producto/");
     },
+
     Catalogo:(req, res)=>{
-        db.Productos.findAll({include:[{association:"talles"}]}).then(resultado=>res.render('Products/productDetail',{producto:resultado}));
-        
+        db.Productos.findAll({include:[{association:"talles"}]}).then(resultado=>res.render('Products/productDetail',{producto:resultado}));   
     },
     
     Detalle:(req, res)=>{
@@ -106,11 +108,32 @@ const producto={
         res.render('Products/CarritoCompras',{ DetalleCompra: Detalle.readFile()});
     },
     CrearProducto:(req,res)=>{
+        console.log("esto contiene el FILEEEE");
+        console.log(req.file.filename);
+        let extencion=path.extname(req.file.filename);
         let errors = validationResult(req);
-        if (!errors.isEmpty()) {
 
-            return res.render('Products/AltaProducto',{errors: errors.mapped(),old:req.body});
-          }
+        if (!errors.isEmpty() || (extencion!='.jpg' && extencion!='.jpeg'&& extencion!='.png'&& extencion!='.gif') ) {
+            let bufferErrors={errors: errors.mapped(),old:req.body, imgNovalida:true}
+            try {
+                fs.unlinkSync(__dirname+"/../../public/images/product/"+req.file.filename);
+                console.log('File removed');
+            } catch(err) {
+                console.error('Something wrong happened removing the file', err);
+            }
+
+            if(!errors.isEmpty() && (extencion!='.jpg' && extencion!='.jpeg'&& extencion!='.png'&& extencion!='.gif') ){
+                bufferErrors={errors: errors.mapped(),old:req.body, imgNovalida:true}
+            }
+            else if(!errors.isEmpty()){
+                bufferErrors={errors: errors.mapped(),old:req.body, imgNovalida:false}
+            }
+            else if (extencion!='.jpg' && extencion!='.jpeg'&& extencion!='.png'&& extencion!='.gif'){
+                bufferErrors={imgNovalida:true}
+            }
+            return res.render('Products/AltaProducto',bufferErrors);
+        }
+
         let talleD;
         console.log("EL TALLE ES");
         console.log(req.body.talle.value);
@@ -135,8 +158,6 @@ const producto={
                 break;
 
         }
-        console.log("esto es lo que devuelve file!!!!!");
-        console.log(req.file.filename);
         let nuevo= {
             nameProduct: req.body.nombre,
             image_product: req.file.filename,
@@ -149,6 +170,7 @@ const producto={
         console.log(nuevo);
     
         db.Productos.create(nuevo)
+
         res.redirect('/Producto/');
     },
     AgregarAlCarrito:(req,res)=>{

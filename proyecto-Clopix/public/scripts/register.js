@@ -26,10 +26,11 @@ registerForm.addEventListener('submit', function(event){
     } 
 });
 
+//CORRIGIENDO, CAMBIO KEYDOWN POR BLUR
  
 //valido los input 
 //validate name
-registerForm.nombreCompleto.addEventListener('keydown', nameValidate);
+registerForm.nombreCompleto.addEventListener('blur', nameValidate);
 
 function nameValidate(){
     if(registerForm.nombreCompleto.value < 2 ){
@@ -39,7 +40,7 @@ function nameValidate(){
     }
 } 
 //validate email
-registerForm.mail.addEventListener('keydown', mailValidate);
+registerForm.mail.addEventListener('blur', mailValidate);
 
 function mailValidate(){
     if(!ValidateEmail(registerForm.mail.value)){
@@ -50,13 +51,19 @@ function mailValidate(){
 } 
 
 //validate password (hay que corregit pero no es tan necesario)
-registerForm.pasword.addEventListener('keydown', passwordValidate);
+registerForm.pasword.addEventListener('blur', passwordValidate);
 
 function passwordValidate(){
     if(registerForm.pasword.value < 8 ){
         registerForm.pasword.style.borderColor= 'red';
     }else {
         registerForm.pasword.style.borderColor= 'inherit';
+    }
+    //en proceso de validacion
+    if(){
+        
+    }else {
+        return('La contraseña debe ser una válida')
     }
 } 
 

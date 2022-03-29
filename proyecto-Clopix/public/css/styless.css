@@ -262,7 +262,8 @@ body#bodyCatalogo section.Productos{
   }
   body#bodyHome{
       width: 100%;
-      background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(189,94,213,1) 62%);
+      /*background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(189,94,213,1) 62%);*/
+      background-color: white;
       padding: 2%;
   }
   /*CSS del slider*/
@@ -296,12 +297,9 @@ body#bodyCatalogo section.Productos{
      width: 100%;
      
   }
-  #bodyHome .caja-detalle{
-    display: flex;
-
+  #bodyHome .precio{ 
   /* border: 3px white solid;*/
     margin: auto;
-    text-align: center;
     /*background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(242,223,231,1) 1%); */
     font-family: Helvetica;
     font-size: 15px;
@@ -312,6 +310,20 @@ body#bodyCatalogo section.Productos{
     line-height: 18px;
     overflow-x: hidden;
   }
+
+  #bodyHome .descuento{ 
+      margin: auto; 
+      font-family: Helvetica;
+      font-size: 15px;
+      display: grid;
+      vertical-align: baseline;
+      font-stretch: condensed;
+      letter-spacing: 0.8px;
+      line-height: 18px;
+      overflow-x: hidden;
+    }
+
+
   #bodyHome .caja-detalle div{
     width: 90%;
   }
@@ -329,9 +341,10 @@ body#bodyCatalogo section.Productos{
     transform: rotate(-90deg)
   }
   #bodyHome main section.Ofertas img{
-    width: 100%;
-    height: 100%;
-    border: 3px white solid;
+    width: 400px;
+    height: 400px;
+    /*border: 3px black solid;*/
+    background-color: #F9F5ED;
   }
   #bodyHome main section.Ofertas article{
     width: 90%;
@@ -597,21 +610,24 @@ body#AltaProducto main.main{
 footer {
   display:  flex;
   flex-direction: column;
-  margin: auto;
-  border: 1px solid white;
-  color: white;
+  margin: 10px;
+  border-top: 1px solid black;
+  color: #99DDCC;
   width: 80%;
   height: 10%;
   font-size: 100%;
   text-align: center;
   margin-bottom: 5%;
+  flex-grow: 1;
+  line-height: 1.8;
+  background-color: black;
 }
 
 footer a img{
     width: 8%;
 }
 footer a{
-  color: white;
+  color: #99DDCC;
 }
 footer section ul li {
   display: flex;

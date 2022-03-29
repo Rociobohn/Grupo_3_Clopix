@@ -299,11 +299,18 @@ body#bodyCatalogo section.Productos{
   #bodyHome .caja-detalle{
     display: flex;
 
-    border: 3px white solid;
+   /* border: 3px white solid;*/
     margin: auto;
     text-align: center;
-    background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(242,223,231,1) 1%); 
-    Font-family: Garamond;
+    /*background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(242,223,231,1) 1%); */
+    font-family: Helvetica;
+    font-size: 15px;
+    display: grid;
+    vertical-align: baseline;
+    font-stretch: condensed;
+    letter-spacing: 0.8px;
+    line-height: 18px;
+    overflow-x: hidden;
   }
   #bodyHome .caja-detalle div{
     width: 90%;

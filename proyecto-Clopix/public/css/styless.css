@@ -301,7 +301,7 @@ body#bodyCatalogo section.Productos{
   /* border: 3px white solid;*/
     margin: auto;
     /*background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(242,223,231,1) 1%); */
-    font-family: Helvetica;
+    /*font-family:'Bangers', cursive;*/
     font-size: 15px;
     display: grid;
     vertical-align: baseline;
@@ -314,7 +314,7 @@ body#bodyCatalogo section.Productos{
 
   #bodyHome .descuento{ 
       margin: auto; 
-      font-family: Helvetica;
+      /*font-family:'Bangers', cursive;*/
       font-size: 15px;
       display: grid;
       vertical-align: baseline;

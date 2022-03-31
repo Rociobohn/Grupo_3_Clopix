@@ -90,6 +90,7 @@ registerForm.passwordConfirm.addEventListener('blur', passwordConfirmValidate);
 function passwordConfirmValidate(){
 
     if(registerForm.passwordConfirm.value == 0 ){
+        
         registerForm.passwordConfirm.style.borderColor= 'red';
     }else {
         registerForm.passwordConfirm.style.borderColor= 'inherit';
@@ -100,6 +101,28 @@ function passwordConfirmValidate(){
         document.querySelector('p#errConfirmPassword').innerHTML= 'El campo es obligatorio';
     }
         
+    }
+
+    //Blur celular
+    registerForm.celular.addEventListener('blur', celularValidate);
+    function celularValidate() {
+        if(registerForm.celular.value == 0) {
+            document.querySelector('p#errCelular').innerHTML= 'El campo es obligatorio';
+            registerForm.celular.style.borderColor= 'red';
+    }else {
+        registerForm.celular.style.borderColor= 'inherit';
+    }
+    }
+
+    //blur nombre de usuario
+    registerForm.user.addEventListener('blur', userValidate);
+    function userValidate() {
+        if(registerForm.user.value == 0) {
+            document.querySelector('p#errUser').innerHTML= 'El campo es obligatorio';
+            registerForm.user.style.borderColor= 'red';
+    }else {
+        registerForm.user.style.borderColor= 'inherit';
+    }
     }
 
 

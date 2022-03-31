@@ -26,17 +26,25 @@ registerForm.addEventListener('submit', function(event){
     } 
 });
 
+
+
 //CORRIGIENDO, CAMBIO KEYDOWN POR BLUR
  
 //valido los input 
 //validate name
-registerForm.nombreCompleto.addEventListener('blur', nameValidate);
 
+registerForm.nombreCompleto.addEventListener('blur', nameValidate);
 function nameValidate(){
     if(registerForm.nombreCompleto.value < 2 ){
         registerForm.nombreCompleto.style.borderColor= 'red';
     }else {
         registerForm.nombreCompleto.style.borderColor= 'inherit';
+    }
+      //blur
+    
+      if(registerForm.nombreCompleto.value == 0) {
+        document.querySelector('p#errName').innerHTML= 'El campo es obligatorio';
+        
     }
 } 
 //validate email
@@ -48,9 +56,16 @@ function mailValidate(){
     }else {
         registerForm.mail.style.borderColor= 'inherit';
     }
+     //blur
+    
+     if(registerForm.mail.value == 0) {
+        document.querySelector('p#errMail').innerHTML= 'El campo es obligatorio';
+        
+    }
 } 
 
-//validate password (hay que corregit pero no es tan necesario)
+//validate password 
+
 registerForm.pasword.addEventListener('blur', passwordValidate);
 
 function passwordValidate(){
@@ -59,13 +74,18 @@ function passwordValidate(){
     }else {
         registerForm.pasword.style.borderColor= 'inherit';
     }
-    //en proceso de validacion
-    if(){
+    //blur
+    
+    if(registerForm.pasword.value == 0) {
+        document.querySelector('p#errPassword').innerHTML= 'El campo es obligatorio';
         
-    }else {
-        return('La contraseña debe ser una válida')
     }
+
 } 
+
+
+//Blur Confirm password
+
 
 //validacion de caracteres del email
 function ValidateEmail(mail) 

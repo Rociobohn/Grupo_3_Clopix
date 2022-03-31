@@ -4,7 +4,16 @@
     margin: 0px;
 }
 img{
-    width: 100%;
+  max-width: 100%;
+    min-height: 100%;
+    padding: 5px;
+}
+.imagenProducto {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 /*header*/
 header{
@@ -16,8 +25,7 @@ header{
 header nav ul li a{
     width: 15%;
     color: #99DDCC;
-    margin: 10px;
-   
+    margin: 10px;  
 }
 header nav ul li{
     display: flex;
@@ -261,8 +269,8 @@ body#bodyCatalogo section.Productos{
     width: 95%;
   }
   body#bodyHome{
-      width: 100%;
-      background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(189,94,213,1) 62%);
+      /*background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(189,94,213,1) 62%);*/
+      background-color: white;
       padding: 2%;
   }
   /*CSS del slider*/
@@ -280,31 +288,41 @@ body#bodyCatalogo section.Productos{
 
   #bodyHome main{
     margin: auto;
-    width: 100%;
     text-align: center;
   }
 
   #bodyHome main section.slider {
-    width: 100%;
     overflow: hidden;
   }
-  #bodyHome main section.Ofertas{
-     display: flex;
-     flex-direction: row;
-     flex-wrap: wrap;
-     text-align: center;
-     width: 100%;
+
+ #bodyHome main section.Ofertas {
+     display: flex;                        
   }
 
-  #bodyHome .caja-detalle{
-    display: flex;
+  #bodyHome .nombreProducto-Precio{ 
+      margin: auto; 
+      font-family: 'Open Sans', sans-serif;
+      display: grid;
+      vertical-align: baseline;
+      font-stretch: condensed;
+      line-height: 50px;
+      vertical-align: baseline;
+      font-stretch: condensed;
+      letter-spacing: 0.8px;
+      line-height: 18px;
+      overflow-x: hidden;
+      text-align: center;
+      font-size: 15px;
+      display: grid;  
+    }
 
-    border: 3px white solid;
-    margin: auto;
+p.nombre-precio{ 
+    justify-content: center;
+  }
+  #bodyHome .caja-detalle{ 
     text-align: center;
-    background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(242,223,231,1) 1%); 
-    Font-family: Garamond;
   }
+
   #bodyHome .caja-detalle div{
     width: 90%;
   }
@@ -324,6 +342,8 @@ body#bodyCatalogo section.Productos{
   #bodyHome main section.Ofertas img{
     width: 100%;
     height: 100%;
+    /*border: 3px black solid;*/
+    background-color: #F9F5ED;
   }
   #bodyHome main section.Ofertas article{
     width: 90%;
@@ -587,30 +607,38 @@ body#AltaProducto main.main{
 
 /*footer*/
 footer {
-  display:  flex;
-  flex-direction: column;
-  margin: auto;
-  border: 1px solid white;
-  color: white;
-  width: 80%;
-  height: 10%;
-  font-size: 100%;
+ /* display:  flex;*/
+ /* flex-direction: column;
+  margin: 10px;*/
+  margin-top: 55px;
+  border-top: 1px solid black;
+  color: #c772db;
+  width: 100%;
+  /*height: 10%;*/
+ /* margin-bottom: 5%;
+  flex-grow: 1;*/
+  line-height: 1.8;
+  background: url(../images/FONDO\ NEGRO.jpg) repeat-x top;
+  padding: 24px;
+  box-sizing: border-box;
+  padding-left: 22px;
+  padding-right: 22px;
+  float: left;
   text-align: center;
-  margin-bottom: 5%;
 }
 
 footer a img{
-    width: 8%;
+   width: 5%;
+   text-align: center;
 }
 footer a{
-  color: white;
+  color:#c772db;
+  font-size: 20px;
 }
 footer section ul li {
   display: flex;
   justify-content: center; 
 }
-
-
 
 
 /*footer*/
@@ -708,7 +736,7 @@ body#MenuAdmin div ul li{
   }
 
   footer{
-    width: 40%;
+    width: 100%;
     font-size: 100%;
   }
   #bodyLogin .wrapper form{
@@ -729,6 +757,3 @@ body#MenuAdmin div ul li{
   50%{margin-left: -100%;} 
   100%{margin-left: -200%;}  
 }
-
-
-

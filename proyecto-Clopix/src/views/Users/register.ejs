@@ -60,6 +60,7 @@
               <div class="inputfield">
                   <label>Confirmar contraseña</label>
                   <input type="password" class="input" name="passwordConfirm" required>
+                  <p id="errConfirmPassword"></p>
                   <br> 
                   <% if(locals && locals.errors && locals.errors.passwordConfirm){  %>
                     <p class="error"><%= errors.passwordConfirm.msg %> </p>

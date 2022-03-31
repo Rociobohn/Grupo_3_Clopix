@@ -85,6 +85,22 @@ function passwordValidate(){
 
 
 //Blur Confirm password
+registerForm.passwordConfirm.addEventListener('blur', passwordConfirmValidate);
+
+function passwordConfirmValidate(){
+
+    if(registerForm.passwordConfirm.value == 0 ){
+        registerForm.passwordConfirm.style.borderColor= 'red';
+    }else {
+        registerForm.passwordConfirm.style.borderColor= 'inherit';
+    }
+    //blur
+    
+    if(registerForm.passwordConfirm.value == 0) {
+        document.querySelector('p#errConfirmPassword').innerHTML= 'El campo es obligatorio';
+    }
+        
+    }
 
 
 //validacion de caracteres del email

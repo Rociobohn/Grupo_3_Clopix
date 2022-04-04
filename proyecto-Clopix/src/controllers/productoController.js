@@ -95,11 +95,17 @@ const producto={
     },
 
     Catalogo:(req, res)=>{
-        db.Productos.findAll({include:[{association:"talles"}]}).then(resultado=>res.render('Products/productDetail',{producto:resultado}));   
+        db.Productos.findAll({include:[{association:"talles"}]}).then(resultado=>{ 
+            console.log("ESTO ES LO QUE TIENE DE RESULTADO");
+            console.log(resultado);
+            console.log(resultado.length);
+            res.render('Products/productDetail',{producto:resultado})
+        });   
     },
     
     Detalle:(req, res)=>{
         db.Productos.findByPk(req.params.id,{include:[{association:"talles"}]}).then(resultado=>{
+            
             req.session.productoActual=resultado;
             res.render('Products/unProducto',{ unP: resultado })
         });

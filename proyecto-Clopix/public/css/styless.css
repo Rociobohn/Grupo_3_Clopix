@@ -759,9 +759,11 @@ body#MenuAdmin div ul li{
   #bodyUnProducto article{
     width: 40%;
     margin: auto;
+    
   }
   #bodyHome main section.Ofertas {
-    flex-direction: row;        
+    flex-direction: row;    
+    justify-content: space-around;  
  }
   
 }

@@ -8,13 +8,7 @@ img{
     min-height: 100%;
     padding: 5px;
 }
-.imagenProducto {
-  /*height: 200px;
-  width: 200px;*/
-  object-fit: cover;
-  padding-left: 20px;
-  padding-right: 20px;
-}
+
 /*header*/
 header{
     background-color: white;
@@ -279,6 +273,8 @@ body#bodyCatalogo section.Productos{
 
 
 /*fin estilos catalogo*/
+
+
 /*Home*/
   body#bodyHome header{
     margin: 2%;
@@ -288,6 +284,7 @@ body#bodyCatalogo section.Productos{
       /*background: linear-gradient(207deg, rgba(241,104,193,1) 0%, rgba(189,94,213,1) 62%);*/
       background-color: white;
       padding: 2%;
+      width: 100%;
   }
   /*CSS del slider*/
   #bodyHome section.slider ul {
@@ -301,71 +298,51 @@ body#bodyCatalogo section.Productos{
     width: 100%;
     margin: 1%;
   }
-
-  #bodyHome main{
-    margin: auto;
-    text-align: center;
-  }
-
   #bodyHome main section.slider {
     overflow: hidden;
   }
 
- #bodyHome main section.Ofertas {
-     display: flex;                        
-  }
+  
 
-  #bodyHome .nombreProducto-Precio{ 
-      margin: auto; 
-      font-family: 'Open Sans', sans-serif;
-      display: grid;
-      vertical-align: baseline;
-      font-stretch: condensed;
-      line-height: 50px;
-      vertical-align: baseline;
-      font-stretch: condensed;
-      letter-spacing: 0.8px;
-      line-height: 18px;
-      overflow-x: hidden;
-      text-align: center;
-      font-size: 15px;
-      display: grid;  
-    }
-
-p.nombre-precio{ 
-    justify-content: center;
-  }
-  #bodyHome .caja-detalle{ 
+  #bodyHome main{
+    margin: auto;
     text-align: center;
+    height: 100%;
+    width: 100%;
   }
 
-  #bodyHome .caja-detalle div{
-    width: 90%;
-  }
-  
-  #bodyHome .caja-detalle i{
-    font-size: 16px;
-    background:none;
-    border: none;
-    transition: all 0.3s;
-    position: relative;
-    bottom: -10px;
-  }
-  
-  #bodyHome .caja-detalle i:hover{
-    transform: rotate(-90deg)
-  }
-  #bodyHome main section.Ofertas img{
-    width: 100%;
-    height: 100%;
-    /*border: 3px black solid;*/
-    background-color: #F9F5ED;
+ #bodyHome main section.Ofertas {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     width: 90%;
+     margin: auto;           
   }
   #bodyHome main section.Ofertas article{
-    width: 90%;
-    margin: auto;
-    margin-bottom: 5%;
+    height: 45vh;
+    text-align: center;
+    border: 1px solid #99DDCC;
   }
+  #bodyHome main section.Ofertas article div.imagenProducto{
+    height:85%;
+    margin: auto;
+  }
+  #bodyHome main section.Ofertas article div.imagenProducto img{
+    height:30vh;
+    margin: auto;
+    text-align: center;
+  }
+  #bodyHome main section.Ofertas article div.nombre-precio{
+    height:12%;
+    margin: auto;
+    border: 1px solid #99DDCC;
+  }
+  
+
+  
+  
+  
+ 
 
 /*fin del home*/
 
@@ -736,6 +713,8 @@ body#MenuAdmin div ul li{
   }
   #bodyHome main section.Ofertas article{
     width: 45%;
+    margin: auto;
+    margin-top: 2%;
   }
 
   #bodyUnProducto article{
@@ -743,7 +722,10 @@ body#MenuAdmin div ul li{
     width: 60%;
     margin: auto;
   }
- 
+  
+  #bodyHome main section.Ofertas {
+    flex-direction: row;        
+ }
 
 }
 @media (min-width: 1280px){
@@ -778,7 +760,9 @@ body#MenuAdmin div ul li{
     width: 40%;
     margin: auto;
   }
- 
+  #bodyHome main section.Ofertas {
+    flex-direction: row;        
+ }
   
 }
 @keyframes cambio {

@@ -1,11 +1,10 @@
 const express = require('express');
 const apiRouters = express.Router();
-const apiController = require("../../controllers/apiController");
+const apiProduct = require("../../controllers/apiControllerProduct");
 
+apiRouters.get("/products",apiProduct.listar);
 
+apiRouters.get("/products/:id",apiProduct.get);
 
-apiRouters.get("/products",apiController.informe);
-
-apiRouters.get("/products/:id");
 
 module.exports = apiRouters;

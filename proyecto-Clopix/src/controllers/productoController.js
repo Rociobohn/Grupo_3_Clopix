@@ -5,6 +5,7 @@ const db=require('../../database/models');
 const { validationResult } = require('express-validator');
 const multer=require('multer');
 const path=require('path');
+const { log, Console } = require('console');
 
 const producto={
     alta:(req, res)=>{
@@ -99,8 +100,10 @@ const producto={
             console.log("ESTO ES LO QUE TIENE DE RESULTADO");
             console.log(resultado);
             console.log(resultado.length);
+           
             res.render('Products/productDetail',{producto:resultado})
-        });   
+        });
+        
     },
     
     Detalle:(req, res)=>{

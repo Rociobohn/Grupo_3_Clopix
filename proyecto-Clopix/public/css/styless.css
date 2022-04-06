@@ -317,7 +317,8 @@ body#bodyCatalogo section.Productos{
      flex-direction: column;
      flex-wrap: wrap;
      width: 90%;
-     margin: auto;           
+     margin: auto;    
+         
   }
   #bodyHome main section.Ofertas article{
     height: 45vh;
@@ -327,7 +328,7 @@ body#bodyCatalogo section.Productos{
    
   }
   #bodyHome main section.Ofertas article div.imagenProducto{
-    height:85%;
+    height: 85%;
     margin: auto;
   }
   #bodyHome main section.Ofertas article div.imagenProducto img{
@@ -659,24 +660,30 @@ text-align: center;
 
 /*MENU ADMIN*/
 body#MenuAdmin{
-  background-color: #FF5DA2;
+  background-color: #C3F293 ;
 }
 body#MenuAdmin div{
   margin-top: 5%;
   height: 59vh;
   font-size: 150%;
 }
+
 body#MenuAdmin div ul{
   width: 100%;
   justify-content: center;
   align-content: center;
 }
 
+
 body#MenuAdmin div ul li{
   display: flex;
-  width: 100%;
-  margin-bottom: 5%;
+  width: 25%;
   justify-content: center;
+  border-style:inset;
+
+  margin-left: 37%;
+  margin-top: 15%;
+ 
 }
 
 
@@ -727,7 +734,8 @@ body#MenuAdmin div ul li{
   }
   
   #bodyHome main section.Ofertas {
-    flex-direction: row;        
+    flex-direction: row;    
+    justify-content: space-evenly;   
  }
 
 }

@@ -259,6 +259,7 @@ body#bodyCatalogo section.Productos{
   text-align: center;
   background-color: #99DDCC;
   border: 5px solid white;
+  line-height: 40px;
 }
 
 
@@ -727,6 +728,9 @@ body#MenuAdmin div ul li{
   }
   body#bodyCatalogo section.Productos{
     font-size: 100%;
+  }
+  body#bodyCatalogo label.for.precio{ 
+    color:red;
   }
   body#bodyCatalogo section article{
     width: 23%;

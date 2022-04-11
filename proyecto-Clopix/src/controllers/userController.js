@@ -118,7 +118,7 @@ const user={
                     pasword: resultado.password,
                     tipe:resultado.Roles.name_rol
                 }; 
-                return res.redirect("/user/"+resultado.username+"/profile");
+                return res.redirect("/user/profile");
             }
             else{
                 console.log("No entra a ningun iff");
@@ -144,8 +144,6 @@ const user={
                 username:req.params.user
             }
         }).then(r=>{
-            console.log("EL VALOR DE REQ.BODY.PREV");
-            console.log(req.body.prevPassword);
             if( bycript.compareSync(req.body.prevPassword,r.password)&& req.body.newpassword==req.body.newpasswordConfirm){
                 db.Usuarios.update({ 
                     password: bycript.hashSync(req.body.newpassword,3)
@@ -154,14 +152,11 @@ const user={
                        username: req.params.user
                    }
                 });
-                console.log("PASSWORD CAMBIADA CORRECTAMENTE")
-                res.redirect("/User/"+req.params.user+"/Profile");
+
+                res.redirect("/User/"+req.params.user+"/Profile/ok");
 
             }
-            else{
-                console.log("EL R TIENE");
-                console.log(r);
-            }
+            
         }).catch(error=>console.log(error));
         
         

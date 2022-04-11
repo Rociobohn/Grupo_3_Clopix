@@ -685,7 +685,13 @@ body#MenuAdmin div ul li{
   margin-top: 15%;
  
 }
-
+/*ok*/
+body#bodyOk{
+  width: 100%;
+}
+body#bodyOk main{
+  text-align: center;
+}
 
 
 @media (min-width: 768px) and (max-width: 1279px ) {
